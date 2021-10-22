@@ -1,0 +1,40 @@
+.scroll-down-item {
+    position: fixed;
+    font-size: 1.4vh;
+    bottom: 8vh;
+    left: 3vw;
+    line-height: 1;
+    letter-spacing: 0.3em;
+    -webkit-writing-mode: vertical-rl;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    color: #fff;
+    z-index: 100;
+    transform: translateY(23vh);
+    transition: all 0.5s ease-out 0.2s;
+    &:after {
+        content: "";
+        width: 2px;
+        height: 7vh;
+        background: #fff;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        bottom: -8vh;
+    }
+}
+
+@media screen and (orientation: portrait) {
+    .scroll-down-item {
+        position: absolute;
+        width: fit-content;
+        bottom: 8vh;
+        left: 92%;
+        
+        transform: translateY(23vh);
+        &:after {
+            bottom: -8vh;
+        }
+    }
+}

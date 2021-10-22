@@ -1,0 +1,82 @@
+.ico-social {
+    width: auto;
+    z-index: 1000;
+
+    .content {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    i {
+        transition: transform 1.5s ease-out;
+    }
+
+    li {
+        margin: 0 1.5vw;
+    }
+
+    .ico-nav {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        margin-left: 3vw;
+        margin-right: 0;
+        width: 5vh;
+        height: 1.7vh;
+        cursor: pointer;
+    }
+
+    .ico-nav span {
+        position: absolute;
+        width: 90%;
+        height: 0.2vh;
+        background: #fff;
+        border-radius: 100vw;
+        transform-origin: center;
+        transition: all 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    }
+
+    .nav-th {
+        top: 0;
+    }
+
+    .nav-tb {
+        top: 100%;
+    }
+}
+
+@media screen and (orientation: portrait) {
+    .ico-social {
+        .content {   
+            align-items: baseline;
+        }
+        li {
+            margin: 0 3vw;
+        }
+        .ico-nav {
+            margin-left: 6vw;
+            width: 5vh;
+            height: 1.6vh;
+        }
+    
+        .ico-nav span {
+            position: absolute;
+            width: 90%;
+            height: 0.2vh;
+            background: #fff;
+            border-radius: 100vw;
+            transform-origin: center;
+            transition: all 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+        }
+    
+        .nav-th {
+            top: 0;
+        }
+    
+        .nav-tb {
+            top: 100%;
+        }
+    }
+}

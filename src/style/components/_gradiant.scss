@@ -1,0 +1,47 @@
+.grandiant {
+    position: absolute;
+    width: 100vh;
+    height: 100vh;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 100em;
+    z-index: 100;
+    background: radial-gradient(
+        #ffffff40 0,
+        #ffffff40 35%,
+        #ffffff33 35%,
+        #ffffff33 43%,
+        #ffffff27 43%,
+        #ffffff27 50%,
+        #ffffff20 50%,
+        #ffffff20 57%,
+        #ffffff15 57%,
+        #ffffff15 64%,
+        #ffffff10 64%
+    );
+    transform-origin: center;
+
+    .dot {
+        position: absolute;
+        width: 5px;
+        height: 5px;
+        border-radius: 100px;
+        background-color: white;
+        z-index: 50;
+    }
+}
+
+@media screen and (orientation: portrait) {
+    .grandiant {
+        width: 100vw;
+        height: 100vw;
+        bottom: 40%;
+    
+        .dot {
+            width: 2px;
+            height: 2px;   
+        }
+    }
+}

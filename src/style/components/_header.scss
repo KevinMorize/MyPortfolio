@@ -1,0 +1,66 @@
+.header {
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2vh 2vw 1vh 2vw;
+    z-index: 3000;
+    color: $font-color-1;
+
+    .content-ico {
+        padding: 1vh 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: auto;
+        z-index: inherit;
+    }
+
+    h1 {
+        display: block;
+        font-size: 1.2vw;
+        font-weight: 400;
+        z-index: inherit;
+    }
+
+    i {
+        font-size: 1.2vw;
+    }
+}
+
+.black {
+    color: #ff4d5a;
+    a {
+        color: #072142;
+    }
+    .ico-social .ico-nav span {
+        background: #072142;
+    }
+}
+
+@media screen and (orientation: portrait) {
+    .header {
+        padding: 2vh 6vw;
+
+        h1 {
+            font-size: 5vw;
+        }
+
+        i {
+            font-size: 4vw;
+        }
+    }
+
+    .black {
+        color: #ff4d5a;
+        background-color: white;
+        a {
+            color: #072142;
+        }
+        .ico-social .ico-nav span {
+            background: #072142;
+        }
+    }
+}

@@ -1,0 +1,22 @@
+.growing-circle {
+  width: 70vh;
+  height: 70vh;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -50vh;
+  margin: auto;
+  transform-origin: center;
+  border: 2px solid white;
+  border-radius: 50%;
+  animation: circleAnim 10s infinite alternate;
+
+  @keyframes circleAnim {
+    from {
+      transform: scale(0.9);
+    }
+    to {
+      transform: scale(1.2);
+    }
+  }
+}
