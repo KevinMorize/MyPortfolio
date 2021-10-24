@@ -11,7 +11,7 @@ export const mainContentData = [
         content: "I love gaming, cooking and coding",
         img: "./assets/img/about.png",
         number: "01",
-        link: "/content",
+        link: "/about/content",
       },
       {
         id: 3,
@@ -19,7 +19,7 @@ export const mainContentData = [
         content: "Some projects I like",
         img: "./assets/img/work.png",
         number: "02",
-        link: "/content",
+        link: "/production/content",
       },
       {
         id: 4,
