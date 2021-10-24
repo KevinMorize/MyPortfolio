@@ -28,12 +28,12 @@ const Moon = () => {
 
         setTimeout(() => {
             moon.classList.remove("moon-animation");
-        }, 20);
+        }, 100);
 
         clouds.forEach((cloud) => {
             setTimeout(() => {
                 cloud.classList.remove("cloud-animation");
-            }, 20);
+            }, 100);
         })
 
         setTimeout(() => {
