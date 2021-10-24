@@ -39,12 +39,11 @@ const AboutContent = () => {
 
     return (
         <div className="about-content">
-
             <div className="back">
-                <Navlink exact to="/about" className="hovered">
+                <NavLink exact to="/about" className="hovered">
                     <img src="../assets/back.svg" alt="back"></img>
                     <p>Back</p>
-                </Navlink>
+                </NavLink>
             </div>
 
             {/* first content */}
