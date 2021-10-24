@@ -32,9 +32,8 @@ const Moon = () => {
 
         clouds.forEach((cloud) => {
             setTimeout(() => {
-                const cloudImg = cloud.querySelector('img').src;
-                const cloudNumber = cloudImg.slice(cloudImg.indexOf('.') - 1, cloudImg.indexOf('.'));
-                cloud.classList.add("cloud-animation" + cloudNumber);
+                const cloudAlt = cloud.querySelector('img').alt;
+                cloud.classList.add(cloudAlt + "-animation");
             }, 20);
         })
 
@@ -54,19 +53,19 @@ const Moon = () => {
             <p>PORTFOLIO</p>
 
             <div className="cloud cloud1">
-                <img src="./assets/cloud1.svg" alt="cloud" />
+                <img src="./assets/cloud1.svg" alt="cloud1" />
             </div>
             <div className="cloud cloud2">
-                <img src="./assets/cloud2.svg" alt="cloud" />
+                <img src="./assets/cloud2.svg" alt="cloud2" />
             </div>
             <div className="cloud cloud3">
-                <img src="./assets/cloud3.svg" alt="cloud" />
+                <img src="./assets/cloud3.svg" alt="cloud3" />
             </div>
             <div className="cloud cloud4">
-                <img src="./assets/cloud4.svg" alt="cloud" />
+                <img src="./assets/cloud4.svg" alt="cloud4" />
             </div>
             <div className="cloud cloud5">
-                <img src="./assets/cloud5.svg" alt="cloud" />
+                <img src="./assets/cloud5.svg" alt="cloud5" />
             </div>
         </div>
     );
