@@ -1,8 +1,8 @@
 .scroll-down-item {
     position: fixed;
     font-size: 1.4vh;
-    bottom: 8vh;
-    left: 3vw;
+    bottom: 8%;
+    left: 3%;
     line-height: 1;
     letter-spacing: 0.3em;
     -webkit-writing-mode: vertical-rl;
@@ -30,11 +30,7 @@
         position: absolute;
         width: fit-content;
         bottom: 8%;
-        left: 92%;
-        
-        transform: translateY(23vh);
-        &:after {
-            bottom: -110%;
-        }
+        left: 92%;    
+        transform: translateY(200%);
     }
 }
