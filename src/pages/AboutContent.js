@@ -3,6 +3,7 @@ import AboutMe from "../components/AboutMe";
 import AboutPassion from "../components/AboutPassion";
 import AboutSkills from "../components/AboutSkills";
 import { CopyToClipboard } from "react-copy-to-clipboard";
+import { NavLink } from 'react-router-dom';
 
 const AboutContent = () => {
 
