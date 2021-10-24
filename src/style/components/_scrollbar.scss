@@ -32,7 +32,7 @@
         left: 0;
         top: initial;
         margin: auto;
-        z-index: 800;
+        z-index: 100;
 
         ul {
             width: 10%;
@@ -53,7 +53,6 @@
             margin-bottom: 0;
         }
 
-    
         .active {
             width: 100%;
             transition: all 1s ease-out;
