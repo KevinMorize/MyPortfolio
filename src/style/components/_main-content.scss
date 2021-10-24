@@ -200,6 +200,7 @@
         position: absolute;
         bottom: 10%;
         right: 2%;
+        margin: auto;
         overflow: hidden;
         z-index: 700;
     }
@@ -336,7 +337,7 @@
     
         .content-number {
             position: absolute;
-            top: 42%;
+            bottom: 55%;
             right: 5%;
             height: -moz-fit-content;
             height: fit-content;
@@ -344,6 +345,7 @@
     
         em {
             font-size: 15vw;
+            transform: translateY(150%);
         }
     
         .top-animation {
