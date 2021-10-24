@@ -56,6 +56,9 @@
 
 @media screen and (orientation: portrait) {
     .nav {
+        ul {
+            margin-top: 10%;
+        }
         li {
             font-size: 15vw;
             font-weight: 600;

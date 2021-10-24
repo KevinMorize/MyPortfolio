@@ -146,9 +146,7 @@ const MainContent = (props) => {
                 }
                 {content.link &&
                     <div className="button">
-                        <NavLink to={content.link} exact className="hovered">
-                            See more
-                        </NavLink>
+                        <NavLink to={content.link} exact className="hovered">See more</NavLink>
                     </div>
                 }
             </div>
