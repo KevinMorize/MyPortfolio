@@ -228,6 +228,7 @@
 
 @media screen and (orientation: portrait) {
     .main-content { 
+        height: auto;
         .content {
             width: 75%;
             height: -moz-fit-content;
