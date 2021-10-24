@@ -108,7 +108,7 @@
     .moon-img {
         overflow: hidden;
         width: 100vw;
-        height: 100%;
+        height: 100vw;
         top: 5%;
         bottom: auto;
 
@@ -127,11 +127,6 @@
             margin: auto;
         }
 
-        .moon-animation {
-            opacity: 0;
-            left: 90%;
-        }
-
         .cloud {
             img {
                 width: 60vw;
@@ -139,17 +134,17 @@
         }
 
         .cloud1 {
-            top: 17%;
+            top: 37%;
             left: 60%;
         }
 
         .cloud2 {
-            top: 33%;
+            top: 72%;
             left: 50%;
         }
 
         .cloud3 {
-            top: 28%;
+            top: 61%;
             left: -10%;
         }
 
@@ -159,7 +154,7 @@
         }
 
         .cloud5 {
-            top: 3%;
+            top: 12%;
             left: -10%;
         }
 
