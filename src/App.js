@@ -87,11 +87,11 @@ function App() {
           <ScrollBar />
         </Route>
 
-        <Route exact path="/production/content">
+        <Route exact path="https://kevinmorize.netlify.app/production/content">
           <ProductionContent />
         </Route>
 
-        <Route exact path="/about/content">
+        <Route exact path="/https://kevinmorize.netlify.app/about/content">
           <AboutContent />
         </Route>
 
