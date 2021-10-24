@@ -32,7 +32,6 @@ const Moon = () => {
 
         clouds.forEach((cloud) => {
             setTimeout(() => {
-                const cloudAlt = cloud.querySelector('img').alt;
                 cloud.classList.remove("cloud-animation");
             }, 20);
         })
