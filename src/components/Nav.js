@@ -3,12 +3,12 @@ import { NavLink } from 'react-router-dom';
 
 const Nav = () => {
 
-    useEffect( () => {
+    useEffect(() => {
         const nav = document.querySelector('.nav');
         const links = document.querySelectorAll('.nav li');
 
         links.forEach((link) => {
-            const displayNav =() => {
+            const displayNav = () => {
                 nav.style.transform = 'translateY(-100vh)';
             }
             link.addEventListener('click', displayNav)

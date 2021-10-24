@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { mainContentData } from '../data/mainContentData';
 import { CopyToClipboard } from "react-copy-to-clipboard";
+import { NavLink } from 'react-router-dom';
 
 const MainContent = (props) => {
     const [currentContent] = useState(mainContentData);
@@ -65,9 +66,9 @@ const MainContent = (props) => {
         }
 
         if (animatedContentImage) {
-            setTimeout(() => { 
+            setTimeout(() => {
                 animatedContentImage.style.transform = "scale(1)"
-               }, 20)     
+            }, 20)
         }
 
         if (animatedBeforeImage) {
@@ -145,7 +146,9 @@ const MainContent = (props) => {
                 }
                 {content.link &&
                     <div className="button">
-                        <a className="hovered" href={content.link}>See more</a>
+                        <NavLink to={content.link} exact className="hovered">
+                            <em>See more</em>
+                        </NavLink>
                     </div>
                 }
             </div>

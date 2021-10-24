@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
 
 const ScrollBar = () => {
 
@@ -18,20 +19,20 @@ const ScrollBar = () => {
 
     return (
         <div className="scroll-bar">
-            <ul>   
-                <NavLink to="/production" exact className="hovered">      
+            <ul>
+                <NavLink to="/" exact className="hovered">
                     <li></li>
                 </NavLink>
 
-                 <NavLink to="/about" exact className="hovered">      
+                <NavLink to="/about" exact className="hovered">
                     <li></li>
                 </NavLink>
 
-                <NavLink to="/production" exact className="hovered">      
+                <NavLink to="/production" exact className="hovered">
                     <li></li>
                 </NavLink>
 
-                <NavLink to="/contact" exact className="hovered">      
+                <NavLink to="/contact" exact className="hovered">
                     <li></li>
                 </NavLink>
             </ul>
