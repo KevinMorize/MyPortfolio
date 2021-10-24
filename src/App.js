@@ -57,6 +57,7 @@ function App() {
     }
 
     window.addEventListener('wheel', handleScrollToElement);
+    window.addEventListener('scroll', handleScrollToElement);
 
   }, [history])
 
