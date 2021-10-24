@@ -124,7 +124,6 @@
             width: 25%;
         }
         .screwdriver {
-            transform: translateX(60vw);
             transition: all ease 1s;
             z-index: 200;
             @keyframes dongleSkrew {
@@ -146,23 +145,22 @@
             }
         }
         .wrench {
-            transform: rotate(-90deg) translateY(-60vw);
             transition: all ease 1s;
             @keyframes dongleWrench {
                 0% {
-                    transform: rotate(-90deg);
+                    transform: rotate(0deg);
                 }
                 20% {
-                    transform: rotate(-110deg);
+                    transform: rotate(-20deg);
                 }
                 40% {
-                    transform: rotate(-70deg);
+                    transform: rotate(20deg);
                 }
                 60% {
-                    transform: rotate(-100deg);
+                    transform: rotate(-10deg);
                 }
                 80% {
-                    transform: rotate(-90deg);
+                    transform: rotate(0deg);
                 }
             }
         }
@@ -170,8 +168,6 @@
 }
 
 @media screen and (orientation: portrait) {
-    @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
-
     .production-content {
         padding-top: 15%;
         height: 100%;
@@ -241,22 +237,22 @@
                 }
             }
             .wrench {
-                transform: rotate(-90deg) translateY(-50%);
+                transform: translateX(-50%);
                 @keyframes dongleWrench {
                     0% {
-                        transform: rotate(-90deg) translateY(-50%);
+                        transform: rotate(0deg) translateX(-50%); 
                     }
                     20% {
-                        transform: rotate(0deg);
+                        transform: rotate(90deg);
                     }
                     40% {
-                        transform: rotate(-90deg) translateY(-50%);
+                        transform: rotate(0deg) translateX(-50%);
                     }
                     60% {
-                        transform: rotate(0deg);
+                        transform: rotate(90deg);
                     }
                     80% {
-                        transform: rotate(-90deg) translateY(-50%);
+                        transform: rotate(0deg) translateX(-50%);
                     }
                 }
             }
