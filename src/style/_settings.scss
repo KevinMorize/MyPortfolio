@@ -20,6 +20,7 @@ $color-2: linear-gradient(to right, #00192c, #812b8c 42%, #ff4d5a);
 html { 
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
     scroll-behavior: unset;
     ::-webkit-scrollbar {
         display: none;
