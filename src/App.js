@@ -74,15 +74,15 @@ function App() {
           <ScrollBar />
           <ScrollDownItem />
         </Route>
-        <Route exact path="/about">
+        <Route exact path="https://kevinmorize.netlify.app/about">
           <MainContent mainContent={1} />
           <ScrollBar />
         </Route>
-        <Route exact path="/production">
+        <Route exact path="https://kevinmorize.netlify.app/production">
           <MainContent mainContent={2} />
           <ScrollBar />
         </Route>
-        <Route exact path="/contact">
+        <Route exact path="https://kevinmorize.netlify.app/contact">
           <MainContent mainContent={3} />
           <ScrollBar />
         </Route>
