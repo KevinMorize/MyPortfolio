@@ -126,7 +126,8 @@
         width: 100vw;
         height: 100vw;
         position: absolute;
-        bottom: 40%;
+        top: 5%;
+        bottom: auto;
 
         .moon {
             width: 100vw;
@@ -159,6 +160,7 @@
         }
 
         .cloud-animation1 {
+            opacity: 1;
             left: 60%;
         }
 
@@ -167,6 +169,7 @@
         }
 
         .cloud-animation2 {
+            opacity: 1;
             left: 50%;
         }
 
@@ -175,6 +178,7 @@
         }
 
         .cloud-animation3 {
+            opacity: 1;
             left: -10%;
         }
 
@@ -183,6 +187,7 @@
         }
 
         .cloud-animation4 {
+            opacity: 1;
             left: 47%;
         }
 
@@ -191,6 +196,7 @@
         }
 
         .cloud-animation5 {
+            opacity: 1;
             left: -10%;
         }
 
