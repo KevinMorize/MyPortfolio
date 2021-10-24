@@ -25,24 +25,24 @@
 
 @media screen and (orientation: portrait) {
     .scroll-bar {
-        width: 3vh;
-        height: -moz-fit-content;
-        height: fit-content;
+        width: 100%;
+        height: 100%;
         position: absolute;
         right: 0;
         left: 0;
         top: initial;
-        bottom: -5%;
         margin: auto;
         z-index: 800;
-        transform: rotate(270deg);
-    
-        li {
-            width: 50%;
-            height: 0.25vh;
-            margin: 4vh 0;
-            border-radius: 100px;
-            background-color: white;
+
+        ul {
+            width: 10%;
+            position: absolute;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            margin: auto;
+            transform-origin: center left;
+            transform: rotateZ(-90deg) translateX(-140%);
         }
 
         & ul a:nth-of-type(1) :nth-child(1) {

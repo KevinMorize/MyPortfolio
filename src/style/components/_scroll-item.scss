@@ -10,18 +10,18 @@
     writing-mode: vertical-rl;
     color: #fff;
     z-index: 100;
-    transform: translateY(23vh);
+    transform: translateY(200%);
     transition: all 0.5s ease-out 0.2s;
     &:after {
         content: "";
         width: 2px;
-        height: 7vh;
+        height: 100%;
         background: #fff;
         position: absolute;
         left: 0;
         right: 0;
         margin: auto;
-        bottom: -8vh;
+        bottom: -8%;
     }
 }
 
@@ -29,12 +29,12 @@
     .scroll-down-item {
         position: absolute;
         width: fit-content;
-        bottom: 8vh;
+        bottom: 8%;
         left: 92%;
         
         transform: translateY(23vh);
         &:after {
-            bottom: -8vh;
+            bottom: -110%;
         }
     }
 }
