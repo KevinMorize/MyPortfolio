@@ -87,11 +87,11 @@ function App() {
           <ScrollBar />
         </Route>
 
-        <Route exact path="/about-content">
+        <Route exact path="/about/content">
           <AboutContent />
         </Route>
 
-        <Route exact path="/production-content">
+        <Route exact path="/production/content">
           <ProductionContent />
         </Route>
 
