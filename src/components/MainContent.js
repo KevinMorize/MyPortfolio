@@ -145,7 +145,7 @@ const MainContent = (props) => {
                 }
                 {content.link &&
                     <div className="button">
-                        <a className="hovered" href={window.location.href + "/content"}>See more</a>
+                        <a className="hovered" href={window.location.href + content.link}>See more</a>
                     </div>
                 }
             </div>
