@@ -6,11 +6,6 @@ import { CopyToClipboard } from "react-copy-to-clipboard";
 
 const AboutContent = () => {
 
-    // redirect
-    const backRedirect = () => {
-        window.location.href = window.location.origin + '/about';
-    }
-
     useEffect(() => {
         //header style
         const header = document.querySelector('.header');
@@ -45,8 +40,10 @@ const AboutContent = () => {
         <div className="about-content">
 
             <div className="back">
-                <img src="../assets/back.svg" alt="back" className="hovered" onClick={backRedirect}></img>
-                <p className="hovered" onClick={backRedirect}>Back</p>
+                <Navlink exact to="/about" className="hovered">
+                    <img src="../assets/back.svg" alt="back"></img>
+                    <p>Back</p>
+                </Navlink>
             </div>
 
             {/* first content */}
@@ -73,12 +70,12 @@ const AboutContent = () => {
             <ul className="footer">
                 <li>
                     <CopyToClipboard text="morizekevin91@gmail.com">
-                    <p className="hovered" style={{ cursor: 'pointer' }} onClick={() => { alert("Copié dans le presse papier !") }}>morizekevin91@gmail.com</p>
+                        <p className="hovered" style={{ cursor: 'pointer' }} onClick={() => { alert("Copié dans le presse papier !") }}>morizekevin91@gmail.com</p>
                     </CopyToClipboard>
                 </li>
                 <li>
                     <CopyToClipboard text="0781938154">
-                    <p className="hovered" style={{ cursor: 'pointer' }} onClick={() => { alert("Copié dans le presse papier !") }}>0781938154</p>
+                        <p className="hovered" style={{ cursor: 'pointer' }} onClick={() => { alert("Copié dans le presse papier !") }}>0781938154</p>
                     </CopyToClipboard>
                 </li>
             </ul>
