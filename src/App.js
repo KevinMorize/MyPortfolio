@@ -68,34 +68,34 @@ function App() {
       <Gradiant />
       <GrowingCircle />
       <Switch location={location} key={location.pathname}>
-        <Route exact path="/">
+        <Route exact path="https://kevinmorize.netlify.app/">
           <MainContent mainContent={0} />
           <Moon />
           <ScrollBar />
           <ScrollDownItem />
         </Route>
-        <Route exact path="/about">
+        <Route exact path="https://kevinmorize.netlify.app/about">
           <MainContent mainContent={1} />
           <ScrollBar />
         </Route>
-        <Route exact path="/production">
+        <Route exact path="https://kevinmorize.netlify.app/production">
           <MainContent mainContent={2} />
           <ScrollBar />
         </Route>
-        <Route exact path="/contact">
+        <Route exact path="https://kevinmorize.netlify.app/contact">
           <MainContent mainContent={3} />
           <ScrollBar />
+        </Route>
+
+        <Route exact path="https://kevinmorize.netlify.app/about/content">
+          <AboutContent />
         </Route>
 
         <Route exact path="https://kevinmorize.netlify.app/production/content">
           <ProductionContent />
         </Route>
 
-        <Route exact path="/https://kevinmorize.netlify.app/about/content">
-          <AboutContent />
-        </Route>
-
-        <Redirect to="/" />
+        <Redirect to="https://kevinmorize.netlify.app/" />
       </Switch>
     </>
   );
