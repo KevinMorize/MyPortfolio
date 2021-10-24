@@ -14,12 +14,12 @@
         top: 0;
         bottom: 0;
         right: 0;
-        left: 60%;
+        left: 0;
+        opacity: 1;
         margin: auto;
         transform-style: preserve-3d;
         perspective: 200px;
         transform-origin: center;
-        opacity: 0;
         transition: left cubic-bezier(0.65, 0.05, 0.36, 1) 1s, opacity cubic-bezier(0.65, 0.05, 0.36, 1) 1.2s;
     }
 
@@ -34,17 +34,16 @@
     }
 
     .moon-animation {
-        opacity: 1;
-        left: 0;
+        opacity: 0;
+        left: 60%;
     }
 
     .cloud {
         position: absolute;
         width: -moz-fit-content;
         width: fit-content;
-        opacity: 0;
+        opacity: 1;
         transition: left cubic-bezier(0.65, 0.05, 0.36, 1) 1s, opacity cubic-bezier(0.65, 0.05, 0.36, 1) 1.5s;
-        left: 90vw;
         img {
             width: 35vh;
         }
@@ -53,51 +52,36 @@
     .cloud1 {
         top: 39%;
         z-index: 500;
-    }
-
-    .cloud1-animation {
-        opacity: 1;
         left: 57%;
     }
 
     .cloud2 {
         top: 59%;
         z-index: 500;
-    }
-
-    .cloud2-animation {
-        opacity: 1;
         left: 48%;
     }
 
     .cloud3 {
         top: 54%;
         z-index: 500;
-    }
-
-    .cloud3-animation {
-        opacity: 1;
         left: 12%;
     }
 
     .cloud4 {
         top: 20%;
         z-index: 200;
-    }
-
-    .cloud4-animation {
-        opacity: 1;
         left: 47%;
     }
 
     .cloud5 {
         top: 27%;
         z-index: 200;
+        left: 16%;
     }
 
-    .cloud5-animation {
-        opacity: 1;
-        left: 16%;
+    .cloud-animation {
+        left: 200%;
+        opacity: 0;
     }
 
     p {
@@ -126,8 +110,7 @@
         width: 100vw;
         height: 100vw;
         position: absolute;
-        top: 5%;
-        bottom: auto;
+        bottom: 40%;
 
         .moon {
             width: 100vw;
@@ -144,11 +127,6 @@
             margin: auto;
         }
 
-        .moon-animation {
-            opacity: 1;
-            left: 0;
-        }
-
         .cloud {
             img {
                 width: 60vw;
@@ -157,47 +135,32 @@
 
         .cloud1 {
             top: 38%;
-        }
-
-        .cloud1-animation {
-            opacity: 1;
             left: 60%;
         }
 
         .cloud2 {
             top: 70%;
-        }
-
-        .cloud2-animation {
-            opacity: 1;
             left: 50%;
         }
 
         .cloud3 {
             top: 60%;
-        }
-
-        .cloud3-animation {
-            opacity: 1;
             left: -10%;
         }
 
         .cloud4 {
             top: 5%;
-        }
-
-        .cloud4-animation {
-            opacity: 1;
             left: 47%;
         }
 
         .cloud5 {
             top: 10%;
+            left: -10%;
         }
 
-        .cloud5-animation {
-            opacity: 1;
-            left: -10%;
+        .cloud-animation {
+            left: 200%;
+            opacity: 0;
         }
 
         p {
