@@ -18,19 +18,22 @@ const ScrollBar = () => {
 
     return (
         <div className="scroll-bar">
-            <ul>       
-                <a href="https://kevinmorize.netlify.app/" className="hovered">
+            <ul>   
+                <NavLink to="/production" exact className="hovered">      
                     <li></li>
-                </a>
-                <a href="https://kevinmorize.netlify.app/about" className="hovered">
+                </NavLink>
+
+                 <NavLink to="/about" exact className="hovered">      
                     <li></li>
-                </a>
-                <a href="https://kevinmorize.netlify.app/production" className="hovered">
+                </NavLink>
+
+                <NavLink to="/production" exact className="hovered">      
                     <li></li>
-                </a>
-                <a href="https://kevinmorize.netlify.app/contact" className="hovered">
+                </NavLink>
+
+                <NavLink to="/contact" exact className="hovered">      
                     <li></li>
-                </a>
+                </NavLink>
             </ul>
         </div>
     );

@@ -57,7 +57,6 @@ function App() {
     }
 
     window.addEventListener('wheel', handleScrollToElement);
-    window.addEventListener('scroll', handleScrollToElement);
 
   }, [history])
 
@@ -88,11 +87,11 @@ function App() {
           <ScrollBar />
         </Route>
 
-        <Route exact path="https://kevinmorize.netlify.app/about/content">
+        <Route exact path="/about/content">
           <AboutContent />
         </Route>
 
-        <Route exact path="https://kevinmorize.netlify.app/production/content">
+        <Route exact path="/production/content">
           <ProductionContent />
         </Route>
 
