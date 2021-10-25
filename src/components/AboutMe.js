@@ -11,7 +11,7 @@ const AboutMe = () => {
         const animatedAfterImage = document.querySelector('.after-img');
 
         img.style.transform = 'scale(1)';
-        animatedBeforeImage.style.animation = "runBefore 0.8s linear"
+        animatedBeforeImage.style.animation = "runBefore 1s linear"
         animatedAfterImage.style.animation = "runAfter 0.8s linear"
 
         setTimeout(() => {
