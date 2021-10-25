@@ -64,12 +64,12 @@ function App() {
       table.push(position);
 
       table.map(() => {
-        if (table.length > 2) {
+        if (table.length >= 5) {
 
           switch (window.location.href.toString()) {
 
             case url:
-              if (table[table.length - 2] - table[table.length - 1] > 0) {
+              if (table[0] - table[table.length - 1] > 0) {
                 history.push("about");
                 table = [];
               } else {
@@ -79,7 +79,7 @@ function App() {
               break;
 
             case url + "about":
-              if (table[table.length - 2] - table[table.length - 1] > 0) {
+              if (table[0] - table[table.length - 1] > 0) {
                 history.push("production");
                 table = [];
               } else {
@@ -89,7 +89,7 @@ function App() {
               break;
 
             case url + "production":
-              if (table[table.length - 2] - table[table.length - 1] > 0) {
+              if (table[0] - table[table.length - 1] > 0) {
                 history.push("contact");
                 table = []
               } else {
@@ -99,7 +99,7 @@ function App() {
               break;
 
             case url + "contact":
-              if (table[table.length - 2] - table[table.length - 1] < 0) {
+              if (table[0] - table[table.length - 1] < 0) {
                 history.push("production");
                 table = [];
               } else {
