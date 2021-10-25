@@ -73,6 +73,7 @@ function App() {
                 history.push("about");
                 table = [];
               } else {
+                history.push("contact");
                 table = [];
               }
               break;
@@ -102,6 +103,7 @@ function App() {
                 history.push("production");
                 table = [];
               } else {
+                history.push("/");
                 table = [];
               }
             break;
