@@ -72,12 +72,16 @@ const MainContent = (props) => {
         }
 
         if (animatedBeforeImage) {
-            animatedBeforeImage.style.animation = "runBefore 0.7s ease-in";
-            setTimeout(() => { animatedBeforeImage.style.transform = "translateX(100%)" }, 700)
+            animatedBeforeImage.style.animation = "runBefore 0.9s ease-in";      
+            if(window.matchMedia("(orientation:portrait)").matches){
+                setTimeout(() => { animatedBeforeImage.style.transform = "translateX(-100%)" }, 900)
+            } else {
+                setTimeout(() => { animatedBeforeImage.style.transform = "translateX(100%)" }, 900)
+            }
         }
 
         if (animatedAfterImage) {
-            animatedAfterImage.style.animation = "runAfter 0.7s ease-in";
+            animatedAfterImage.style.animation = "runAfter 1.1s ease-in";
         }
 
         if (animatedNumber) {

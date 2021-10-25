@@ -179,18 +179,15 @@
             width: 100%;
             height: 100%;
             background-color: #ff4d5a;
-            transform: translateX(100vh);
+            transform: translateX(100vw);
         }
         @keyframes runAfter {
             0% {
                 transform: translateX(0);
                 width: 0;
             }
-            50% {
-                width: 50%;
-            }
             100% {
-                width: 0;
+                width: 100%;
                 transform: translateX(100%);
             }
         }
@@ -226,9 +223,8 @@
     }
 }
 
-
 @media screen and (orientation: portrait) {
-    .main-content { 
+    .main-content {
         height: 100%;
         .content {
             width: 75%;
@@ -242,14 +238,14 @@
             bottom: 8%;
             margin: auto;
         }
-    
+
         h1 {
-            font-size: 12vw; 
-            font-weight: 400;  
-            transform: translateX(-150%);  
+            font-size: 12vw;
+            font-weight: 400;
+            transform: translateX(-150%);
         }
-    
-        .borders {          
+
+        .borders {
             width: 30vw;
             margin: 3vh 0;
             span {
@@ -261,18 +257,18 @@
             padding-top: 0.2vh;
             transform: translateX(-200%);
         }
-    
+
         .bottom-border {
             padding-bottom: 0.2vh;
             transform: translateX(-400%);
         }
-    
+
         p {
             font-size: 5vw;
             font-weight: 300;
             transform: translateX(-100vw);
         }
-    
+
         .button {
             margin-top: 3vh;
             align-self: center;
@@ -286,7 +282,7 @@
                     -webkit-box-shadow: 0 0 0 0 #ff4d5a;
                     box-shadow: 0 0 0 0 #ff4d5a;
                 }
-        
+
                 70% {
                     -webkit-box-shadow: 0 0 0 2vw transparent;
                     box-shadow: 0 0 0 2vw transparent;
@@ -297,7 +293,7 @@
                 }
             }
         }
-    
+
         .animate-social-ico {
             margin-top: 3vh;
             img {
@@ -314,27 +310,13 @@
             left: 0;
             margin: auto;
             z-index: 600;
-            transform: scale(0.4);
             img {
                 width: 80vw;
                 height: 80vw;
                 object-fit: cover;
             }
-            .before-img {
-                @keyframes runBefore {
-                    0% {
-                        transform: translateX(0);
-                    }
-                    100% {
-                        transform: translateX(100%);
-                    }
-                }
-            }
-            .after-img {
-                transform: translateX(100vw);
-            }
         }
-    
+
         .content-number {
             position: absolute;
             bottom: 50%;
@@ -342,15 +324,15 @@
             height: -moz-fit-content;
             height: fit-content;
         }
-    
+
         em {
             font-size: 15vw;
         }
-    
+
         .top-animation {
             transform: translateY(0);
         }
-    
+
         .right-animation {
             transform: translateX(0);
         }
