@@ -60,9 +60,7 @@ function App() {
     const handleMoveToElement = (e) => {
 
       const url = window.location.origin + "/";
-
       let position = e.touches[0].clientY;
-
       table.push(position);
 
       table.map(() => {
@@ -107,6 +105,7 @@ function App() {
             default:
           }
         }
+        return table
       })
     }
 
