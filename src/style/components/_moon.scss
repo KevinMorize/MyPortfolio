@@ -21,21 +21,23 @@
         perspective: 200px;
         transform-origin: center;
         transition: left cubic-bezier(0.65, 0.05, 0.36, 1) 1s, opacity cubic-bezier(0.65, 0.05, 0.36, 1) 1.2s;
+    }  
+    
+    .moon-animation {
+        opacity: 0;
+        left: 90%;
     }
 
     .moon img {
         width: 40vh;
+        opacity: 1;
         position: absolute;
         top: 0;
         bottom: 0;
         left: 0;
         right: 0;
         margin: auto;
-    }
-
-    .moon-animation {
-        opacity: 0;
-        left: 90%;
+        transition: all cubic-bezier(0.65, 0.05, 0.36, 1) 1s;
     }
 
     .cloud {
@@ -115,11 +117,6 @@
         .moon {
             width: 100vw;
             height: 100vw;
-            top: 0;
-            bottom: 0;
-            right: 0;
-            left: 0;
-            margin: auto;
         }
 
         .moon-animation {
@@ -129,12 +126,7 @@
 
         .moon img {
             width: 60vw;
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            margin: auto;
+            left: 0;         
         }
 
         .cloud {
