@@ -60,7 +60,7 @@ function App() {
     const handleMoveToElement = (e) => {
 
       const url = window.location.origin + "/";
-      let position = e.touches[0].clientY;
+      let position = e.touches[0].clientX;
       table.push(position);
 
       table.map(() => {
@@ -100,7 +100,7 @@ function App() {
                 history.push("production");
                 table = [];
               }
-              break;
+            break;
 
             default:
           }
