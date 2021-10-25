@@ -19,7 +19,7 @@ function App() {
   useEffect(() => {
 
     const handleScrollToElement = (e) => {
-      const url = window.location.origin + "/";
+      const url = window.location.origin + "!#/";
 
       const wheelRouter = (before, after) => {
         if (e.wheelDeltaY < 0) {
@@ -52,7 +52,7 @@ function App() {
           break;
 
         default:
-          
+
       }
     }
 
@@ -68,34 +68,34 @@ function App() {
       <Gradiant />
       <GrowingCircle />
       <Switch location={location} key={location.pathname}>
-        <Route exact path="/">
+        <Route exact path="!#/">
           <MainContent mainContent={0} />
           <Moon />
           <ScrollBar />
           <ScrollDownItem />
         </Route>
-        <Route exact path="/about">
+        <Route exact path="!#/about">
           <MainContent mainContent={1} />
           <ScrollBar />
         </Route>
-        <Route exact path="/production">
+        <Route exact path="!#/production">
           <MainContent mainContent={2} />
           <ScrollBar />
         </Route>
-        <Route exact path="/contact">
+        <Route exact path="!#/contact">
           <MainContent mainContent={3} />
           <ScrollBar />
         </Route>
 
-        <Route exact path="/about/content">
+        <Route exact path="!#/about/content">
           <AboutContent />
         </Route>
 
-        <Route exact path="/production/content">
+        <Route exact path="!#/production/content">
           <ProductionContent />
         </Route>
 
-        <Redirect to="/" />
+        <Redirect to="!#/" />
       </Switch>
     </>
   );
