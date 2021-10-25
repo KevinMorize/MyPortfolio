@@ -56,6 +56,60 @@ function App() {
       }
     }
 
+    const handleMoveToElement = (e) => {
+
+      const url = window.location.origin + "/";
+
+      let position = e.touches[0].clientY;
+
+      table.push(position);
+
+      table.map(() => {
+        if (table.length > 2) {
+
+          switch (window.location.href.toString()) {
+
+            case url:
+              if (table[table.length - 2] - table[table.length - 1] > 0) {
+                history.push("about");
+                table = [];
+              }
+              break;
+
+            case url + "about":
+              if (table[table.length - 2] - table[table.length - 1] > 0) {
+                history.push("production");
+                table = [];
+              } else {
+                history.push(url);
+                table = [];
+              }
+              break;
+
+            case url + "production":
+              if (table[table.length - 2] - table[table.length - 1] > 0) {
+                history.push("contact");
+                table = []
+              } else {
+                history.push("about");
+                table = []
+              }
+              break;
+
+            case url + "contact":
+              if (table[table.length - 2] - table[table.length - 1] < 0) {
+                history.push("production");
+                table = [];
+              }
+              break;
+
+            default:
+          }
+        }
+      })
+    }
+
+    window.addEventListener('touchmove', handleMoveToElement);
     window.addEventListener('wheel', handleScrollToElement);
 
   }, [history])
