@@ -72,6 +72,8 @@ function App() {
               if (table[table.length - 2] - table[table.length - 1] > 0) {
                 history.push("about");
                 table = [];
+              } else {
+                table = [];
               }
               break;
 
@@ -98,6 +100,8 @@ function App() {
             case url + "contact":
               if (table[table.length - 2] - table[table.length - 1] < 0) {
                 history.push("production");
+                table = [];
+              } else {
                 table = [];
               }
             break;
