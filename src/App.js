@@ -17,6 +17,7 @@ function App() {
   const history = useHistory();
 
   useEffect(() => {
+    var table = [];
 
     const handleScrollToElement = (e) => {
       const url = window.location.origin + "/";
