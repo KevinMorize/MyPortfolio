@@ -139,7 +139,7 @@ function App() {
       <Mouse />
       <Header />
       <Nav />
-      <img className="flag hovered" alt="flag" onClick={displayEng} src="./assets/img/english.png" />
+      <img className="flag hovered" alt="flag" onClick={displayEng} src="./assets/img/french.png" />
       <Gradiant />
       <GrowingCircle />
       <Switch location={location} key={location.pathname}>
