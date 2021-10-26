@@ -1,5 +1,5 @@
 import { Redirect, Route, Switch, useHistory, useLocation } from "react-router";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Gradiant from './components/Gradiant';
 import GrowingCircle from './components/GrowingCircle';
 import Header from './components/Header';
