@@ -14,10 +14,4 @@
   <body>
     <div id="root"></div>
   </body>
-  <script>
-    if (window.location.hash.length > 1) {
-      const path = window.location.hash.replace('#', '')
-      history.pushState({ page: 1 }, "Some title", '/static-dynamic-routing' + path)
-    }
-  </script>
 </html>

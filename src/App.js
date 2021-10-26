@@ -129,6 +129,7 @@ function App() {
       <Gradiant />
       <GrowingCircle />
       <Switch location={location} key={location.pathname}>
+
         <Route exact path="/" pathname="/#">
           <MainContent mainContent={0} />
           <Moon />
@@ -156,7 +157,7 @@ function App() {
           <ProductionContent />
         </Route>
 
-        <Redirect to="/" />
+        <Redirect to="kevinmorize.netlify.app" />
       </Switch>
     </>
   );
