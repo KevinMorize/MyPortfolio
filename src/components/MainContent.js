@@ -26,7 +26,6 @@ const MainContent = (props) => {
         const animatedIco = document.querySelectorAll('.animate-social-ico img');
         const animatedImage = document.querySelector('.content-img img');
 
-
         animatedTitle.forEach((e) => {
             setTimeout(() => {
                 e.className = "right-animation";

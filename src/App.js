@@ -86,7 +86,7 @@ function App() {
               if (addition >= 15) {
                 history.push("about");
                 table = [];
-              } else if (addition <= 15) {
+              } else if (addition <= -15) {
                 history.push("contact");
                 table = [];
               }
@@ -96,7 +96,7 @@ function App() {
               if (addition >= 15) {
                 history.push("production");
                 table = [];
-              } else if (addition <= 15) {
+              } else if (addition <= -15) {
                 history.push(url);
                 table = [];
               }
@@ -106,14 +106,14 @@ function App() {
               if (addition >= 15) {
                 history.push("contact");
                 table = []
-              } else if (addition <= 15) {
+              } else if (addition <= -15) {
                 history.push("about");
                 table = []
               }
               break;
 
             case url + "contact":
-              if (addition <= 15) {
+              if (addition <= -15) {
                 history.push("production");
                 table = [];
               } else if (addition >= 15) { 
@@ -139,7 +139,7 @@ function App() {
       <Mouse />
       <Header />
       <Nav />
-      <img className="flag hovered" alt="flag" onClick={displayEng} />
+      <img className="flag hovered" alt="flag" onClick={displayEng} src="./assets/img/english.png" />
       <Gradiant />
       <GrowingCircle />
       <Switch location={location} key={location.pathname}>
