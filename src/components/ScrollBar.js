@@ -9,8 +9,10 @@ const ScrollBar = () => {
 
         scrollLinks.forEach((e) => {
             if (e.href === currentLocation) {
-                const linkBar = e.querySelector('li')
-                linkBar.className = "active"
+                setTimeout(() => {
+                    const linkBar = e.querySelector('li');
+                    linkBar.className = "active"
+                }, 100);
             }
         })
 
