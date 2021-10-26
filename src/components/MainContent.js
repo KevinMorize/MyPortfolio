@@ -22,6 +22,7 @@ const MainContent = (props) => {
 
         // main content image
         const animatedContentImage = document.querySelector('.content-img');
+        const animatedImage = document.querySelector('.content-img img');
         const animatedBeforeImage = document.querySelector('.before-img');
         const animatedAfterImage = document.querySelector('.after-img');
         const animatedNumber = document.querySelector('.content-number em');
@@ -73,15 +74,7 @@ const MainContent = (props) => {
         // main content image
         if (animatedContentImage) {
 
-            const preLoad = (url) => {
-                var img = new Image();
-                img.src = url;
-                return img;
-            }
-
-            var image = preLoad(`${content.img}`);
-
-            image.onload = () => {
+            animatedImage.onload = () => {
                 // image
                 setTimeout(() => {
                     animatedContentImage.style.transform = "scale(1)"
