@@ -8,6 +8,7 @@ const MainContent = (props) => {
     const content = currentContent[props.mainContent];
 
     useEffect(() => {
+
         //header style
         const header = document.querySelector('.header');
         if (header.classList[1] === 'black') {
@@ -65,29 +66,32 @@ const MainContent = (props) => {
             }, 500);
         }
 
+        // main content image
         if (animatedContentImage) {
-            setTimeout(() => {
-                animatedContentImage.style.transform = "scale(1)"
-            }, 20)
-        }
+            window.addEventListener('load', () => {
 
-        if (animatedBeforeImage) {
-            animatedBeforeImage.style.animation = "runBefore 0.9s ease-in";      
-            if(window.matchMedia("(orientation:portrait)").matches){
-                setTimeout(() => { animatedBeforeImage.style.transform = "translateX(-100%)" }, 900)
-            } else {
-                setTimeout(() => { animatedBeforeImage.style.transform = "translateX(100%)" }, 900)
-            }
-        }
+                // image
+                setTimeout(() => {
+                    animatedContentImage.style.transform = "scale(1)"
+                }, 20)
 
-        if (animatedAfterImage) {
-            animatedAfterImage.style.animation = "runAfter 1.1s ease-in";
-        }
+                // before animation
+                animatedBeforeImage.style.animation = "runBefore 0.9s ease-in";
+                if (window.matchMedia("(orientation:portrait)").matches) {
+                    setTimeout(() => { animatedBeforeImage.style.transform = "translateX(-100%)" }, 900)
+                } else {
+                    setTimeout(() => { animatedBeforeImage.style.transform = "translateX(100%)" }, 900)
+                }
+                
+                // after animation
+                animatedAfterImage.style.animation = "runAfter 1.1s ease-in";
 
-        if (animatedNumber) {
-            setTimeout(() => {
-                animatedNumber.className = "top-animation";
-            }, 500);
+                // number animation
+                setTimeout(() => {
+                    animatedNumber.className = "top-animation";
+                }, 500);
+
+            })
         }
 
     }, []);
