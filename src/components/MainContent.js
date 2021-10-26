@@ -72,13 +72,21 @@ const MainContent = (props) => {
 
         // main content image
         if (animatedContentImage) {
-            document.querySelector('.content-img img').onload = () => {
 
+            const preLoad = (url) => {
+                var img = new Image();
+                img.src = url;
+                return img;
+            }
+
+            var image = preLoad(`${content.img}`);
+
+            image.onload = () => {
                 // image
                 setTimeout(() => {
                     animatedContentImage.style.transform = "scale(1)"
                 }, 20)
-
+    
                 // before animation
                 animatedBeforeImage.style.animation = "runBefore 0.9s ease-in";
                 if (window.matchMedia("(orientation:portrait)").matches) {
@@ -89,12 +97,11 @@ const MainContent = (props) => {
                 
                 // after animation
                 animatedAfterImage.style.animation = "runAfter 1.1s ease-in";
-
+    
                 // number animation
                 setTimeout(() => {
                     animatedNumber.className = "top-animation";
                 }, 500);
-
             }
         }
 
@@ -162,6 +169,7 @@ const MainContent = (props) => {
                     </div>
                 }
             </div>
+
             <div className="content-img">
                 {content.img &&
                     <div className="before-img"></div>
