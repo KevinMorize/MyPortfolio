@@ -45,11 +45,11 @@
             transform: rotateZ(-90deg) translateX(-90%);
         }
 
-        & ul li:nth-of-type(1) {
+        & ul a:nth-of-type(1) li:nth-of-type(1) {
             margin-top: 0;
         }
 
-        & ul li:nth-of-type(4) {
+        & ul a:nth-of-type(4) li:nth-of-type(1) {
             margin-bottom: 0;
         }
 

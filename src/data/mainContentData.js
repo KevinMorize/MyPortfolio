@@ -16,7 +16,7 @@ export const mainContentData = [
     {
       id: 3,
       title: ["Mon travail","My Work"],
-      content: ["Mes projets passés et à venir", "Some projects I'd like to show"],
+      content: ["Mes projets passés et à venir.", "Some projects I'd like to show."],
       img: "./assets/img/work.png",
       number: "02",
       link: "/production/content",
