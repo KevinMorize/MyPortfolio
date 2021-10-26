@@ -101,7 +101,7 @@ function App() {
 
             case url + "contact":
               if (table[0] - table[table.length - 1] < 0) {
-                history.push("#production");
+                history.push("production");
                 table = [];
               } else {
                 history.push("/");
