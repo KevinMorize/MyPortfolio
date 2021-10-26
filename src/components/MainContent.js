@@ -19,10 +19,14 @@ const MainContent = (props) => {
         const animatedSpan = document.querySelectorAll('.borders span');
         const animatedContent = document.querySelectorAll('.content p');
         const animatedButton = document.querySelector('.button');
+
+        // main content image
         const animatedContentImage = document.querySelector('.content-img');
         const animatedBeforeImage = document.querySelector('.before-img');
         const animatedAfterImage = document.querySelector('.after-img');
         const animatedNumber = document.querySelector('.content-number em');
+
+        // contact ico
         const animatedIco = document.querySelectorAll('.animate-social-ico img');
 
         animatedTitle.forEach((e) => {
@@ -68,7 +72,7 @@ const MainContent = (props) => {
 
         // main content image
         if (animatedContentImage) {
-            animatedContentImage.onload = () => {
+            document.querySelector('.content-img img').onload = () => {
 
                 // image
                 setTimeout(() => {
