@@ -91,7 +91,7 @@ const MainContent = (props) => {
                     animatedNumber.className = "top-animation";
                 }, 500);
 
-            })
+            }
         }
 
     }, []);
