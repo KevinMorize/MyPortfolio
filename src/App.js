@@ -16,6 +16,8 @@ function App() {
   const location = useLocation();
   const history = useHistory();
 
+  console.log(window.location)
+
   useEffect(() => {
     var table = [];
 
