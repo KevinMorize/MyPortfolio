@@ -129,21 +129,21 @@ function App() {
       <Gradiant />
       <GrowingCircle />
       <Switch location={location} key={location.pathname}>
-        <Route exact path="/" pathname="/">
+        <Route exact path="/" pathname="/#">
           <MainContent mainContent={0} />
           <Moon />
           <ScrollBar />
           <ScrollDownItem />
         </Route>
-        <Route exact path="/about" pathname="/about">
+        <Route exact path="/about" pathname="/#about">
           <MainContent mainContent={1} />
           <ScrollBar />
         </Route>
-        <Route exact path="/production" pathname="/production">
+        <Route exact path="/production" pathname="/#production">
           <MainContent mainContent={2} />
           <ScrollBar />
         </Route>
-        <Route exact path="/contact" pathname="/contact">
+        <Route exact path="/contact" pathname="/#contact">
           <MainContent mainContent={3} />
           <ScrollBar />
         </Route>
