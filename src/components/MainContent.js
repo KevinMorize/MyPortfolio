@@ -73,8 +73,8 @@ const MainContent = (props) => {
 
         // main content image
         if (animatedContentImage) {
-
             animatedImage.addEventListener('load', () => {
+                
                 // image
                 setTimeout(() => {
                     animatedContentImage.style.transform = "scale(1)"
@@ -90,12 +90,13 @@ const MainContent = (props) => {
                 
                 // after animation
                 animatedAfterImage.style.animation = "runAfter 1.1s ease-in";
-    
-                // number animation
-                setTimeout(() => {
-                    animatedNumber.className = "top-animation";
-                }, 500);
             })
+        }
+
+        if (animatedNumber) {
+            setTimeout(() => {
+                animatedNumber.className = "top-animation";
+            }, 500);
         }
 
     }, []);
