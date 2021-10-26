@@ -157,7 +157,7 @@ function App() {
           <ProductionContent />
         </Route>
 
-        <Redirect to="kevinmorize.netlify.app" />
+        <Redirect to="/" />
       </Switch>
     </>
   );
