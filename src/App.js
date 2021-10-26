@@ -163,12 +163,12 @@ function App() {
           <ScrollBar />
         </Route>
 
-        <Route exact path="/about/content" pathname="/about/content" english={isEng}>
-          <AboutContent />
+        <Route exact path="/about/content" pathname="/about/content">
+          <AboutContent english={isEng}/>
         </Route>
 
-        <Route exact path="/production/content" pathname="/production/content" english={isEng}>
-          <ProductionContent />
+        <Route exact path="/production/content" pathname="/production/content">
+          <ProductionContent english={isEng}/>
         </Route>
 
         <Redirect to="/" />
