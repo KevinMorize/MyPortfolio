@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 
-const AboutPassion = () => {
+const AboutPassion = (props) => {
+    const isEnglish = props.english
 
     useEffect(() => {
         const img = document.querySelectorAll('.passion-item img');
@@ -9,28 +10,53 @@ const AboutPassion = () => {
             e.style.transform = "scale(1)"
         })
 
-    }, [])
+    }, [isEnglish])
 
     return (
-        <div className="content-passion">
-            <ul className="passion-list">
-                <li className="passion-item">
-                    <img src="../assets/img/computer.png" alt="computer" />
-                    <h4 className="passion-title">Computer</h4>
-                    <p className="passion-text">I built my first computer myself and I liked it very much, years after I decided to quit my job and become a web developper. Since that I'm very passionate by coding.</p>
-                </li>
-                <li className="passion-item">
-                    <img src="../assets/img/games.png" alt="games" />
-                    <h4 className="passion-title">Games</h4>
-                    <p className="passion-text">I grew up with video games and I've never stop to play since my young age. I started with Playstation 1 and Nintendo 64, now I keep going on computer games exclusively. </p>
-                </li>
-                <li className="passion-item">
-                    <img src="../assets/img/nature.png" alt="nature" />
-                    <h4 className="passion-title">Nature</h4>
-                    <p className="passion-text">I live with my girlfriend and our two dogs. I love animals and walking in nature with them. I also travel a lot in Europe and Asia to discover new environments and lifestyles.</p>
-                </li>
-            </ul>
-        </div>
+        <>
+            {!isEnglish &&
+                <div className="content-passion">
+                    <ul className="passion-list">
+                        <li className="passion-item">
+                            <img src="../assets/img/computer.png" alt="computer" />
+                            <h4 className="passion-title">Ordinateur</h4>
+                            <p className="passion-text">J'ai monté mon premier ordinateur moi-même et je l'ai beaucoup aimé, des années après avoir décidé de quitter mon travail et de devenir développeur Web. Depuis que je suis très passionné par le codage.</p>
+                        </li>
+                        <li className="passion-item">
+                            <img src="../assets/img/games.png" alt="games" />
+                            <h4 className="passion-title">Jeux-vidéos</h4>
+                            <p className="passion-text">J'ai grandi avec les jeux vidéo et je n'ai jamais arrêté de jouer depuis mon plus jeune âge. J'ai commencé avec Playstation 1 et Nintendo 64, maintenant je continue exclusivement sur les jeux informatiques.</p>
+                        </li>
+                        <li className="passion-item">
+                            <img src="../assets/img/nature.png" alt="nature" />
+                            <h4 className="passion-title">Nature</h4>
+                            <p className="passion-text">Je vis avec ma copine et nos deux chiens. J'aime les animaux et me promener dans la nature avec eux. Je voyage aussi beaucoup en Europe et en Asie pour découvrir de nouveaux environnements et modes de vie.</p>
+                        </li>
+                    </ul>
+                </div>
+            }
+            {isEnglish &&
+                <div className="content-passion">
+                    <ul className="passion-list">
+                        <li className="passion-item">
+                            <img src="../assets/img/computer.png" alt="computer" />
+                            <h4 className="passion-title">Computer</h4>
+                            <p className="passion-text">I built my first computer myself and I liked it very much, years after I decided to quit my job and become a web developper. Since that I'm very passionate by coding.</p>
+                        </li>
+                        <li className="passion-item">
+                            <img src="../assets/img/games.png" alt="games" />
+                            <h4 className="passion-title">Games</h4>
+                            <p className="passion-text">I grew up with video games and I've never stop to play since my young age. I started with Playstation 1 and Nintendo 64, now I keep going on computer games exclusively. </p>
+                        </li>
+                        <li className="passion-item">
+                            <img src="../assets/img/nature.png" alt="nature" />
+                            <h4 className="passion-title">Nature</h4>
+                            <p className="passion-text">I live with my girlfriend and our two dogs. I love animals and walking in nature with them. I also travel a lot in Europe and Asia to discover new environments and lifestyles.</p>
+                        </li>
+                    </ul>
+                </div>
+            }
+        </>
     );
 };
 

@@ -1,10 +1,8 @@
 import { useEffect } from "react";
+import { NavLink } from "react-router-dom";
 
-const ProductionContent = () => {
-
-    const backRedirect = () => {
-        window.location.href = window.location.origin + '/production';
-    }
+const ProductionContent = (props) => {
+    const isEnglish = props.english
 
     useEffect(() => {
 
@@ -54,13 +52,15 @@ const ProductionContent = () => {
         arrowDiv.addEventListener('mouseover', onMouseOverArrow);
         arrowDiv.addEventListener('mouseleave', onMouseLeaveArrow);
 
-    }, [])
+    }, [isEnglish])
 
     return (
         <div className="production-content">
             <div className="back">
-                <img src="../assets/back.svg" alt="back" className="hovered" onClick={backRedirect}></img>
-                <p className="hovered" onClick={backRedirect}>Back</p>
+                <NavLink exact to="/production" className="hovered">
+                    <img src="../assets/back.svg" alt="back"></img>
+                    <p>Back</p>
+                </NavLink>
             </div>
 
             <div className="about-titles">

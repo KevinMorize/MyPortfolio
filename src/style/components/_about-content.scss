@@ -24,17 +24,17 @@
         position: fixed;
         overflow: hidden;
         top: 11%;
-        left: 1%;
-        width: 8vw;
+        left: 90%;
+        width: 10vw;
         z-index: 500;
         height: -moz-fit-content;
         height: fit-content;
         @keyframes translateArrow {
             from {
-                left: 1%;
+                left: 90%;
             }
             to {
-                left: 0%;
+                left: 87%;
             }
         }
         img {
@@ -43,7 +43,7 @@
             opacity: 1;
             cursor: pointer;
             transition: transform cubic-bezier(0.65, 0.05, 0.36, 1) 0.8s;
-            transform: translateX(300%);
+            transform: translateX(100vw);
             fill: #072142;
         }
         p {
@@ -58,7 +58,7 @@
             left: 3vw;
             cursor: pointer;
             transition: transform cubic-bezier(0.65, 0.05, 0.36, 1) 0.8s;
-            transform: translateX(300%);
+            transform: translateX(100vw);
         }
         .arrow-animation {
             transform: translateX(0);
@@ -72,6 +72,7 @@
         position: relative;
         display: flex;
         flex-direction: row;
+        align-items: center;
         margin: 5% 0;
     }
     h1 {
