@@ -16,7 +16,18 @@ function App() {
   const location = useLocation();
   const history = useHistory();
 
-  console.log(window.location)
+  const [isEng, setIsEng] = useState(false);
+
+  const displayEng = () => {  
+    const flagIco = document.querySelector('.flag'); 
+    if (!isEng) {
+      flagIco.src = "./assets/img/english.png"
+      setIsEng(true)
+    } else {
+      flagIco.src = "./assets/img/french.png"
+      setIsEng(false)
+    }
+  }
 
   useEffect(() => {
     var table = [];
@@ -66,46 +77,48 @@ function App() {
 
       table.map(() => {
         if (table.length >= 5) {
+          
+          const addition = table[0] - table[table.length - 1];
 
           switch (window.location.href.toString()) {
 
             case url:
-              if (table[0] - table[table.length - 1] > 0) {
+              if (addition >= 15) {
                 history.push("about");
                 table = [];
-              } else {
+              } else if (addition <= 15) {
                 history.push("contact");
                 table = [];
               }
               break;
 
             case url + "about":
-              if (table[0] - table[table.length - 1] > 0) {
+              if (addition >= 15) {
                 history.push("production");
                 table = [];
-              } else {
+              } else if (addition <= 15) {
                 history.push(url);
                 table = [];
               }
               break;
 
             case url + "production":
-              if (table[0] - table[table.length - 1] > 0) {
+              if (addition >= 15) {
                 history.push("contact");
                 table = []
-              } else {
+              } else if (addition <= 15) {
                 history.push("about");
                 table = []
               }
               break;
 
             case url + "contact":
-              if (table[0] - table[table.length - 1] < 0) {
+              if (addition <= 15) {
                 history.push("production");
                 table = [];
-              } else {
+              } else if (addition >= 15) { 
                 history.push("/");
-                table = [];
+                table = []
               }
               break;
 
@@ -126,26 +139,27 @@ function App() {
       <Mouse />
       <Header />
       <Nav />
+      <img className="flag hovered" alt="flag" onClick={displayEng} />
       <Gradiant />
       <GrowingCircle />
       <Switch location={location} key={location.pathname}>
 
         <Route exact path="/" pathname="/#">
-          <MainContent mainContent={0} />
+          <MainContent mainContent={0} english={isEng}/>
           <Moon />
           <ScrollBar />
           <ScrollDownItem />
         </Route>
         <Route exact path="/about" pathname="/#about">
-          <MainContent mainContent={1} />
+          <MainContent mainContent={1} english={isEng}/>
           <ScrollBar />
         </Route>
         <Route exact path="/production" pathname="/#production">
-          <MainContent mainContent={2} />
+          <MainContent mainContent={2} english={isEng}/>
           <ScrollBar />
         </Route>
         <Route exact path="/contact" pathname="/#contact">
-          <MainContent mainContent={3} />
+          <MainContent mainContent={3} english={isEng}/>
           <ScrollBar />
         </Route>
 

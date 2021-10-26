@@ -6,9 +6,9 @@ import { NavLink } from 'react-router-dom';
 const MainContent = (props) => {
     const [currentContent] = useState(mainContentData);
     const content = currentContent[props.mainContent];
+    const isEnglish = props.english
 
     useEffect(() => {
-
         //header style
         const header = document.querySelector('.header');
         if (header.classList[1] === 'black') {
@@ -19,16 +19,13 @@ const MainContent = (props) => {
         const animatedSpan = document.querySelectorAll('.borders span');
         const animatedContent = document.querySelectorAll('.content p');
         const animatedButton = document.querySelector('.button');
-
-        // main content image
         const animatedContentImage = document.querySelector('.content-img');
-        const animatedImage = document.querySelector('.content-img img');
         const animatedBeforeImage = document.querySelector('.before-img');
         const animatedAfterImage = document.querySelector('.after-img');
         const animatedNumber = document.querySelector('.content-number em');
-
-        // contact ico
         const animatedIco = document.querySelectorAll('.animate-social-ico img');
+        const animatedImage = document.querySelector('.content-img img');
+
 
         animatedTitle.forEach((e) => {
             setTimeout(() => {
@@ -71,23 +68,18 @@ const MainContent = (props) => {
             }, 500);
         }
 
-        // main content image
-        if (animatedImage) {               
-                // image
-                setTimeout(() => {
-                    animatedContentImage.style.transform = "scale(1)"
-                }, 20)
-    
-                // before animation
-                animatedBeforeImage.style.animation = "runBefore 0.9s ease-in";
-                if (window.matchMedia("(orientation:portrait)").matches) {
-                    setTimeout(() => { animatedBeforeImage.style.transform = "translateX(-100%)" }, 900)
-                } else {
-                    setTimeout(() => { animatedBeforeImage.style.transform = "translateX(100%)" }, 900)
-                }
-                
-                // after animation
-                animatedAfterImage.style.animation = "runAfter 1.1s ease-in";
+        if (animatedImage) {
+            setTimeout(() => {
+                animatedContentImage.style.transform = "scale(1)"
+            })
+
+            animatedBeforeImage.style.animation = "runBefore 0.9s ease-in";
+            if (window.matchMedia("(orientation:portrait)").matches) {
+                setTimeout(() => { animatedBeforeImage.style.transform = "translateX(-100%)" }, 900)
+            } else {
+                setTimeout(() => { animatedBeforeImage.style.transform = "translateX(100%)" }, 900)
+            }
+            animatedAfterImage.style.animation = "runAfter 1.1s ease-in";
         }
 
         if (animatedNumber) {
@@ -96,88 +88,147 @@ const MainContent = (props) => {
             }, 500);
         }
 
-    }, []);
+    }, [isEnglish]);
 
     return (
-        <div className="main-content">
-            <div className="content">
-                <h1>{content.title}</h1>
-                {content.title2 &&
-                    <h1>
-                        {content.title2}
-                    </h1>
-                }
-                <div className="borders">
-                    <span className="top-border"></span>
-                    <span className="bottom-border"></span>
-                </div>
-                {content.content &&
-                    <p>
-                        {content.content}
-                    </p>
-                }
-                {content.phone &&
-                    <CopyToClipboard text="0781938154" className="hovered">
-                        <p style={{ cursor: 'pointer' }} onClick={() => { alert("Copié dans le presse papier !") }}>
-                            {content.phone}
-                        </p>
-                    </CopyToClipboard>
-                }
-                {content.email &&
-                    <CopyToClipboard text="morizekevin91@gmail.com" className="hovered">
-                        <p style={{ cursor: 'pointer' }} onClick={() => { alert("Copié dans le presse papier !") }}>
-                            {content.email}
-                        </p>
-                    </CopyToClipboard>
-                }
-                {content.email &&
-                    <ul className="animate-social-ico">
-                        <li>
-                            <a href="https://discord.com/channels/Allun33d#6386" target="_blank" title="discord.com" rel="noopener noreferrer" className="hovered">
-                                <img src="./assets/img/discord.png" alt="messenger" />
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.facebook.com/kevinmorize1991" target="_blank" title="facebook.com" rel="noopener noreferrer" className="hovered">
-                                <img src="./assets/img/facebook.png" alt="messenger" />
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.instagram.com/kevin_morize/" target="_blank" title="instagram.com" rel="noopener noreferrer" className="hovered">
-                                <img src="./assets/img/instagram.png" alt="messenger" />
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://twitter.com/morize_kevin" target="_blank" title="twitter.com" rel="noopener noreferrer" className="hovered">
-                                <img src="./assets/img/twitter.png" alt="messenger" />
-                            </a>
-                        </li>
-                    </ul>
-                }
-                {content.link &&
-                    <div className="button">
-                        <NavLink to={content.link} exact className="hovered">See more</NavLink>
-                    </div>
-                }
-            </div>
+        <>
+            {!isEnglish &&
+                <div className="main-content">
+                    <div className="content">
+                        <h1>{content.title[0]}</h1>
 
-            <div className="content-img">
-                {content.img &&
-                    <div className="before-img"></div>
-                }
-                {content.img &&
-                    <div className="after-img"></div>
-                }
-                {content.img &&
-                    <img src={content.img} alt={content.title} />
-                }
-            </div>
-            {content.number &&
-                <div className="content-number">
-                    <em>{content.number}</em>
+                        {content.title2 && <h1>{content.title2[0]}</h1>}
+
+                        <div className="borders">
+                            <span className="top-border"></span>
+                            <span className="bottom-border"></span>
+                        </div>
+
+                        {content.content && <p>{content.content[0]}</p>}
+
+                        {content.phone &&
+                            <CopyToClipboard text="0781938154" className="hovered">
+                                <p style={{ cursor: 'pointer' }} onClick={() => { alert("Copié dans le presse papier !") }}>{content.phone}</p>
+                            </CopyToClipboard>
+                        }
+                        {content.email &&
+                            <CopyToClipboard text="morizekevin91@gmail.com" className="hovered">
+                                <p style={{ cursor: 'pointer' }} onClick={() => { alert("Copié dans le presse papier !") }}>{content.email}</p>
+                            </CopyToClipboard>
+                        }
+                        {content.email &&
+                            <ul className="animate-social-ico">
+                                <li>
+                                    <a href="https://discord.com/channels/Allun33d#6386" target="_blank" title="discord.com" rel="noopener noreferrer" className="hovered">
+                                        <img src="./assets/img/discord.png" alt="messenger" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.facebook.com/kevinmorize1991" target="_blank" title="facebook.com" rel="noopener noreferrer" className="hovered">
+                                        <img src="./assets/img/facebook.png" alt="messenger" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.instagram.com/kevin_morize/" target="_blank" title="instagram.com" rel="noopener noreferrer" className="hovered">
+                                        <img src="./assets/img/instagram.png" alt="messenger" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://twitter.com/morize_kevin" target="_blank" title="twitter.com" rel="noopener noreferrer" className="hovered">
+                                        <img src="./assets/img/twitter.png" alt="messenger" />
+                                    </a>
+                                </li>
+                            </ul>
+                        }
+                        {content.link &&
+                            <div className="button">
+                                <NavLink to={content.link} exact className="hovered">See more</NavLink>
+                            </div>
+                        }
+                    </div>
+                    {content.img &&
+                        <div className="content-img">
+                            <div className="before-img"></div>
+                            <div className="after-img"></div>
+                            <img src={content.img} alt={content.title} />
+                        </div>
+                    }
+                    {content.number &&
+                        <div className="content-number">
+                            <em>{content.number}</em>
+                        </div>
+                    }
                 </div>
             }
-        </div>
+            {isEnglish &&
+                <div className="main-content">
+                    <div className="content">
+                        <h1>{content.title[1]}</h1>
+
+                        {content.title2 && <h1>{content.title2[1]}</h1>}
+
+                        <div className="borders">
+                            <span className="top-border"></span>
+                            <span className="bottom-border"></span>
+                        </div>
+
+                        {content.content && <p>{content.content[1]}</p>}
+
+                        {content.phone &&
+                            <CopyToClipboard text="0781938154" className="hovered">
+                                <p style={{ cursor: 'pointer' }} onClick={() => { alert("Copié dans le presse papier !") }}>{content.phone}</p>
+                            </CopyToClipboard>
+                        }
+                        {content.email &&
+                            <CopyToClipboard text="morizekevin91@gmail.com" className="hovered">
+                                <p style={{ cursor: 'pointer' }} onClick={() => { alert("Copié dans le presse papier !") }}>{content.email}</p>
+                            </CopyToClipboard>
+                        }
+                        {content.email &&
+                            <ul className="animate-social-ico">
+                                <li>
+                                    <a href="https://discord.com/channels/Allun33d#6386" target="_blank" title="discord.com" rel="noopener noreferrer" className="hovered">
+                                        <img src="./assets/img/discord.png" alt="messenger" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.facebook.com/kevinmorize1991" target="_blank" title="facebook.com" rel="noopener noreferrer" className="hovered">
+                                        <img src="./assets/img/facebook.png" alt="messenger" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.instagram.com/kevin_morize/" target="_blank" title="instagram.com" rel="noopener noreferrer" className="hovered">
+                                        <img src="./assets/img/instagram.png" alt="messenger" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://twitter.com/morize_kevin" target="_blank" title="twitter.com" rel="noopener noreferrer" className="hovered">
+                                        <img src="./assets/img/twitter.png" alt="messenger" />
+                                    </a>
+                                </li>
+                            </ul>
+                        }
+                        {content.link &&
+                            <div className="button">
+                                <NavLink to={content.link} exact className="hovered">See more</NavLink>
+                            </div>
+                        }
+                    </div>
+                    {content.img &&
+                        <div className="content-img">
+                            <div className="before-img"></div>
+                            <div className="after-img"></div>
+                            <img src={content.img} alt={content.title} />
+                        </div>
+                    }
+                    {content.number &&
+                        <div className="content-number">
+                            <em>{content.number}</em>
+                        </div>
+                    }
+                </div>
+            }
+        </>
     );
 };
 
