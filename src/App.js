@@ -20,7 +20,7 @@ function App() {
     var table = [];
 
     const handleScrollToElement = (e) => {
-      const url = window.location.origin + "/";
+      const url = window.location.origin + "/#";
 
       const wheelRouter = (before, after) => {
         if (e.wheelDeltaY < 0) {
@@ -34,21 +34,21 @@ function App() {
 
         case url:
           if (e.wheelDeltaY < 0) {
-            history.push("#about")
+            history.push("about")
           }
           break;
 
-        case url + "#about":
-          wheelRouter(url, "#production");
+        case url + "about":
+          wheelRouter(url, "production");
           break;
 
-        case url + "#production":
-          wheelRouter("#about", "#contact");
+        case url + "production":
+          wheelRouter("about", "contact");
           break;
 
-        case url + "#contact":
+        case url + "contact":
           if (e.wheelDeltaY > 0) {
-            history.push("#production")
+            history.push("production")
           }
           break;
 
@@ -59,7 +59,7 @@ function App() {
 
     const handleMoveToElement = (e) => {
 
-      const url = window.location.origin + "/";
+      const url = window.location.origin + "/#";
       let position = e.touches[0].clientY;
       table.push(position);
 
@@ -70,17 +70,17 @@ function App() {
 
             case url:
               if (table[0] - table[table.length - 1] > 0) {
-                history.push("#about");
+                history.push("about");
                 table = [];
               } else {
-                history.push("#contact");
+                history.push("contact");
                 table = [];
               }
               break;
 
-            case url + "#about":
+            case url + "about":
               if (table[0] - table[table.length - 1] > 0) {
-                history.push("#production");
+                history.push("production");
                 table = [];
               } else {
                 history.push(url);
@@ -88,22 +88,22 @@ function App() {
               }
               break;
 
-            case url + "#production":
+            case url + "production":
               if (table[0] - table[table.length - 1] > 0) {
-                history.push("#contact");
+                history.push("contact");
                 table = []
               } else {
-                history.push("#about");
+                history.push("about");
                 table = []
               }
               break;
 
-            case url + "#contact":
+            case url + "contact":
               if (table[0] - table[table.length - 1] < 0) {
-                history.push("#production");
+                history.push("production");
                 table = [];
               } else {
-                history.push("/");
+                history.push("/#");
                 table = [];
               }
             break;
@@ -128,7 +128,7 @@ function App() {
       <Gradiant />
       <GrowingCircle />
       <Switch location={location} key={location.pathname}>
-        <Route exact path="/">
+        <Route exact path="/#">
           <MainContent mainContent={0} />
           <Moon />
           <ScrollBar />
