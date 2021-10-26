@@ -7,7 +7,6 @@ const Moon = () => {
         const moon = document.querySelector('.moon');
         const clouds = document.querySelectorAll('.cloud');
         const portfolioTitle = document.querySelector('.moon-img p');
-        console.log(moon)
 
         const handleMouseMove = (e) => {
             if (window.matchMedia("(orientation:portrait)").matches) {

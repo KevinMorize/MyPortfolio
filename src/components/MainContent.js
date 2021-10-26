@@ -68,7 +68,7 @@ const MainContent = (props) => {
 
         // main content image
         if (animatedContentImage) {
-            window.addEventListener('load', () => {
+            animatedContentImage.onload = () => {
 
                 // image
                 setTimeout(() => {
