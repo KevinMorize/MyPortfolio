@@ -133,15 +133,15 @@ function App() {
           <ScrollBar />
           <ScrollDownItem />
         </Route>
-        <Route exact path="/about">
+        <Route exact path="/#about">
           <MainContent mainContent={1} />
           <ScrollBar />
         </Route>
-        <Route exact path="/production">
+        <Route exact path="/#production">
           <MainContent mainContent={2} />
           <ScrollBar />
         </Route>
-        <Route exact path="/contact">
+        <Route exact path="/#contact">
           <MainContent mainContent={3} />
           <ScrollBar />
         </Route>
