@@ -1,123 +1,5 @@
-.about-content {
-    width: 100vw;
-    height: 100%;
-    padding-top: 7%;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    position: absolute;
-    top: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: white;
-    color: #072142;
-    z-index: 200;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-    &::-webkit-scrollbar {
-        display: none;
-    }
-
-    // back
-    .back {
-        position: absolute;
-        position: fixed;
-        overflow: hidden;
-        top: 11%;
-        left: 90%;
-        width: 10vw;
-        z-index: 500;
-        height: -moz-fit-content;
-        height: fit-content;
-        @keyframes translateArrow {
-            from {
-                left: 90%;
-            }
-            to {
-                left: 87%;
-            }
-        }
-        img {
-            width: 3vw;
-            position: absolute;
-            opacity: 1;
-            cursor: pointer;
-            transition: transform cubic-bezier(0.65, 0.05, 0.36, 1) 0.8s;
-            transform: translateX(100vw);
-            fill: #072142;
-        }
-        p {
-            height: -moz-fit-content;
-            height: fit-content;
-            font-size: 2vw;
-            font-weight: 300;
-            color: #072142;
-            padding-left: 1vw;
-            position: relative;
-            bottom: 0;
-            left: 3vw;
-            cursor: pointer;
-            transition: transform cubic-bezier(0.65, 0.05, 0.36, 1) 0.8s;
-            transform: translateX(100vw);
-        }
-        .arrow-animation {
-            transform: translateX(0);
-        }
-    }
-
-    // titles
-    .about-titles {
-        align-self: flex-start;
-        width: inherit;
-        position: relative;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        margin: 5% 0;
-    }
-    h1 {
-        font-weight: 400;
-        font-size: 3vw;
-        margin-left: 3vw;
-    }
-    em {
-        color: #ff4d5a;
-        left: 0;
-        margin-left: 3%;
-        padding-left: 1%;
-        font-size: 3vw;
-        font-weight: 500;
-    }
-    em::after {
-        content: "";
-        width: 3vw;
-        height: 0.2vh;
-        background: #072142;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        margin: auto;
-    }
-
-    //footer
-    .footer {
-        width: 100%;
-        font-size: 1.2vw;
-        padding: 5% 0;
-        color: white;
-        background-image: linear-gradient(to right, #00192c, #812b8c 42%, #ff4d5a);
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-        p {
-            font-size: 3vw;
-            margin: 7% 0;
-        }
-    }
-
-    // First content
+.second-content {
+    // 01
     .content-me {
         width: 80%;
         height: -moz-fit-content;
@@ -211,7 +93,7 @@
         }
     }
 
-    //second content
+    // 02
     .content-passion {
         width: 70%;
         height: auto;
@@ -252,7 +134,7 @@
         }
     }
 
-    // Third content
+    // 03
     .content-skill {
         width: 80%;
         margin-bottom: 5%;
@@ -341,44 +223,8 @@
 }
 
 @media screen and (orientation: portrait) {
-    .about-content {
-        padding-top: 15%;
-
-        // back
-        .back {
-            display: none;
-        }
-
-        // titles
-        .about-titles {
-            margin: 10% 0;
-        }
-        h1 {
-            font-weight: 400;
-            font-size: 8vw;
-            margin-left: 10%;
-        }
-        em {
-            left: 0;
-            margin-left: 5%;
-            font-size: 8vw;
-        }
-        em::after {
-            width: 5vw;
-            height: 0.2vh;
-        }
-
-        //footer
-        .footer {
-            padding: 15% 0;
-            p {
-                margin: 5% 0;
-                font-size: 5vw;
-                font-weight: 400;
-            }
-        }
-
-        // First content
+    .second-content {
+        // 01
         .content-me {
             width: 80%;
             height: -moz-fit-content;
@@ -415,10 +261,9 @@
                     width: 100%;
                     height: 100%;
                 }
-            }         
+            }
         }
-
-        //second content
+        // 02
         .content-passion {
             width: 80%;
             .passion-list {
@@ -442,6 +287,7 @@
                     font-size: 6vw;
                     font-weight: 500;
                     margin-bottom: 5%;
+                    text-align: center;
                 }
                 p {
                     font-size: 5vw;
@@ -449,8 +295,7 @@
                 }
             }
         }
-
-        // Third content
+        // 03
         .content-skill {
             width: 80%;
             margin-bottom: 5%;

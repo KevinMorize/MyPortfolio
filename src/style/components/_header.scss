@@ -5,28 +5,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2vh 2vw 1vh 3vw;
+    padding: 3vh 2vw 1vh 3vw;
     z-index: 3000;
     color: $font-color-1;
-
-    .content-ico {
-        padding: 1vh 0;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: auto;
-        z-index: inherit;
-    }
 
     h1 {
         display: block;
         font-size: 1.2vw;
         font-weight: 400;
         z-index: inherit;
-    }
-
-    i {
-        font-size: 1.2vw;
     }
 }
 
@@ -46,10 +33,6 @@
 
         h1 {
             font-size: 5vw;
-        }
-
-        i {
-            font-size: 4vw;
         }
     }
 

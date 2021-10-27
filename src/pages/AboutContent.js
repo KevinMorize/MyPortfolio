@@ -43,7 +43,7 @@ const AboutContent = (props) => {
     return (
         <>
             {!isEnglish &&
-                <div className="about-content">
+                <div className="second-content">
                     <div className="back">
                         <NavLink exact to="/about" className="hovered">
                             <img src="../assets/back.svg" alt="retour"></img>
@@ -87,7 +87,7 @@ const AboutContent = (props) => {
                 </div>
             }
             {isEnglish &&
-                <div className="about-content">
+                <div className="second-content">
                     <div className="back">
                         <NavLink exact to="/about" className="hovered">
                             <img src="../assets/back.svg" alt="BACK"></img>

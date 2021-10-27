@@ -1,15 +1,11 @@
-.ico-social {
+.header-ico {
     width: auto;
-    z-index: 1000;
-
-    .content {
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     i {
+        font-size: 1.2vw;
         transition: transform 1.5s ease-out;
     }
 
@@ -21,62 +17,31 @@
         position: relative;
         display: flex;
         justify-content: center;
-        margin-left: 3vw;
-        margin-right: 0;
-        width: 5vh;
-        height: 1.7vh;
+        align-items: center;
+        margin: 0 3vw;
+        width: 2.5vw;
         cursor: pointer;
-    }
-
-    .ico-nav span {
-        position: absolute;
-        width: 90%;
-        height: 0.2vh;
-        background: #fff;
-        border-radius: 100vw;
-        transform-origin: center;
-        transition: all 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-    }
-
-    .nav-th {
-        top: 0;
-    }
-
-    .nav-tb {
-        top: 100%;
+        span {
+            position: absolute;
+            width: 100%;
+            height: 0.8vh;
+            background: #fff;
+            transform-origin: center;
+            transition: all 0.4s ease;
+        }
     }
 }
 
 @media screen and (orientation: portrait) {
-    .ico-social {
-        .content {   
-            align-items: baseline;
-        }
+    .header-ico {
         li {
-            margin: 0 3vw;
+            margin: 0 4vw;
+        }
+        i {
+            font-size: 4vw;
         }
         .ico-nav {
-            margin-left: 6vw;
-            width: 5vh;
-            height: 1.6vh;
-        }
-    
-        .ico-nav span {
-            position: absolute;
-            width: 90%;
-            height: 0.2vh;
-            background: #fff;
-            border-radius: 100vw;
-            transform-origin: center;
-            transition: all 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-        }
-    
-        .nav-th {
-            top: 0;
-        }
-    
-        .nav-tb {
-            top: 100%;
+            width: 8vw;
         }
     }
 }

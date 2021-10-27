@@ -1,119 +1,5 @@
-.production-content {
-    width: 100vw;
-    height: 100%;
-    padding-top: 7%;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    position: absolute;
-    top: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: white;
-    color: #072142;
-    z-index: 200;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-    &::-webkit-scrollbar {
-        display: none;
-    }
-
-    .back {
-        position: absolute;
-        position: fixed;
-        overflow: hidden;
-        top: 11%;
-        left: 1%;
-        width: 8vw;
-        z-index: 500;
-        height: -moz-fit-content;
-        height: fit-content;
-        @keyframes translateArrow {
-            from {
-                left: 1%;
-            }
-            to {
-                left: 0%;
-            }
-        }
-        img {
-            width: 3vw;
-            position: absolute;
-            opacity: 1;
-            cursor: pointer;
-            transition: transform cubic-bezier(0.65, 0.05, 0.36, 1) 0.8s;
-            transform: translateX(300%);
-            fill: #072142;
-        }
-        p {
-            height: -moz-fit-content;
-            height: fit-content;
-            font-size: 2vw;
-            font-weight: 300;
-            padding-left: 1vw;
-            position: relative;
-            bottom: 0;
-            left: 3vw;
-            cursor: pointer;
-            transition: transform cubic-bezier(0.65, 0.05, 0.36, 1) 0.8s;
-            transform: translateX(300%);
-        }
-        .arrow-animation {
-            transform: translateX(0);
-        }
-    }
-
-    // titles
-    .about-titles {
-        align-self: flex-start;
-        width: inherit;
-        position: relative;
-        display: flex;
-        flex-direction: row;
-        margin: 5% 0;
-    }
-    h1 {
-        font-weight: 400;
-        font-size: 3vw;
-        margin-left: 3vw;
-    }
-    em {
-        color: #ff4d5a;
-        left: 0;
-        margin-left: 3%;
-        padding-left: 1%;
-        font-size: 3vw;
-        font-weight: 500;
-    }
-    em::after {
-        content: "";
-        width: 3vw;
-        height: 0.2vh;
-        background: #072142;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        margin: auto;
-    }
-
-    //footer
-    .footer {
-        width: 100%;
-        font-size: 1.2vw;
-        padding: 5% 0;
-        color: white;
-        background-image: linear-gradient(to right, #00192c, #812b8c 42%, #ff4d5a);
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-        p {
-            font-size: 3vw;
-            margin: 7% 0;
-        }
-    }
-
+.second-content {
+    // 01
     .content {
         width: 100vw;
         height: 100vh;
@@ -168,46 +54,8 @@
 }
 
 @media screen and (orientation: portrait) {
-    .production-content {
-        padding-top: 15%;
-        height: 100%;
-        min-height: 100vh;
-
-        // back
-        .back {
-            display: none;
-        }
-
-        // titles
-        .about-titles {
-            margin: 10% 0;
-        }
-        h1 {
-            font-weight: 400;
-            font-size: 8vw;
-            margin-left: 10%;
-        }
-        em {
-            left: 0;
-            margin-left: 5%;
-            font-size: 8vw;
-        }
-        em::after {
-            width: 5vw;
-            height: 0.2vh;
-        }
-
-        //footer
-        .footer {
-            padding: 15% 0;
-            p {
-                margin: 5% 0;
-                font-size: 5vw;
-                font-weight: 400;
-            }
-        }
-
-        // content
+    .second-content {
+        // 01
         .content {
             width: 80%;
             margin: 7% 0;
@@ -220,7 +68,7 @@
                 transform: translateX(50%);
                 @keyframes dongleSkrew {
                     0% {
-                        transform: rotate(0deg) translateX(50%); 
+                        transform: rotate(0deg) translateX(50%);
                     }
                     20% {
                         transform: rotate(-90deg);
@@ -240,7 +88,7 @@
                 transform: translateX(-50%);
                 @keyframes dongleWrench {
                     0% {
-                        transform: rotate(0deg) translateX(-50%); 
+                        transform: rotate(0deg) translateX(-50%);
                     }
                     20% {
                         transform: rotate(90deg);

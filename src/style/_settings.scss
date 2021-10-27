@@ -53,7 +53,7 @@ a, a:visited {
     position: absolute;
     top: 7%;
     left: 3vw;
-    z-index: 10000;
+    z-index: 850;
 }
 
 @media screen and (orientation: portrait) {
@@ -75,7 +75,6 @@ a, a:visited {
         top: auto;
         bottom: 2%;
         left: 6vw;
-        z-index: 10000;
     }
 }
 

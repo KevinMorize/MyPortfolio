@@ -36,17 +36,17 @@ const ProductionContent = (props) => {
         // tools animation 
         if (window.matchMedia("(orientation:portrait)").matches) {
             setTimeout(() => {
-           screwdriver.style.animation = "dongleSkrew 2s ease-in-out"
-           wrench.style.animation = "dongleWrench 2s ease-in-out"
-       }, 100)
-       } else {
-           setTimeout(() => {
-               screwdriver.style.transform = "translate(100%, 0)";
-               wrench.style.transform = "translate(-100%, 0)";
-           }, 900)
-           screwdriver.style.animation = "dongleSkrew 2s ease-in-out"
-           wrench.style.animation = "dongleWrench 2s ease-in-out"
-       }
+                screwdriver.style.animation = "dongleSkrew 2s ease-in-out"
+                wrench.style.animation = "dongleWrench 2s ease-in-out"
+            }, 100)
+        } else {
+            setTimeout(() => {
+                screwdriver.style.transform = "translate(100%, 0)";
+                wrench.style.transform = "translate(-100%, 0)";
+            }, 900)
+            screwdriver.style.animation = "dongleSkrew 2s ease-in-out"
+            wrench.style.animation = "dongleWrench 2s ease-in-out"
+        }
 
         // arrow events
         arrowDiv.addEventListener('mouseover', onMouseOverArrow);
@@ -55,7 +55,7 @@ const ProductionContent = (props) => {
     }, [isEnglish])
 
     return (
-        <div className="production-content">
+        <div className="second-content">
             <div className="back">
                 <NavLink exact to="/production" className="hovered">
                     <img src="../assets/back.svg" alt="back"></img>
