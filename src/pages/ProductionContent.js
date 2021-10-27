@@ -55,29 +55,48 @@ const ProductionContent = (props) => {
     }, [isEnglish])
 
     return (
-        <div className="second-content">
-            <div className="back">
-                <NavLink exact to="/production" className="hovered">
-                    <img src="../assets/back.svg" alt="back"></img>
-                    <p>Back</p>
-                </NavLink>
-            </div>
+        <>
+            {!isEnglish &&
+                <div className="second-content">
+                    <div className="back">
+                        <NavLink exact to="/production" className="hovered">
+                            <img src="../assets/back.svg" alt="retour"></img>
+                            <p>Retour</p>
+                        </NavLink>
+                    </div>
 
-            <div className="about-titles">
-                <em>01</em>
-                <h1>COMING SOON</h1>
-            </div>
+                    <div className="about-titles">
+                        <em>01</em>
+                        <h1>PROCHAINEMENT</h1>
+                    </div>
 
-            <div className="content">
-                <img src="../assets/img/screwdriver.png" alt="screwdriver" className="screwdriver" />
-                <img src="../assets/img/wrench.png" alt="wrench" className="wrench" />
-            </div>
+                    <div className="content">
+                        <img src="../assets/img/screwdriver.png" alt="screwdriver" className="screwdriver" />
+                        <img src="../assets/img/wrench.png" alt="wrench" className="wrench" />
+                    </div>
+                </div>
+            }
+            {isEnglish &&
+                <div className="second-content">
+                    <div className="back">
+                        <NavLink exact to="/production" className="hovered">
+                            <img src="../assets/back.svg" alt="back"></img>
+                            <p>Back</p>
+                        </NavLink>
+                    </div>
 
-            <div className="about-titles">
-                <em>02</em>
-                <h1>STILL IN WORK</h1>
-            </div>
-        </div>
+                    <div className="about-titles">
+                        <em>01</em>
+                        <h1>COMING SOON</h1>
+                    </div>
+
+                    <div className="content">
+                        <img src="../assets/img/screwdriver.png" alt="screwdriver" className="screwdriver" />
+                        <img src="../assets/img/wrench.png" alt="wrench" className="wrench" />
+                    </div>
+                </div>
+            }
+        </>
     );
 };
 
