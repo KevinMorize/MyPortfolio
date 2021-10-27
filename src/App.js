@@ -76,53 +76,53 @@ function App() {
       table.push(position);
 
       table.map(() => {
-        if (table.length >= 5) {
+        if (table.length >= 10) {
 
           const addition = table[0] - table[table.length - 1];
+          const minWay = window.screen.availHeight / 8
 
           switch (window.location.href.toString()) {
 
             case url:
-              if (addition >= 20) {
+              if (addition >= minWay) {
                 history.push("about");
                 table = [];
-              } else if (addition <= -20) {
-                history.push("contact");
+              } else {
                 table = [];
               }
               break;
 
             case url + "about":
-              if (addition >= 20) {
+              if (addition >= minWay) {
                 history.push("production");
                 table = [];
-              } else if (addition <= -20) {
+              } else if (addition <= -minWay) {
                 history.push(url);
                 table = [];
               }
               break;
 
             case url + "production":
-              if (addition >= 20) {
+              if (addition >= minWay) {
                 history.push("contact");
                 table = []
-              } else if (addition <= -20) {
+              } else if (addition <= -minWay) {
                 history.push("about");
                 table = []
               }
               break;
 
             case url + "contact":
-              if (addition <= -20) {
+              if (addition <= -minWay) {
                 history.push("production");
                 table = [];
-              } else if (addition >= 20) {
-                history.push("/");
+              } else {
                 table = []
               }
               break;
 
             default:
+              console.log("none")
           }
         }
         return table
