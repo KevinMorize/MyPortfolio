@@ -140,7 +140,7 @@
         .cloud {
             img {
                 width: 60vw;
-                animation: cloudMoving alternate infinite ease 2s;
+                animation: cloudMoving alternate infinite ease 3s;
                 @keyframes cloudMoving {
                     from {
                         transform: translateX(5%);

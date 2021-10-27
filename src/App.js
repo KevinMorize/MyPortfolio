@@ -79,7 +79,7 @@ function App() {
         if (table.length >= 10) {
 
           const addition = table[0] - table[table.length - 1];
-          const minWay = window.screen.availHeight / 8
+          const minWay = window.screen.availHeight / 10
 
           switch (window.location.href.toString()) {
 
@@ -163,11 +163,11 @@ function App() {
           <ScrollBar />
         </Route>
 
-        <Route exact path="/about/content" pathname="/about/content">
+        <Route exact path="/about/content" pathname="/#about/#content">
           <AboutContent english={isEng} />
         </Route>
 
-        <Route exact path="/production/content" pathname="/production/content">
+        <Route exact path="/production/content" pathname="/#production/#content">
           <ProductionContent english={isEng} />
         </Route>
 
