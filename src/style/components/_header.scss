@@ -18,32 +18,19 @@
 }
 
 .black {
-    color: #ff4d5a;
-    a {
-        color: #072142;
-    }
-    .ico-social .ico-nav span {
-        background: #072142;
-    }
+    background-image: linear-gradient(to right, #00192c, #812b8c 42%, #ff4d5a);
 }
 
 @media screen and (orientation: portrait) {
     .header {
-        padding: 2vh 6vw;
+        padding: 3vh 4vw 3vh 6vw;
 
         h1 {
             font-size: 5vw;
         }
     }
-
     .black {
-        color: #ff4d5a;
-        background-color: white;
-        a {
-            color: #072142;
-        }
-        .ico-social .ico-nav span {
-            background: #072142;
-        }
+        background-image: linear-gradient(to right, #00192c, #812b8c 42%, #ff4d5a);
     }
 }
+

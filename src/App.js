@@ -21,10 +21,10 @@ function App() {
   const displayEng = () => {
     const flagIco = document.querySelector('.flag');
     if (!isEng) {
-      flagIco.src = "../assets/img/english.png"
+      flagIco.src = "../assets/img/french.png"
       setIsEng(true)
     } else {
-      flagIco.src = "../assets/img/french.png"
+      flagIco.src = "../assets/img/english.png"
       setIsEng(false)
     }
   }
@@ -139,7 +139,7 @@ function App() {
       <Mouse />
       <Header />
       <Nav english={isEng} />
-      <img className="flag hovered" alt="flag" onClick={displayEng} src="../assets/img/french.png" />
+      <img className="flag hovered" alt="flag" onClick={displayEng} src="../assets/img/english.png" />
       <Gradiant />
       <GrowingCircle />
       <Switch location={location} key={location.pathname}>
