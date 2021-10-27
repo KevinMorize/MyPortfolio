@@ -126,7 +126,15 @@
 
         .moon img {
             width: 60vw;
-            left: 0;         
+            left: 0;
+            animation: moonScale alternate infinite ease 1s; 
+            @keyframes moonScale {
+                from {
+                    transform: scale(0.9);
+                } to {
+                    transform: scale(1.1)
+                }
+            }        
         }
 
         .cloud {
