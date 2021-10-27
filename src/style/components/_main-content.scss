@@ -123,8 +123,10 @@
 
     .content-img {
         position: absolute;
-        width: 100vh;
-        height: 75vh;
+        width: -moz-fit-content;
+        width: fit-content;
+        height: -moz-fit-content;
+        height: fit-content;
         overflow: hidden;
         top: 0;
         bottom: 0;
