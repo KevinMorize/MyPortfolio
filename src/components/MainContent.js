@@ -15,17 +15,21 @@ const MainContent = (props) => {
             header.classList.remove('black');
         }
 
+        // txt content
         const animatedTitle = document.querySelectorAll('.content h1');
         const animatedSpan = document.querySelectorAll('.borders span');
         const animatedContent = document.querySelectorAll('.content p');
         const animatedButton = document.querySelector('.button');
+        const animatedIco = document.querySelectorAll('.animate-social-ico img');
+
+        // img content
         const animatedContentImage = document.querySelector('.content-img');
+        const animatedImage = document.querySelector('.content-img img');
         const animatedBeforeImage = document.querySelector('.before-img');
         const animatedAfterImage = document.querySelector('.after-img');
         const animatedNumber = document.querySelector('.content-number em');
-        const animatedIco = document.querySelectorAll('.animate-social-ico img');
-        const animatedImage = document.querySelector('.content-img img');
 
+        // txt content
         animatedTitle.forEach((e) => {
             setTimeout(() => {
                 e.className = "right-animation";
@@ -67,24 +71,59 @@ const MainContent = (props) => {
             }, 500);
         }
 
+        // img content
         if (animatedImage) {
             setTimeout(() => {
                 animatedContentImage.style.transform = "scale(1)"
             })
-
-            animatedBeforeImage.style.animation = "runBefore 0.9s ease-in";
-            if (window.matchMedia("(orientation:portrait)").matches) {
-                setTimeout(() => { animatedBeforeImage.style.transform = "translateX(-100%)" }, 900)
-            } else {
-                setTimeout(() => { animatedBeforeImage.style.transform = "translateX(100%)" }, 900)
-            }
-            animatedAfterImage.style.animation = "runAfter 1.1s ease-in";
-        }
-
-        if (animatedNumber) {
             setTimeout(() => {
                 animatedNumber.className = "top-animation";
             }, 500);
+            if (window.matchMedia("(orientation:portrait)").matches) {
+                animatedAfterImage.style.animation = "runAfter 0.9s ease-in";
+                animatedBeforeImage.style.animation = "runBefore 0.7s ease-in";
+                setTimeout(() => {
+                    animatedBeforeImage.style.transform = "translateX(100vw)";
+                }, 700)
+            } else {
+                animatedBeforeImage.style.animation = "runBefore 0.73s ease-in";
+                animatedAfterImage.style.animation = "runAfter 1.1s ease-in";
+                setTimeout(() => {
+                    animatedBeforeImage.style.transform = "translateX(100vw)";
+                }, 730)
+            }
+
+            const handleImgOver = (e) => {
+                const width = e.target.width / 2;
+                const height = e.target.height / 2;
+                const positionX = e.layerX;
+                const positionY = e.layerY;
+
+                if (positionX < width && positionY < height) {
+                    animatedContentImage.style.transform = "rotateX(10deg) rotateY(-10deg)";
+                } else if (positionX > width && positionY < height) {
+                    animatedContentImage.style.transform = "rotateX(10deg) rotateY(10deg)";
+                } else if (positionX > width && positionY > height) {
+                    animatedContentImage.style.transform = "rotateX(-10deg) rotateY(10deg)";
+                } else if (positionX < width && positionY > height) {
+                    animatedContentImage.style.transform = "rotateX(-10deg) rotateY(-10deg)";
+                }
+
+                animatedImage.style.filter = "brightness(0.5)";
+                animatedImage.style.transform = "scale(0.97)";
+                animatedContentImage.style.backgroundColor = "#ff4d5a";
+            }
+
+            const handleImgLeave = () => {
+                animatedContentImage.style.transform = "scale(1)";
+                animatedImage.style.filter = "brightness(1)";
+                animatedImage.style.transform = "scale(1)"
+            }
+
+            setTimeout(() => {
+                animatedContentImage.addEventListener('mousemove', handleImgOver);
+                animatedContentImage.addEventListener('mouseleave', handleImgLeave);
+            }, 1500)
         }
 
     }, [isEnglish]);
@@ -149,7 +188,16 @@ const MainContent = (props) => {
                         <div className="content-img">
                             <div className="before-img"></div>
                             <div className="after-img"></div>
-                            <img src={content.img} alt={content.title} />
+                            {content.link &&
+                                <NavLink to={content.link} exact>
+                                    <img src={content.img} alt={content.title}></img>
+                                </NavLink>
+                            }
+                            {!content.link &&
+                                <NavLink to="" exact>
+                                    <img src={content.img} alt={content.title}></img>
+                                </NavLink>
+                            }
                         </div>
                     }
                     {content.number &&
@@ -217,7 +265,16 @@ const MainContent = (props) => {
                         <div className="content-img">
                             <div className="before-img"></div>
                             <div className="after-img"></div>
-                            <img src={content.img} alt={content.title} />
+                            {content.link &&
+                                <NavLink to={content.link} exact>
+                                    <img src={content.img} alt={content.title}></img>
+                                </NavLink>
+                            }
+                            {!content.link &&
+                                <NavLink to="" exact>
+                                    <img src={content.img} alt={content.title}></img>
+                                </NavLink>
+                            }
                         </div>
                     }
                     {content.number &&

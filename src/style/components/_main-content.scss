@@ -4,22 +4,6 @@
     width: 100vw;
     height: 100vh;
     margin: auto;
-    @keyframes scrollDownAnimation {
-        from {
-            transform: translateY(100vh);
-        }
-        to {
-            transform: translateY(0);
-        }
-    }
-    @keyframes scrollUpAnimation {
-        from {
-            transform: translateY(100vh);
-        }
-        to {
-            transform: translateY(0);
-        }
-    }
 
     .content {
         width: -moz-fit-content;
@@ -139,10 +123,8 @@
 
     .content-img {
         position: absolute;
-        width: -moz-fit-content;
-        height: -moz-fit-content;
-        width: fit-content;
-        height: fit-content;
+        width: 100vh;
+        height: 75vh;
         overflow: hidden;
         top: 0;
         bottom: 0;
@@ -150,11 +132,14 @@
         right: 10vh;
         z-index: 600;
         transform: scale(0.8);
+        perspective: 1500px;
+        transform-style: preserve-3d;
         transition: transform ease 1.5s;
         img {
             width: 100vh;
             height: 75vh;
             object-fit: fill;
+            transition: all 0.8s cubic-bezier(0.42, 0, 0, 1);
         }
         .before-img {
             position: absolute;
