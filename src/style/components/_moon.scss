@@ -130,7 +130,7 @@
             animation: moonScale alternate infinite ease 2s; 
             @keyframes moonScale {
                 from {
-                    transform: scale(0.9);
+                    transform: scale(1);
                 } to {
                     transform: scale(1.1)
                 }
@@ -143,9 +143,9 @@
                 animation: cloudMoving alternate infinite ease 2s;
                 @keyframes cloudMoving {
                     from {
-                        transform: translateX(-5%);
-                    } to {
                         transform: translateX(5%);
+                    } to {
+                        transform: translateX(-5%);
                     }
                 }
             }
