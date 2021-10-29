@@ -118,7 +118,8 @@
                 transform: scale(0.6);
             }
             h4 {
-                font-size: 3.5vw;
+                font-size: 3vw;
+                text-align: center;
                 font-weight: 500;
                 margin-bottom: 10%;
             }
@@ -126,7 +127,7 @@
                 font-size: 1.3vw;
                 font-weight: 400;
                 line-height: 2;
-                text-align: center;
+                text-align: justify;
                 word-wrap: break-word;
                 white-space: normal;
                 color: #828c96;
@@ -287,11 +288,9 @@
                     font-size: 6vw;
                     font-weight: 500;
                     margin-bottom: 5%;
-                    text-align: center;
                 }
                 p {
                     font-size: 5vw;
-                    text-align: justify;
                 }
             }
         }
