@@ -11,10 +11,17 @@ const AboutMe = (props) => {
         const animatedBeforeImage = document.querySelector('.before-img');
         const animatedAfterImage = document.querySelector('.after-img');
 
-        img.style.transform = 'scale(1)';
-        animatedBeforeImage.style.animation = "runBefore 1s linear"
-        animatedAfterImage.style.animation = "runAfter 0.8s linear"
+        if (window.matchMedia("(orientation:portrait)").matches) {
+            animatedBeforeImage.style.animation = "runBefore 0.7s ease-in";
+            animatedAfterImage.style.animation = "runAfter 0.9s ease-in";
+        } else {
+            animatedBeforeImage.style.animation = "runBefore 0.73s ease-in";
+            animatedAfterImage.style.animation = "runAfter 1.1s ease-in";
+        }
 
+        setTimeout(() => {
+            img.style.transform = 'scale(1)';
+        }, 20)
         setTimeout(() => {
             h2.style.transform = "translateX(0)";
         }, 500)
