@@ -15,7 +15,7 @@ const AboutMe = (props) => {
             animatedBeforeImage.style.animation = "runBefore 0.7s ease-in";
             animatedAfterImage.style.animation = "runAfter 0.9s ease-in";
         } else {
-            animatedBeforeImage.style.animation = "runBefore 0.73s ease-in";
+            animatedBeforeImage.style.animation = "runBefore 1s ease-in";
             animatedAfterImage.style.animation = "runAfter 1.1s ease-in";
         }
 

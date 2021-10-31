@@ -86,7 +86,7 @@ const MainContent = (props) => {
                     animatedBeforeImage.style.transform = "translateX(100vw)";
                 }, 700)
             } else {
-                animatedBeforeImage.style.animation = "runBefore 0.73s ease-in";
+                animatedBeforeImage.style.animation = "runBefore 0.95s ease-in";
                 animatedAfterImage.style.animation = "runAfter 1.1s ease-in";
                 setTimeout(() => {
                     animatedBeforeImage.style.transform = "translateX(100vw)";
