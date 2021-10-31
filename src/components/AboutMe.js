@@ -12,11 +12,11 @@ const AboutMe = (props) => {
         const animatedAfterImage = document.querySelector('.after-img');
 
         if (window.matchMedia("(orientation:portrait)").matches) {
-            animatedBeforeImage.style.animation = "runBefore 0.7s ease-in";
-            animatedAfterImage.style.animation = "runAfter 0.9s ease-in";
-        } else {
-            animatedBeforeImage.style.animation = "runBefore 1s ease-in";
+            animatedBeforeImage.style.animation = "runBefore 0.9s ease-in";
             animatedAfterImage.style.animation = "runAfter 1.1s ease-in";
+        } else {
+            animatedBeforeImage.style.animation = "runBefore 1.4s ease-in";
+            animatedAfterImage.style.animation = "runAfter 1.5s ease-in";
         }
 
         setTimeout(() => {
