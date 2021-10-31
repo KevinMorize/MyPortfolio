@@ -9,11 +9,11 @@ const Gradiant = () => {
 
         dots.forEach((e) => {
             if(window.matchMedia("(orientation:portrait)").matches){
-                e.style.top = `${Math.random() * window.innerHeight / 2}px`;
+                e.style.top = `${Math.random() * window.innerHeight}px`;
                 e.style.left = `${Math.random() * window.innerWidth}px`;
             } else {
                 e.style.top = `${Math.random() * window.innerHeight}px`;
-                e.style.left = `${Math.random() * window.innerWidth / 2}px`;
+                e.style.left = `${Math.random() * window.innerWidth}px`;
             }
         })
 
@@ -38,6 +38,32 @@ const Gradiant = () => {
 
     return (
         <div className="grandiant">
+            <div className="dot"></div>
+            <div className="dot"></div>
+            <div className="dot"></div>
+            <div className="dot"></div>
+            <div className="dot"></div>
+            <div className="dot"></div>
+            <div className="dot"></div>
+            <div className="dot"></div>
+            <div className="dot"></div>
+            <div className="dot"></div>
+            <div className="dot"></div>
+            <div className="dot"></div>
+            <div className="dot"></div>
+            <div className="dot"></div>
+            <div className="dot"></div>
+            <div className="dot"></div>
+            <div className="dot"></div>
+            <div className="dot"></div>
+            <div className="dot"></div>
+            <div className="dot"></div>
+            <div className="dot"></div>
+            <div className="dot"></div>
+            <div className="dot"></div>
+            <div className="dot"></div>
+            <div className="dot"></div>
+            <div className="dot"></div>
             <div className="dot"></div>
             <div className="dot"></div>
             <div className="dot"></div>
