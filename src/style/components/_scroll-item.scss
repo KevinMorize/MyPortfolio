@@ -29,7 +29,12 @@
     .scroll-down-item {
         position: absolute;
         width: fit-content;
-        transform: translateY(200%);
+        bottom: 11%;
         left: 92%;    
+        transform: translateY(0);
+        &:after {
+            height: 50%;
+            bottom: -60%;
+        }
     }
 }
