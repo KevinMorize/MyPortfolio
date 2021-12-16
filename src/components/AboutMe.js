@@ -1,9 +1,12 @@
 import React, { useEffect } from 'react';
 
 const AboutMe = (props) => {
-    const isEnglish = props.english
+
+    const [loaded, setLoaded] = useState(false);
+    const isEnglish = props.english;
 
     useEffect(() => {
+
         const img = document.querySelector('.content-img');
         const h2 = document.querySelector('.text-content h2');
         const h3 = document.querySelector('.text-content h3');
@@ -11,28 +14,30 @@ const AboutMe = (props) => {
         const animatedBeforeImage = document.querySelector('.before-img');
         const animatedAfterImage = document.querySelector('.after-img');
 
-        if (window.matchMedia("(orientation:portrait)").matches) {
-            animatedBeforeImage.style.animation = "runBefore 0.9s ease-in";
-            animatedAfterImage.style.animation = "runAfter 1.1s ease-in";
-        } else {
-            animatedBeforeImage.style.animation = "runBefore 1.4s ease-in";
-            animatedAfterImage.style.animation = "runAfter 1.5s ease-in";
+
+        if (loaded) {
+            if (window.matchMedia("(orientation:portrait)").matches) {
+                animatedBeforeImage.style.animation = "runBefore 0.9s ease-in";
+                animatedAfterImage.style.animation = "runAfter 1.1s ease-in";
+            } else {
+                animatedBeforeImage.style.animation = "runBefore 1.4s ease-in";
+                animatedAfterImage.style.animation = "runAfter 1.5s ease-in";
+            }  
+            setTimeout(() => {
+                img.style.transform = 'scale(1)';
+            }, 20)
+            setTimeout(() => {
+                h2.style.transform = "translateX(0)";
+            }, 500)
+            setTimeout(() => {
+                h3.style.transform = "translateY(0)";
+            }, 300)
+            p.forEach((e) => {
+                e.style.transform = "translateY(0)"
+            })
         }
 
-        setTimeout(() => {
-            img.style.transform = 'scale(1)';
-        }, 20)
-        setTimeout(() => {
-            h2.style.transform = "translateX(0)";
-        }, 500)
-        setTimeout(() => {
-            h3.style.transform = "translateY(0)";
-        }, 300)
-        p.forEach((e) => {
-            e.style.transform = "translateY(0)"
-        })
-
-    }, [isEnglish])
+    }, [isEnglish, loaded])
 
 
     return (
@@ -48,7 +53,7 @@ const AboutMe = (props) => {
                         <p>Travailleur acharné et passionné c'est avec plaisir que je relève les nouveaux défis. Si vous avez senti quelque chose en moi, n'hésitez surtout pas et allez sur la page contact.</p>
                     </div>
                     <div className="content-img">
-                        <img src="../assets/img/profil-pic.jpg" alt="profil-pic" />
+                        <img src="../assets/img/profil-pic.jpg" alt="profil-pic" onLoad={() => setLoaded(true)}/>
                         <div className="before-img"></div>
                         <div className="after-img"></div>
                     </div>
@@ -65,7 +70,7 @@ const AboutMe = (props) => {
                         <p>Hard worker and passionate, it is with pleasure that I take up new challenges. If you felt something in me, do not hesitate and go to the contact page.</p>
                     </div>
                     <div className="content-img">
-                        <img src="../assets/img/profil-pic.jpg" alt="profil-pic" />
+                        <img src="../assets/img/profil-pic.jpg" alt="profil-pic" onLoad={() => setLoaded(true)}/>
                         <div className="before-img"></div>
                         <div className="after-img"></div>
                     </div>

@@ -6,7 +6,8 @@ import { NavLink } from 'react-router-dom';
 const MainContent = (props) => {
     const [currentContent] = useState(mainContentData);
     const content = currentContent[props.mainContent];
-    const isEnglish = props.english
+    const [loaded, setLoaded] = useState(false);
+    const isEnglish = props.english;
 
     useEffect(() => {
         //header style
@@ -72,7 +73,7 @@ const MainContent = (props) => {
         }
 
         // img content
-        if (animatedImage) {
+        if (animatedImage && loaded) {
             setTimeout(() => {
                 animatedContentImage.style.transform = "scale(1)"
             })
@@ -126,7 +127,7 @@ const MainContent = (props) => {
             }, 1500)
         }
 
-    }, [isEnglish]);
+    }, [isEnglish, loaded]);
 
     return (
         <>
@@ -190,12 +191,12 @@ const MainContent = (props) => {
                             <div className="after-img"></div>
                             {content.link &&
                                 <NavLink to={content.link} exact>
-                                    <img src={content.img} alt={content.title}></img>
+                                    <img src={content.img} alt={content.title} onLoad={() => setLoaded(true)}></img>
                                 </NavLink>
                             }
                             {!content.link &&
                                 <NavLink to="" exact>
-                                    <img src={content.img} alt={content.title}></img>
+                                    <img src={content.img} alt={content.title} onLoad={() => setLoaded(true)}></img>
                                 </NavLink>
                             }
                         </div>
@@ -267,12 +268,12 @@ const MainContent = (props) => {
                             <div className="after-img"></div>
                             {content.link &&
                                 <NavLink to={content.link} exact>
-                                    <img src={content.img} alt={content.title}></img>
+                                    <img src={content.img} alt={content.title} onLoad={() => setLoaded(true)}></img>
                                 </NavLink>
                             }
                             {!content.link &&
                                 <NavLink to="" exact>
-                                    <img src={content.img} alt={content.title}></img>
+                                    <img src={content.img} alt={content.title} onLoad={() => setLoaded(true)}></img>
                                 </NavLink>
                             }
                         </div>

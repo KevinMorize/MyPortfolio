@@ -7,8 +7,8 @@ import AboutSkills from "../components/AboutSkills";
 
 const AboutContent = (props) => {
 
+    const [loaded, setLoaded] = useState(false);
     const isEnglish = props.english;
-    console.log(isEnglish)
 
     useEffect(() => {
         //header style
