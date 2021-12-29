@@ -1,196 +1,200 @@
 .moon-img {
-    position: absolute;
+  position: absolute;
+  width: 100vh;
+  height: 100vh;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  z-index: 100;
+
+  .moon {
     width: 100vh;
     height: 100vh;
+    position: relative;
     top: 0;
     bottom: 0;
     right: 0;
+    left: 0;
+    opacity: 1;
     margin: auto;
+    transform-style: preserve-3d;
+    perspective: 200px;
+    transform-origin: center;
+    transition: left cubic-bezier(0.65, 0.05, 0.36, 1) 1s,
+      opacity cubic-bezier(0.65, 0.05, 0.36, 1) 1.2s;
+  }
 
-    .moon {
-        width: 100vh;
-        height: 100vh;
-        position: relative;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        left: 0;
-        opacity: 1;
-        margin: auto;
-        transform-style: preserve-3d;
-        perspective: 200px;
-        transform-origin: center;
-        transition: left cubic-bezier(0.65, 0.05, 0.36, 1) 1s, opacity cubic-bezier(0.65, 0.05, 0.36, 1) 1.2s;
-    }
+  .moon-animation {
+    opacity: 0;
+    left: 90%;
+  }
 
-    .moon-animation {
-        opacity: 0;
-        left: 90%;
-    }
+  .moon img {
+    width: 40vh;
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transition: all cubic-bezier(0.65, 0.05, 0.36, 1) 1s;
+  }
 
-    .moon img {
-        width: 40vh;
-        opacity: 1;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin: auto;
-        transition: all cubic-bezier(0.65, 0.05, 0.36, 1) 1s;
+  .cloud {
+    position: absolute;
+    width: -moz-fit-content;
+    width: fit-content;
+    opacity: 1;
+    transition: left cubic-bezier(0.65, 0.05, 0.36, 1) 1s,
+      opacity cubic-bezier(0.65, 0.05, 0.36, 1) 1.5s;
+    img {
+      width: 35vh;
     }
+  }
 
-    .cloud {
-        position: absolute;
-        width: -moz-fit-content;
-        width: fit-content;
-        opacity: 1;
-        transition: left cubic-bezier(0.65, 0.05, 0.36, 1) 1s, opacity cubic-bezier(0.65, 0.05, 0.36, 1) 1.5s;
-        img {
-            width: 35vh;
-        }
-    }
+  .cloud1 {
+    top: 39%;
+    z-index: 500;
+    left: 57%;
+  }
 
-    .cloud1 {
-        top: 39%;
-        z-index: 500;
-        left: 57%;
-    }
+  .cloud2 {
+    top: 59%;
+    z-index: 500;
+    left: 48%;
+  }
 
-    .cloud2 {
-        top: 59%;
-        z-index: 500;
-        left: 48%;
-    }
+  .cloud3 {
+    top: 54%;
+    z-index: 500;
+    left: 12%;
+  }
 
-    .cloud3 {
-        top: 54%;
-        z-index: 500;
-        left: 12%;
-    }
+  .cloud4 {
+    top: 20%;
+    z-index: 200;
+    left: 47%;
+  }
 
-    .cloud4 {
-        top: 20%;
-        z-index: 200;
-        left: 47%;
-    }
+  .cloud5 {
+    top: 27%;
+    z-index: 200;
+    left: 16%;
+  }
 
-    .cloud5 {
-        top: 27%;
-        z-index: 200;
-        left: 16%;
-    }
+  .cloud-animation {
+    left: 200%;
+    opacity: 0;
+  }
 
-    .cloud-animation {
-        left: 200%;
-        opacity: 0;
-    }
+  p {
+    position: absolute;
+    top: 47%;
+    left: 6%;
+    z-index: 400;
+    font-size: 5vh;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    text-shadow: 0 10px 15px rgba(0, 0, 0, 0.554);
+    color: #ff4d5a;
+    opacity: 0;
+    transition: left cubic-bezier(0.65, 0.05, 0.36, 1) 1s,
+      opacity cubic-bezier(0.65, 0.05, 0.36, 1) 1s;
+  }
 
-    p {
-        position: absolute;
-        top: 47%;
-        left: 6%;
-        z-index: 400;
-        font-size: 5vh;
-        letter-spacing: 0.1em;
-        font-weight: 700;
-        text-shadow: 0 10px 15px rgba(0, 0, 0, 0.554);
-        color: #ff4d5a;
-        opacity: 0;
-        transition: left cubic-bezier(0.65, 0.05, 0.36, 1) 1s, opacity cubic-bezier(0.65, 0.05, 0.36, 1) 1s;
-    }
-
-    .title-animation {
-        opacity: 1;
-        left: 22%;
-    }
+  .title-animation {
+    opacity: 1;
+    left: 22%;
+  }
 }
 
 @media screen and (orientation: portrait) {
-    .moon-img {
-        overflow: hidden;
-        width: 100vw;
-        height: 100vw;
-        top: 5%;
-        bottom: auto;
+  .moon-img {
+    overflow: hidden;
+    width: 100vw;
+    height: 100vw;
+    top: 5%;
+    bottom: auto;
 
-        .moon {
-            width: 100vw;
-            height: 100vw;
-        }
-
-        .moon-animation {
-            opacity: 0;
-            left: 200%;
-        }
-
-        .moon img {
-            width: 60vw;
-            left: 0;
-            animation: moonScale alternate infinite ease 2s;
-            @keyframes moonScale {
-                from {
-                    transform: scale(1);
-                }
-                to {
-                    transform: scale(1.1);
-                }
-            }
-        }
-
-        .cloud {
-            img {
-                width: 60vw;
-                animation: cloudMoving alternate infinite ease 3s;
-                @keyframes cloudMoving {
-                    0% {
-                        transform: translateX(0);
-                    }
-                    100% {
-                        transform: translateX(-10%);
-                    }
-                }
-            }
-        }
-
-        .cloud1 {
-            top: 37%;
-            left: 60%;
-        }
-
-        .cloud2 {
-            top: 72%;
-            left: 50%;
-        }
-
-        .cloud3 {
-            top: 61%;
-            left: -10%;
-        }
-
-        .cloud4 {
-            top: 2%;
-            left: 47%;
-        }
-
-        .cloud5 {
-            top: 12%;
-            left: -10%;
-        }
-
-        .cloud-animation {
-            left: 200%;
-            opacity: 0;
-        }
-
-        p {
-            font-size: 7vw;
-            top: 47%;
-        }
-
-        .title-animation {
-            opacity: 1;
-            left: 10%;
-        }
+    .moon {
+      width: 100vw;
+      height: 100vw;
     }
+
+    .moon-animation {
+      opacity: 0;
+      left: 200%;
+    }
+
+    .moon img {
+      width: 60vw;
+      left: 0;
+      animation: moonScale alternate infinite ease 2s;
+      @keyframes moonScale {
+        from {
+          transform: scale(1);
+        }
+        to {
+          transform: scale(1.1);
+        }
+      }
+    }
+
+    .cloud {
+      img {
+        width: 60vw;
+        animation: cloudMoving alternate infinite ease 3s;
+        @keyframes cloudMoving {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-10%);
+          }
+        }
+      }
+    }
+
+    .cloud1 {
+      top: 37%;
+      left: 60%;
+    }
+
+    .cloud2 {
+      top: 72%;
+      left: 50%;
+    }
+
+    .cloud3 {
+      top: 61%;
+      left: -10%;
+    }
+
+    .cloud4 {
+      top: 2%;
+      left: 47%;
+    }
+
+    .cloud5 {
+      top: 12%;
+      left: -10%;
+    }
+
+    .cloud-animation {
+      left: 200%;
+      opacity: 0;
+    }
+
+    p {
+      font-size: 7vw;
+      top: 47%;
+    }
+
+    .title-animation {
+      opacity: 1;
+      left: 10%;
+    }
+  }
 }

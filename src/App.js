@@ -1,10 +1,10 @@
 import { Redirect, Route, Switch, useHistory, useLocation } from "react-router";
 import { useEffect, useState } from "react";
-import Gradiant from './components/Gradiant';
-import GrowingCircle from './components/GrowingCircle';
-import Header from './components/Header';
-import Mouse from './components/Mouse';
-import Nav from './components/Nav';
+import Gradiant from "./components/Gradiant";
+import GrowingCircle from "./components/GrowingCircle";
+import Header from "./components/Header";
+import Mouse from "./components/Mouse";
+import Nav from "./components/Nav";
 import MainContent from "./components/MainContent";
 import ScrollBar from "./components/ScrollBar";
 import Moon from "./components/Moon";
@@ -19,35 +19,36 @@ function App() {
   const [isEng, setIsEng] = useState(false);
 
   const displayEng = () => {
-    const flagIco = document.querySelector('.flag');
+    const flagIco = document.querySelector(".flag");
     if (!isEng) {
-      flagIco.src = "../assets/img/french.png"
-      setIsEng(true)
+      flagIco.src = "../assets/img/french.png";
+      setIsEng(true);
     } else {
-      flagIco.src = "../assets/img/english.png"
-      setIsEng(false)
+      flagIco.src = "../assets/img/english.png";
+      setIsEng(false);
     }
-  }
+  };
 
   useEffect(() => {
     var table = [];
 
     const handleScrollToElement = (e) => {
+      console.log(e.deltaY);
+
       const url = window.location.origin + "/";
 
       const wheelRouter = (before, after) => {
-        if (e.wheelDeltaY < 0) {
+        if (e.wheelDeltaY < 0 || e.deltaY > 0) {
           history.push(after);
-        } else if (e.wheelDeltaY > 0) {
-          history.push(before)
+        } else if (e.wheelDeltaY > 0 || e.deltaY < 0) {
+          history.push(before);
         }
-      }
+      };
 
       switch (window.location.href.toString()) {
-
         case url:
-          if (e.wheelDeltaY < 0) {
-            history.push("about")
+          if (e.wheelDeltaY < 0 || e.deltaY > 0) {
+            history.push("about");
           }
           break;
 
@@ -60,29 +61,26 @@ function App() {
           break;
 
         case url + "contact":
-          if (e.wheelDeltaY > 0) {
-            history.push("production")
+          if (e.wheelDeltaY > 0 || e.deltaY < 0) {
+            history.push("production");
           }
           break;
 
         default:
       }
-    }
+    };
 
     const handleMoveToElement = (e) => {
-
       const url = window.location.origin + "/";
       let position = e.touches[0].clientY;
       table.push(position);
 
       table.map(() => {
-        if (table.length >= 10) {
-
+        if (table.length >= 8) {
           const addition = table[0] - table[table.length - 1];
-          const minWay = window.screen.availHeight / 10
+          const minWay = window.screen.availHeight / 8;
 
           switch (window.location.href.toString()) {
-
             case url:
               if (addition >= minWay) {
                 history.push("about");
@@ -105,10 +103,10 @@ function App() {
             case url + "production":
               if (addition >= minWay) {
                 history.push("contact");
-                table = []
+                table = [];
               } else if (addition <= -minWay) {
                 history.push("about");
-                table = []
+                table = [];
               }
               break;
 
@@ -117,33 +115,38 @@ function App() {
                 history.push("production");
                 table = [];
               } else {
-                table = []
+                table = [];
               }
               break;
 
             default:
-              console.log("none")
+              console.log("none");
           }
         }
-        return table
-      })
-    }
+        return table;
+      });
+    };
 
-    window.addEventListener('touchmove', handleMoveToElement);
-    window.addEventListener('wheel', handleScrollToElement);
-
-  }, [history])
+    window.addEventListener("touchmove", handleMoveToElement);
+    // window.addEventListener("wheel", handleScrollToElement);
+    document.addEventListener("mousewheel", handleScrollToElement);
+    // document.addEventListener("DOMMouseScroll", detectTrackPad);
+  }, [history]);
 
   return (
     <>
       <Mouse />
       <Header />
       <Nav english={isEng} />
-      <img className="flag hovered" alt="flag" onClick={displayEng} src="../assets/img/english.png" />
+      <img
+        className="flag hovered"
+        alt="flag"
+        onClick={displayEng}
+        src="../assets/img/english.png"
+      />
       <Gradiant />
       <GrowingCircle />
       <Switch location={location} key={location.pathname}>
-
         <Route exact path="/" pathname="/#">
           <MainContent mainContent={0} english={isEng} />
           <Moon />
@@ -167,7 +170,11 @@ function App() {
           <AboutContent english={isEng} />
         </Route>
 
-        <Route exact path="/production/content" pathname="/#production/#content">
+        <Route
+          exact
+          path="/production/content"
+          pathname="/#production/#content"
+        >
           <ProductionContent english={isEng} />
         </Route>
 
