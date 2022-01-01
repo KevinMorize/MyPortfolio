@@ -1,16 +1,40 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const AboutPassion = (props) => {
     const isEnglish = props.english
+    const [isVisible, setIsVisible] = useState(false)
 
     useEffect(() => {
         const img = document.querySelectorAll('.passion-item img');
+        if (isVisible) {
+            img.forEach((e) => {
+                e.style.transform = "scale(1)"
+            })
+        } else {
+            img.forEach((e) => {
+                e.style.transform = "scale(0.6)"
+            })
+        }
 
-        img.forEach((e) => {
-            e.style.transform = "scale(1)"
-        })
+    }, [isEnglish, isVisible]);
 
-    }, [isEnglish])
+    // scroll display
+    function setVisible() {
+        let elem = document.getElementById('displaySkills');
+        let coordinates = elem.getBoundingClientRect();
+
+        if (
+            (coordinates.right > window.innerWidth || coordinates.bottom > window.innerHeight) ||
+            (coordinates.top < 0 || coordinates.left < 0)
+        ) {
+            setIsVisible(false);
+        } else {
+            setIsVisible(true);
+        }
+    }
+
+    window.addEventListener('wheel', setVisible);
+    window.addEventListener('touchmove', setVisible);
 
     return (
         <>
@@ -19,7 +43,7 @@ const AboutPassion = (props) => {
                     <ul className="passion-list">
                         <li className="passion-item">
                             <img src="../assets/img/computer.png" alt="computer" />
-                            <h4 className="passion-title">Ordinateur</h4>
+                            <h4 className="passion-title" id="displayPassion">Ordinateur</h4>
                             <p className="passion-text">J'ai monté mon premier ordinateur moi-même et je l'ai beaucoup aimé, des années après avoir décidé de quitter mon travail et de devenir développeur Web. Depuis que je suis très passionné par le codage.</p>
                         </li>
                         <li className="passion-item">
@@ -39,8 +63,8 @@ const AboutPassion = (props) => {
                 <div className="content-passion">
                     <ul className="passion-list">
                         <li className="passion-item">
-                            <img src="../assets/img/computer.png" alt="computer" />
-                            <h4 className="passion-title">Computer</h4>
+                            <img src="../assets/img/computer.png" alt="computer"/>
+                            <h4 className="passion-title" id="displayPassion">Computer</h4>
                             <p className="passion-text">I built my first computer myself and I liked it very much, years after I decided to quit my job and become a web developper. Since that I'm very passionate by coding.</p>
                         </li>
                         <li className="passion-item">
