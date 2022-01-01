@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { useState } from 'react';
 
 const AboutMe = (props) => {
 
@@ -25,19 +26,19 @@ const AboutMe = (props) => {
             }  
             setTimeout(() => {
                 img.style.transform = 'scale(1)';
-            }, 20)
+            }, 20);
             setTimeout(() => {
                 h2.style.transform = "translateX(0)";
-            }, 500)
+            }, 500);
             setTimeout(() => {
                 h3.style.transform = "translateY(0)";
-            }, 300)
+            }, 300);
             p.forEach((e) => {
-                e.style.transform = "translateY(0)"
-            })
+                e.style.transform = "translateY(0)";
+            });
         }
 
-    }, [isEnglish, loaded])
+    }, [isEnglish, loaded]);
 
 
     return (

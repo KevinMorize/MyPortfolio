@@ -7,7 +7,6 @@ import AboutSkills from "../components/AboutSkills";
 
 const AboutContent = (props) => {
 
-    const [loaded, setLoaded] = useState(false);
     const isEnglish = props.english;
 
     useEffect(() => {
@@ -28,17 +27,17 @@ const AboutContent = (props) => {
 
         const onMouseOverArrow = () => {
             arrowDiv.style.animation = ('translateArrow ease 1s infinite alternate');
-        }
+        };
 
         const onMouseLeaveArrow = () => {
             arrowDiv.style.animation = ('');
-        }
+        };
 
         // arrow events
-        arrowDiv.addEventListener('mouseover', onMouseOverArrow)
-        arrowDiv.addEventListener('mouseleave', onMouseLeaveArrow)
+        arrowDiv.addEventListener('mouseover', onMouseOverArrow);
+        arrowDiv.addEventListener('mouseleave', onMouseLeaveArrow);
 
-    }, [isEnglish])
+    }, [isEnglish]);
 
     return (
         <>
@@ -46,7 +45,7 @@ const AboutContent = (props) => {
                 <div className="second-content">
                     <div className="back">
                         <NavLink exact to="/about" className="hovered">
-                            <img src="../assets/back.svg" alt="retour"></img>
+                            <img src="../assets/back.svg" alt="retour" />
                             <p>Retour</p>
                         </NavLink>
                     </div>

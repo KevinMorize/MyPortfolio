@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 
 const ProductionContent = (props) => {
-    const isEnglish = props.english
+    const isEnglish = props.english;
 
     useEffect(() => {
 
@@ -17,7 +17,7 @@ const ProductionContent = (props) => {
 
         //tools const
         const screwdriver = document.querySelector('.screwdriver');
-        const wrench = document.querySelector('.wrench')
+        const wrench = document.querySelector('.wrench');
 
         //arrow animation
         setTimeout(() => {
@@ -27,32 +27,32 @@ const ProductionContent = (props) => {
 
         const onMouseOverArrow = () => {
             arrowDiv.style.animation = ('translateArrow ease 1s infinite alternate');
-        }
+        };
 
         const onMouseLeaveArrow = () => {
             arrowDiv.style.animation = ('');
-        }
+        };
 
         // tools animation 
         if (window.matchMedia("(orientation:portrait)").matches) {
             setTimeout(() => {
-                screwdriver.style.animation = "dongleSkrew 2s ease-in-out"
-                wrench.style.animation = "dongleWrench 2s ease-in-out"
-            }, 100)
+                screwdriver.style.animation = "dongleSkrew 2s ease-in-out";
+                wrench.style.animation = "dongleWrench 2s ease-in-out";
+            }, 100);
         } else {
             setTimeout(() => {
                 screwdriver.style.transform = "translate(100%, 0)";
                 wrench.style.transform = "translate(-100%, 0)";
-            }, 900)
-            screwdriver.style.animation = "dongleSkrew 2s ease-in-out"
-            wrench.style.animation = "dongleWrench 2s ease-in-out"
+            }, 900);
+            screwdriver.style.animation = "dongleSkrew 2s ease-in-out";
+            wrench.style.animation = "dongleWrench 2s ease-in-out";
         }
 
         // arrow events
         arrowDiv.addEventListener('mouseover', onMouseOverArrow);
         arrowDiv.addEventListener('mouseleave', onMouseLeaveArrow);
 
-    }, [isEnglish])
+    }, [isEnglish]);
 
     return (
         <>
@@ -60,7 +60,7 @@ const ProductionContent = (props) => {
                 <div className="second-content">
                     <div className="back">
                         <NavLink exact to="/production" className="hovered">
-                            <img src="../assets/back.svg" alt="retour"></img>
+                            <img src="../assets/back.svg" alt="retour"/>
                             <p>Retour</p>
                         </NavLink>
                     </div>
