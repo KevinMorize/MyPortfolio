@@ -193,8 +193,8 @@ const AboutSkills = (props) => {
                         <div className="skill-meta">
                             <div className="skill-name">
                                 <h4>MYSQL</h4>
-                                {!isEnglish && <p>8 mois</p>}
-                                {isEnglish && <p>8 month</p>}
+                                {!isEnglish && <p>1 an</p>}
+                                {isEnglish && <p>1 year</p>}
                             </div>
                             <p className="skill-rate">90%</p>
                         </div>
