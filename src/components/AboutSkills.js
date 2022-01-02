@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
 
 const AboutSkills = (props) => {
+
     const isEnglish = props.english
     const [isVisible, setIsVisible] = useState(false)
 
     useEffect(() => {
         const detail = document.querySelectorAll('.skill-detail');
+
         detail.forEach((e) => {
             const rate = e.querySelector('.skill-rate');
             const barsAfter = e.querySelector('.skill-bar span');
@@ -15,6 +17,7 @@ const AboutSkills = (props) => {
                 barsAfter.style.width = "10%";
             }
         })
+
     }, [isEnglish, isVisible]);
 
     // scroll display
@@ -22,13 +25,10 @@ const AboutSkills = (props) => {
         let elem = document.getElementById('displaySkills');
         let coordinates = elem.getBoundingClientRect();
 
-        if (
-            (coordinates.right > window.innerWidth || coordinates.bottom > window.innerHeight) ||
-            (coordinates.top < 0 || coordinates.left < 0)
-        ) {
-            setIsVisible(false);
-        } else {
+        if (coordinates.top <= window.innerHeight || coordinates.bottom <=  window.innerHeight) {
             setIsVisible(true);
+        } else {
+            setIsVisible(false);
         }
     }
 
@@ -36,9 +36,9 @@ const AboutSkills = (props) => {
     window.addEventListener('touchmove', setVisible);
 
     return (
-        <div className="content-skill">
+        <div className="content-skill" id="displaySkills">
             <ul className="skill-list">
-                <li className="skill-item" id="displaySkills">
+                <li className="skill-item">
                     <div className="skill-ico">
                         <img src="../assets/html5.svg" alt="html5" />
                     </div>
@@ -46,8 +46,8 @@ const AboutSkills = (props) => {
                         <div className="skill-meta">
                             <div className="skill-name">
                                 <h4>HTML</h4>
-                                {!isEnglish && <p>1 an</p>}
-                                {isEnglish && <p>1 year</p>}
+                                {!isEnglish && <p>1 an <sup>1</sup>&frasl;<sub>2</sub></p>}
+                                {isEnglish && <p>1 year <sup>1</sup>&frasl;<sub>2</sub></p>}
                             </div>
                             <p className="skill-rate">90%</p>
                         </div>
@@ -62,10 +62,26 @@ const AboutSkills = (props) => {
                         <div className="skill-meta">
                             <div className="skill-name">
                                 <h4>JAVASCRIPT</h4>
-                                {!isEnglish && <p>8 mois</p>}
-                                {isEnglish && <p>8 month</p>}
+                                {!isEnglish && <p>+ 1 an</p>}
+                                {isEnglish && <p>1 year +</p>}
                             </div>
-                            <p className="skill-rate">70%</p>
+                            <p className="skill-rate">80%</p>
+                        </div>
+                        <div className="skill-bar"><span></span></div>
+                    </div>
+                </li>
+                <li className="skill-item">
+                    <div className="skill-ico">
+                        <img src="../assets/typescript.svg" alt="javascript" />
+                    </div>
+                    <div className="skill-detail">
+                        <div className="skill-meta">
+                            <div className="skill-name">
+                                <h4>TYPESCRIPT</h4>
+                                {!isEnglish && <p>- <sup>1</sup>&frasl;<sub>2</sub> an</p>}
+                                {isEnglish && <p>- <sup>1</sup>&frasl;<sub>2</sub> year</p>}
+                            </div>
+                            <p className="skill-rate">50%</p>
                         </div>
                         <div className="skill-bar"><span></span></div>
                     </div>
@@ -78,8 +94,8 @@ const AboutSkills = (props) => {
                         <div className="skill-meta">
                             <div className="skill-name">
                                 <h4>NODE JS</h4>
-                                {!isEnglish && <p>8 mois</p>}
-                                {isEnglish && <p>8 month</p>}
+                                {!isEnglish && <p>+ 1 an</p>}
+                                {isEnglish && <p>1 year +</p>}
                             </div>
                             <p className="skill-rate">80%</p>
                         </div>
@@ -94,8 +110,8 @@ const AboutSkills = (props) => {
                         <div className="skill-meta">
                             <div className="skill-name">
                                 <h4>SASS</h4>
-                                {!isEnglish && <p>2 mois</p>}
-                                {isEnglish && <p>2 month</p>}
+                                {!isEnglish && <p>- <sup>1</sup>&frasl;<sub>2</sub> an</p>}
+                                {isEnglish && <p>- <sup>1</sup>&frasl;<sub>2</sub> year</p>}
                             </div>
                             <p className="skill-rate">50%</p>
                         </div>
@@ -113,8 +129,8 @@ const AboutSkills = (props) => {
                         <div className="skill-meta">
                             <div className="skill-name">
                                 <h4>CSS</h4>
-                                {!isEnglish && <p>1 an</p>}
-                                {isEnglish && <p>1 year</p>}
+                                {!isEnglish && <p>1 an <sup>1</sup>&frasl;<sub>2</sub></p>}
+                                {isEnglish && <p>1 year <sup>1</sup>&frasl;<sub>2</sub></p>}
                             </div>
                             <p className="skill-rate">90%</p>
                         </div>
@@ -129,8 +145,24 @@ const AboutSkills = (props) => {
                         <div className="skill-meta">
                             <div className="skill-name">
                                 <h4>REACT JS</h4>
-                                {!isEnglish && <p>3 mois</p>}
-                                {isEnglish && <p>3 month</p>}
+                                {!isEnglish && <p>+ <sup>1</sup>&frasl;<sub>2</sub> an</p>}
+                                {isEnglish && <p>+ <sup>1</sup>&frasl;<sub>2</sub> year</p>}
+                            </div>
+                            <p className="skill-rate">70%</p>
+                        </div>
+                        <div className="skill-bar"><span></span></div>
+                    </div>
+                </li>
+                <li className="skill-item">
+                    <div className="skill-ico">
+                        <img src="../assets/react.svg" alt="react" />
+                    </div>
+                    <div className="skill-detail">
+                        <div className="skill-meta">
+                            <div className="skill-name">
+                                <h4>REACT NATIVE</h4>
+                                {!isEnglish && <p>- <sup>1</sup>&frasl;<sub>2</sub> an</p>}
+                                {isEnglish && <p>- <sup>1</sup>&frasl;<sub>2</sub> year</p>}
                             </div>
                             <p className="skill-rate">60%</p>
                         </div>
@@ -145,10 +177,10 @@ const AboutSkills = (props) => {
                         <div className="skill-meta">
                             <div className="skill-name">
                                 <h4>REDUX</h4>
-                                {!isEnglish && <p>1 mois</p>}
-                                {isEnglish && <p>1 month</p>}
+                                {!isEnglish && <p>- <sup>1</sup>&frasl;<sub>2</sub> an</p>}
+                                {isEnglish && <p>- <sup>1</sup>&frasl;<sub>2</sub> year</p>}
                             </div>
-                            <p className="skill-rate">40%</p>
+                            <p className="skill-rate">60%</p>
                         </div>
                         <div className="skill-bar"><span></span></div>
                     </div>
