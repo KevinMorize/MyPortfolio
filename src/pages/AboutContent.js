@@ -40,96 +40,48 @@ const AboutContent = (props) => {
     }, [isEnglish]);
 
     return (
-        <>
-            {!isEnglish &&
-                <div className="second-content">
-                    <div className="back">
-                        <NavLink exact to="/about" className="hovered">
-                            <img src="../assets/back.svg" alt="retour" />
-                            <p>Retour</p>
-                        </NavLink>
-                    </div>
+        <div className="second-content">
+            <div className="back">
+                <NavLink exact to="/about" className="hovered">
+                    <img src="../assets/back.svg" alt="retour"></img>
+                    <p>{!isEnglish ? "Retour" : "Back"}</p>
+                </NavLink>
+            </div>
 
-                    {/* first content */}
-                    <div className="about-titles">
-                        <em>01</em>
-                        <h1>QUI JE SUIS</h1>
-                    </div>
-                    <AboutMe english={false} />
+            {/* first content */}
+            <div className="about-titles">
+                <em>01</em>
+                <h1>{!isEnglish ? "QUI JE SUIS" : "WHO AM I"}</h1>
+            </div>
+            {!isEnglish ? <AboutMe english={false} /> : <AboutMe english={true} />}
 
-                    {/* second content */}
-                    <div className="about-titles">
-                        <em>02</em>
-                        <h1>PASSIONS</h1>
-                    </div>
-                    <AboutPassion english={false} />
+            {/* second content */}
+            <div className="about-titles">
+                <em>02</em>
+                <h1>PASSIONS</h1>
+            </div>
+            {!isEnglish ? <AboutPassion english={false} /> : <AboutPassion english={true} />}
 
-                    {/* third content */}
-                    <div className="about-titles">
-                        <em>03</em>
-                        <h1>COMPÉTENCES</h1>
-                    </div>
-                    <AboutSkills english={false} />
+            {/* third content */}
+            <div className="about-titles">
+                <em>03</em>
+                <h1>{!isEnglish ? "COMPÉTENCES" : "SKILLS"}</h1>
+            </div>
+            {!isEnglish ? <AboutSkills english={false} /> : <AboutSkills english={true} />}
 
-                    <ul className="footer">
-                        <li>
-                            <CopyToClipboard text="morizekevin91@gmail.com">
-                                <p className="hovered" style={{ cursor: 'pointer' }} onClick={() => { alert("Copié dans le presse papier !") }}>morizekevin91@gmail.com</p>
-                            </CopyToClipboard>
-                        </li>
-                        <li>
-                            <CopyToClipboard text="0781938154">
-                                <p className="hovered" style={{ cursor: 'pointer' }} onClick={() => { alert("Copié dans le presse papier !") }}>0781938154</p>
-                            </CopyToClipboard>
-                        </li>
-                    </ul>
-                </div>
-            }
-            {isEnglish &&
-                <div className="second-content">
-                    <div className="back">
-                        <NavLink exact to="/about" className="hovered">
-                            <img src="../assets/back.svg" alt="BACK"></img>
-                            <p>Back</p>
-                        </NavLink>
-                    </div>
-
-                    {/* first content */}
-                    <div className="about-titles">
-                        <em>01</em>
-                        <h1>WHO AM I</h1>
-                    </div>
-                    <AboutMe english={true} />
-
-                    {/* second content */}
-                    <div className="about-titles">
-                        <em>02</em>
-                        <h1>PASSIONS</h1>
-                    </div>
-                    <AboutPassion english={true} />
-
-                    {/* third content */}
-                    <div className="about-titles">
-                        <em>03</em>
-                        <h1>SKILL SET</h1>
-                    </div>
-                    <AboutSkills english={true} />
-
-                    <ul className="footer">
-                        <li>
-                            <CopyToClipboard text="morizekevin91@gmail.com">
-                                <p className="hovered" style={{ cursor: 'pointer' }} onClick={() => { alert("Copied to clipboard !") }}>morizekevin91@gmail.com</p>
-                            </CopyToClipboard>
-                        </li>
-                        <li>
-                            <CopyToClipboard text="0781938154">
-                                <p className="hovered" style={{ cursor: 'pointer' }} onClick={() => { alert("Copied to clipboard !") }}>0781938154</p>
-                            </CopyToClipboard>
-                        </li>
-                    </ul>
-                </div>
-            }
-        </>
+            <ul className="footer">
+                <li>
+                    <CopyToClipboard text="morizekevin91@gmail.com">
+                        <p className="hovered" style={{ cursor: 'pointer' }} onClick={() => { !isEnglish ? alert("Copié dans le presse papier !") : alert("Copied to clipboard!") }}>morizekevin91@gmail.com</p>
+                    </CopyToClipboard>
+                </li>
+                <li>
+                    <CopyToClipboard text="0781938154">
+                        <p className="hovered" style={{ cursor: 'pointer' }} onClick={() => { !isEnglish ? alert("Copié dans le presse papier !") : alert("Copied to clipboard!") }}>0781938154</p>
+                    </CopyToClipboard>
+                </li>
+            </ul>
+        </div>
     );
 };
 

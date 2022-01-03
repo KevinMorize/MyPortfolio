@@ -18,6 +18,14 @@ const AboutSkills = (props) => {
             }
         })
 
+        document.addEventListener('wheel', setVisible);
+        document.addEventListener('touchmove', setVisible);
+
+        return () => {
+            document.removeEventListener('wheel', setVisible)
+            document.removeEventListener('touchmove', setVisible)
+        }
+
     }, [isEnglish, isVisible]);
 
     // scroll display
@@ -25,15 +33,14 @@ const AboutSkills = (props) => {
         let elem = document.getElementById('displaySkills');
         let coordinates = elem.getBoundingClientRect();
 
-        if (coordinates.top <= window.innerHeight || coordinates.bottom <=  window.innerHeight) {
+        if (coordinates.top <= window.innerHeight || coordinates.bottom <= window.innerHeight) {
             setIsVisible(true);
         } else {
             setIsVisible(false);
         }
     }
 
-    window.addEventListener('wheel', setVisible);
-    window.addEventListener('touchmove', setVisible);
+
 
     return (
         <div className="content-skill" id="displaySkills">
@@ -46,8 +53,7 @@ const AboutSkills = (props) => {
                         <div className="skill-meta">
                             <div className="skill-name">
                                 <h4>HTML</h4>
-                                {!isEnglish && <p>1 an <sup>1</sup>&frasl;<sub>2</sub></p>}
-                                {isEnglish && <p>1 year <sup>1</sup>&frasl;<sub>2</sub></p>}
+                                {!isEnglish ? <p>1 an <sup>1</sup>&frasl;<sub>2</sub></p> : <p>1 year <sup>1</sup>&frasl;<sub>2</sub></p>}
                             </div>
                             <p className="skill-rate">90%</p>
                         </div>
@@ -62,8 +68,7 @@ const AboutSkills = (props) => {
                         <div className="skill-meta">
                             <div className="skill-name">
                                 <h4>JAVASCRIPT</h4>
-                                {!isEnglish && <p>+ 1 an</p>}
-                                {isEnglish && <p>1 year +</p>}
+                                {!isEnglish ? <p>+ 1 an</p> : <p>1 year +</p>}
                             </div>
                             <p className="skill-rate">80%</p>
                         </div>
@@ -78,8 +83,7 @@ const AboutSkills = (props) => {
                         <div className="skill-meta">
                             <div className="skill-name">
                                 <h4>TYPESCRIPT</h4>
-                                {!isEnglish && <p>- <sup>1</sup>&frasl;<sub>2</sub> an</p>}
-                                {isEnglish && <p>- <sup>1</sup>&frasl;<sub>2</sub> year</p>}
+                                {!isEnglish ? <p>- <sup>1</sup>&frasl;<sub>2</sub> an</p> : <p>- <sup>1</sup>&frasl;<sub>2</sub> year</p>}
                             </div>
                             <p className="skill-rate">50%</p>
                         </div>
@@ -94,8 +98,7 @@ const AboutSkills = (props) => {
                         <div className="skill-meta">
                             <div className="skill-name">
                                 <h4>NODE JS</h4>
-                                {!isEnglish && <p>+ 1 an</p>}
-                                {isEnglish && <p>1 year +</p>}
+                                {!isEnglish ? <p>+ 1 an</p> : <p>1 year +</p>}
                             </div>
                             <p className="skill-rate">80%</p>
                         </div>
@@ -110,8 +113,7 @@ const AboutSkills = (props) => {
                         <div className="skill-meta">
                             <div className="skill-name">
                                 <h4>SASS</h4>
-                                {!isEnglish && <p>- <sup>1</sup>&frasl;<sub>2</sub> an</p>}
-                                {isEnglish && <p>- <sup>1</sup>&frasl;<sub>2</sub> year</p>}
+                                {!isEnglish ? <p>- <sup>1</sup>&frasl;<sub>2</sub> an</p> : <p>- <sup>1</sup>&frasl;<sub>2</sub> year</p>}
                             </div>
                             <p className="skill-rate">50%</p>
                         </div>
@@ -129,8 +131,7 @@ const AboutSkills = (props) => {
                         <div className="skill-meta">
                             <div className="skill-name">
                                 <h4>CSS</h4>
-                                {!isEnglish && <p>1 an <sup>1</sup>&frasl;<sub>2</sub></p>}
-                                {isEnglish && <p>1 year <sup>1</sup>&frasl;<sub>2</sub></p>}
+                                {!isEnglish ? <p>1 an <sup>1</sup>&frasl;<sub>2</sub></p> : <p>1 year <sup>1</sup>&frasl;<sub>2</sub></p>}
                             </div>
                             <p className="skill-rate">90%</p>
                         </div>
@@ -145,8 +146,7 @@ const AboutSkills = (props) => {
                         <div className="skill-meta">
                             <div className="skill-name">
                                 <h4>REACT JS</h4>
-                                {!isEnglish && <p>+ <sup>1</sup>&frasl;<sub>2</sub> an</p>}
-                                {isEnglish && <p>+ <sup>1</sup>&frasl;<sub>2</sub> year</p>}
+                                {!isEnglish ? <p>+ <sup>1</sup>&frasl;<sub>2</sub> an</p> : <p>+ <sup>1</sup>&frasl;<sub>2</sub> year</p>}
                             </div>
                             <p className="skill-rate">70%</p>
                         </div>
@@ -161,8 +161,7 @@ const AboutSkills = (props) => {
                         <div className="skill-meta">
                             <div className="skill-name">
                                 <h4>REACT NATIVE</h4>
-                                {!isEnglish && <p>- <sup>1</sup>&frasl;<sub>2</sub> an</p>}
-                                {isEnglish && <p>- <sup>1</sup>&frasl;<sub>2</sub> year</p>}
+                                {!isEnglish ? <p>- <sup>1</sup>&frasl;<sub>2</sub> an</p> : <p>- <sup>1</sup>&frasl;<sub>2</sub> year</p>}
                             </div>
                             <p className="skill-rate">60%</p>
                         </div>
@@ -177,8 +176,7 @@ const AboutSkills = (props) => {
                         <div className="skill-meta">
                             <div className="skill-name">
                                 <h4>REDUX</h4>
-                                {!isEnglish && <p>- <sup>1</sup>&frasl;<sub>2</sub> an</p>}
-                                {isEnglish && <p>- <sup>1</sup>&frasl;<sub>2</sub> year</p>}
+                                {!isEnglish ? <p>- <sup>1</sup>&frasl;<sub>2</sub> an</p> : <p>- <sup>1</sup>&frasl;<sub>2</sub> year</p>}
                             </div>
                             <p className="skill-rate">60%</p>
                         </div>
@@ -193,8 +191,7 @@ const AboutSkills = (props) => {
                         <div className="skill-meta">
                             <div className="skill-name">
                                 <h4>MYSQL</h4>
-                                {!isEnglish && <p>1 an</p>}
-                                {isEnglish && <p>1 year</p>}
+                                {!isEnglish ? <p>1 an</p> : <p>1 year</p>}
                             </div>
                             <p className="skill-rate">90%</p>
                         </div>

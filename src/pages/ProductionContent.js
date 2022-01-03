@@ -55,48 +55,29 @@ const ProductionContent = (props) => {
     }, [isEnglish]);
 
     return (
-        <>
-            {!isEnglish &&
-                <div className="second-content">
-                    <div className="back">
-                        <NavLink exact to="/production" className="hovered">
-                            <img src="../assets/back.svg" alt="retour"/>
-                            <p>Retour</p>
-                        </NavLink>
-                    </div>
+        <div className="second-content">
+            <div className="back">
+                <NavLink exact to="/production" className="hovered">
+                    <img src="../assets/back.svg" alt="retour"></img>
+                    <p>{!isEnglish ? "Retrour" : "Back"}</p>
+                </NavLink>
+            </div>
 
-                    <div className="about-titles">
-                        <em>01</em>
-                        <h1>PROCHAINEMENT</h1>
-                    </div>
+            <div className="about-titles">
+                <em>01</em>
+                <h1>{!isEnglish ? "TRACE TV" : "TRACE TV"}</h1>
+            </div>
 
-                    <div className="content">
-                        <img src="../assets/img/screwdriver.png" alt="screwdriver" className="screwdriver" />
-                        <img src="../assets/img/wrench.png" alt="wrench" className="wrench" />
-                    </div>
-                </div>
-            }
-            {isEnglish &&
-                <div className="second-content">
-                    <div className="back">
-                        <NavLink exact to="/production" className="hovered">
-                            <img src="../assets/back.svg" alt="back"></img>
-                            <p>Back</p>
-                        </NavLink>
-                    </div>
+            <div className="about-titles">
+                <em>02</em>
+                <h1>{!isEnglish ? "PROCHAINEMENT" : "COMING SOON"}</h1>
+            </div>
 
-                    <div className="about-titles">
-                        <em>01</em>
-                        <h1>COMING SOON</h1>
-                    </div>
-
-                    <div className="content">
-                        <img src="../assets/img/screwdriver.png" alt="screwdriver" className="screwdriver" />
-                        <img src="../assets/img/wrench.png" alt="wrench" className="wrench" />
-                    </div>
-                </div>
-            }
-        </>
+            <div className="content">
+                <img src="../assets/img/screwdriver.png" alt="screwdriver" className="screwdriver" />
+                <img src="../assets/img/wrench.png" alt="wrench" className="wrench" />
+            </div>
+        </div>
     );
 };
 
