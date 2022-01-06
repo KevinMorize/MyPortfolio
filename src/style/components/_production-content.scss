@@ -1,8 +1,42 @@
 .second-content {
     // 01
-    .content {
+    .trace-content {
         width: 100vw;
-        height: 100vh;
+        height: -moz-fit-content;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .trace-title {
+            display: flex;
+            justify-content: space-between;
+            width: 60%;
+            margin-bottom: 3%;
+            div {
+                text-align: center;
+            }
+        }
+        img {
+            width: 60%;
+        }
+        // .trace-image-container {
+        //     display: flex;
+        //     justify-content: center;
+        //     width: 100%;
+        //     margin-top: 5%;
+        //     img {
+        //         width: 30%;
+        //         padding: 0 5vw;
+        //     }
+        // }
+    }
+
+    // 02
+    .coming-content {
+        width: 100vw;
+        height: -moz-fit-content;
+        height: fit-content;
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -56,6 +90,8 @@
 @media screen and (orientation: portrait) {
     .second-content {
         // 01
+
+        // 02
         .content {
             width: 80%;
             margin: 7% 0;

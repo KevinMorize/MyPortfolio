@@ -4,7 +4,6 @@ const AboutPassion = (props) => {
     const isEnglish = props.english
     const [isVisible, setIsVisible] = useState(false)
 
-
     useEffect(() => {
         const img = document.querySelectorAll('.passion-item img');
 

@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { NavLink } from "react-router-dom";
+import TraceContent from "../components/TraceContent";
 
 const ProductionContent = (props) => {
     const isEnglish = props.english;
@@ -58,8 +59,8 @@ const ProductionContent = (props) => {
         <div className="second-content">
             <div className="back">
                 <NavLink exact to="/production" className="hovered">
-                    <img src="../assets/back.svg" alt="retour"></img>
-                    <p>{!isEnglish ? "Retrour" : "Back"}</p>
+                    <img src="../assets/back.svg" alt="retour" />
+                    <p>{!isEnglish ? "Retour" : "Back"}</p>
                 </NavLink>
             </div>
 
@@ -67,15 +68,15 @@ const ProductionContent = (props) => {
                 <em>01</em>
                 <h1>{!isEnglish ? "TRACE TV" : "TRACE TV"}</h1>
             </div>
+            {!isEnglish ? <TraceContent english={false} /> : <TraceContent english={true} />}
 
             <div className="about-titles">
                 <em>02</em>
                 <h1>{!isEnglish ? "PROCHAINEMENT" : "COMING SOON"}</h1>
-            </div>
-
-            <div className="content">
-                <img src="../assets/img/screwdriver.png" alt="screwdriver" className="screwdriver" />
-                <img src="../assets/img/wrench.png" alt="wrench" className="wrench" />
+                <div className="coming-content">
+                    <img src="../assets/img/screwdriver.png" alt="screwdriver" className="screwdriver" />
+                    <img src="../assets/img/wrench.png" alt="wrench" className="wrench" />
+                </div>
             </div>
         </div>
     );

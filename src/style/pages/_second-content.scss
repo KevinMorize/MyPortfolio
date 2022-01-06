@@ -24,17 +24,17 @@
         position: fixed;
         overflow: hidden;
         top: 11%;
-        left: 90%;
-        width: 10vw;
+        left: 85%;
+        width: 100%;
         z-index: 500;
         height: -moz-fit-content;
         height: fit-content;
         @keyframes translateArrow {
             from {
-                left: 90%;
+                left: 85%;
             }
             to {
-                left: 87%;
+                left: 80%;
             }
         }
         img {
@@ -77,7 +77,7 @@
     }
     h1 {
         font-weight: 400;
-        font-size: 3vw;
+        font-size: 2vw;
         margin-left: 3vw;
     }
     em {
@@ -85,7 +85,7 @@
         left: 0;
         margin-left: 3%;
         padding-left: 1%;
-        font-size: 3vw;
+        font-size: 2vw;
         font-weight: 500;
     }
     em::after {
