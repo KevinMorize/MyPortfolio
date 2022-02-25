@@ -9,174 +9,44 @@
     justify-content: center;
     align-items: center;
     padding-bottom: 5%;
-    position: relative;
-    .content_title {
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
-      padding-inline: 20%;
-      padding-top: 20px;
-      padding-bottom: 20px;
-      margin-bottom: 3%;
-      div {
-        text-align: flex-start;
-        color: linear-gradient(to top, #00192c, #812b8c 42%, #ff4d5a);
-        font-size: 1.1vw;
-      }
-      .content_title1 {
-        margin-bottom: 10px;
-      }
-      .content_title2 {
-        color: gray;
-      }
-      .content_titlte_ico {
-        position: absolute;
-        width: 56px;
-        height: 56px;
-        object-fit: contain;
-        z-index: -100;
-      }
-      #github {
-        animation: firstAnim 25s linear infinite alternate;
-      }
-      #javascript {
-        animation: secondAnim 40s linear infinite alternate;
-      }
-      #react {
-        animation: thirdAnim 25s linear infinite alternate;
-      }
-      #yarn {
-        animation: firstAnim 40s linear infinite alternate;
-      }
-      #xcode {
-        animation: secondAnim 25s linear infinite alternate;
-      }
-      #android {
-        animation: thirdAnim 40s linear infinite alternate;
-      }
-      #typescript {
-        animation: thirdAnim 25s linear infinite alternate;
-      }
-      #odoo {
-        animation: firstAnim 40s linear infinite alternate;
-      }
-      @keyframes firstAnim {
-        0% {
-          top: 10%;
-          left: 0;
+    .content_container_top {
+      width: 100vw;
+      margin-bottom: 5%;
+      padding: 2% 10% 2% 10%;
+      z-index: -1;
+      background-color: aliceblue;
+      .content_title {
+        display: flex;
+        justify-content: space-between;
+        div {
+          text-align: flex-start;
+          color: linear-gradient(to top, #00192c, #812b8c 42%, #ff4d5a);
+          font-size: 1.1vw;
         }
-        12% {
-          top: 80%;
-          left: 25%;
+        .content_title1 {
+          margin-bottom: 10px;
         }
-        25% {
-          top: 10%;
-          left: 65%;
-        }
-        37% {
-          top: 80%;
-          left: 98%;
-        }
-        50% {
-          top: 10%;
-          left: 80%;
-        }
-        62% {
-          top: 80%;
-          left: 50%;
-        }
-        75% {
-          top: 10%;
-          left: 30%;
-        }
-        87% {
-          top: 80%;
-          left: 15%;
-        }
-        100% {
-          top: 10%;
-          left: 0;
-        }
-      }
-      @keyframes secondAnim {
-        0% {
-          bottom: 20%;
-          left: 0;
-        }
-        12% {
-          bottom: 50%;
-          left: 12%;
-        }
-        25% {
-          bottom: 20%;
-          left: 30%;
-        }
-        37% {
-          bottom: 50%;
-          left: 65%;
-        }
-        50% {
-          bottom: 20%;
-          left: 98%;
-        }
-        62% {
-          bottom: 50%;
-          left: 80%;
-        }
-        75% {
-          bottom: 20%;
-          left: 55%;
-        }
-        87% {
-          bottom: 50%;
-          left: 30%;
-        }
-        100% {
-          bottom: 20%;
-          left: 0;
-        }
-      }
-      @keyframes thirdAnim {
-        0% {
-          top: 15%;
-          right: 0;
-        }
-        12% {
-          top: 70%;
-          right: 25%;
-        }
-        25% {
-          top: 15%;
-          right: 65%;
-        }
-        37% {
-          top: 70%;
-          right: 98%;
-        }
-        50% {
-          top: 15%;
-          right: 80%;
-        }
-        62% {
-          top: 70%;
-          right: 50%;
-        }
-        75% {
-          top: 15%;
-          right: 30%;
-        }
-        87% {
-          top: 70%;
-          right: 15%;
-        }
-        100% {
-          top: 15%;
-          right: 0;
+        .content_title2 {
+          font-weight: 100;
+          color: gray;
         }
       }
     }
     img {
-      width: 60%;
+      width: 80%;
+    }
+    .content_container_bottom {
+      width: 100vw;
+      margin-top: 5%;
+      padding: 5% 10% 5% 10%;
+      background-color: aliceblue;
+      font-size: 1.3vw;
+      font-weight: 100;
+      line-height: 1.4;
+      margin-bottom: 2vh;
+      word-wrap: break-word;
+      white-space: normal;
+      color: #828c96;
     }
   }
 
@@ -243,15 +113,26 @@
   .second_content {
     // 01
     .content_container {
-      .content_title {
-        padding-inline: 2%;
-        div {
-          font-size: 2.8vw;
+      margin-top: 5%;
+      .content_container_top {
+        padding: 5% 10% 5% 10%;
+        .content_title {
+          flex-direction: column;
+          justify-content: space-between;
+          div {
+            margin-bottom: 20px;
+          }
+          .content_title1 {
+            font-size: 5vw;
+            margin-bottom: 0;
+          }
+          .content_title2 {
+            font-size: 5vw;
+          }
         }
-        .content_titlte_ico {
-          width: 24px;
-          height: 24px;
-        }
+      }
+      .content_container_bottom {
+        font-size: 5vw;
       }
     }
 

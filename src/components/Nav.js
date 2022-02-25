@@ -24,11 +24,11 @@ const Nav = (props) => {
                     {!isEnglish && <li className="hovered">ACCUEIL</li>}
                     {isEnglish && <li className="hovered">HOME</li>}
                 </NavLink>
-                <NavLink to="/about" exact activeClassName="nav-active">
+                <NavLink to="/about/content" exact activeClassName="nav-active">
                     {!isEnglish && <li className="hovered">A PROPOS</li>}
                     {isEnglish && <li className="hovered">ABOUT ME</li>}
                 </NavLink>
-                <NavLink to="/production" exact activeClassName="nav-active">
+                <NavLink to="/production/content" exact activeClassName="nav-active">
                     {!isEnglish && <li className="hovered">MON TRAVAIL</li>}
                     {isEnglish && <li className="hovered">WORKS</li>}
                 </NavLink>
