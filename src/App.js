@@ -11,6 +11,7 @@ import Moon from "./components/Moon";
 import AboutContent from "./pages/AboutContent";
 import ProductionContent from "./pages/ProductionContent";
 import ScrollDownItem from "./components/ScrollDownItem";
+import ReactScrollWheelHandler from "react-scroll-wheel-handler";
 
 function App() {
   const location = useLocation();
@@ -29,112 +30,51 @@ function App() {
     }
   };
 
-  useEffect(() => {
-    var table = [];
+  const handleScrollToElement = (dir, e) => {
+    const url = window.location.origin + "/";
 
-    const handleScrollToElement = (e) => {
-      console.log(e.deltaY);
-
-      const url = window.location.origin + "/";
-
-      const wheelRouter = (before, after) => {
-        if (e.wheelDeltaY < 0 || e.deltaY > 0) {
-          history.push(after);
-        } else if (e.wheelDeltaY > 0 || e.deltaY < 0) {
-          history.push(before);
-        }
-      };
-
-      switch (window.location.href.toString()) {
-        case url:
-          if (e.wheelDeltaY < 0 || e.deltaY > 0) {
-            history.push("about");
-          }
-          break;
-
-        case url + "about":
-          wheelRouter(url, "production");
-          break;
-
-        case url + "production":
-          wheelRouter("about", "contact");
-          break;
-
-        case url + "contact":
-          if (e.wheelDeltaY > 0 || e.deltaY < 0) {
-            history.push("production");
-          }
-          break;
-
-        default:
+    const wheelRouter = (before, after) => {
+      if (dir === "down") {
+        history.push(after);
+      } else if (dir === "up") {
+        history.push(before);
       }
     };
 
-    const handleMoveToElement = (e) => {
-      const url = window.location.origin + "/";
-      let position = e.touches[0].clientY;
-      table.push(position);
-
-      table.map(() => {
-        if (table.length >= 8) {
-          const addition = table[0] - table[table.length - 1];
-          const minWay = window.screen.availHeight / 8;
-
-          switch (window.location.href.toString()) {
-            case url:
-              if (addition >= minWay) {
-                history.push("about");
-                table = [];
-              } else {
-                table = [];
-              }
-              break;
-
-            case url + "about":
-              if (addition >= minWay) {
-                history.push("production");
-                table = [];
-              } else if (addition <= -minWay) {
-                history.push(url);
-                table = [];
-              }
-              break;
-
-            case url + "production":
-              if (addition >= minWay) {
-                history.push("contact");
-                table = [];
-              } else if (addition <= -minWay) {
-                history.push("about");
-                table = [];
-              }
-              break;
-
-            case url + "contact":
-              if (addition <= -minWay) {
-                history.push("production");
-                table = [];
-              } else {
-                table = [];
-              }
-              break;
-
-            default:
-              console.log("none");
-          }
+    switch (window.location.href.toString()) {
+      case url:
+        if (dir === "down") {
+          history.push("about");
         }
-        return table;
-      });
-    };
+        break;
 
-    window.addEventListener("touchmove", handleMoveToElement);
-    // window.addEventListener("wheel", handleScrollToElement);
-    document.addEventListener("mousewheel", handleScrollToElement);
-    // document.addEventListener("DOMMouseScroll", detectTrackPad);
-  }, [history]);
+      case url + "about":
+        wheelRouter(url, "production");
+
+        break;
+
+      case url + "production":
+        wheelRouter("about", "contact");
+
+        break;
+
+      case url + "contact":
+        if (dir === "up") {
+          history.push("production");
+        }
+        break;
+
+      default:
+        break;
+    }
+  };
+  useEffect(() => {}, [history]);
 
   return (
-    <>
+    <ReactScrollWheelHandler
+      upHandler={(e) => handleScrollToElement("up", e)}
+      downHandler={(e) => handleScrollToElement("down", e)}
+    >
       <Mouse />
       <Header />
       <Nav english={isEng} />
@@ -180,7 +120,7 @@ function App() {
 
         <Redirect to="/" />
       </Switch>
-    </>
+    </ReactScrollWheelHandler>
   );
 }
 

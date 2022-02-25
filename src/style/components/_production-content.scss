@@ -1,145 +1,309 @@
-.second-content {
-    // 01
-    .trace-content {
-        width: 100vw;
-        height: -moz-fit-content;
-        height: fit-content;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        .trace-title {
-            display: flex;
-            justify-content: space-between;
-            width: 60%;
-            margin-bottom: 3%;
-            div {
-                text-align: center;
-            }
+.second_content {
+  // 01
+  .content_container {
+    width: 100vw;
+    height: -moz-fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5%;
+    position: relative;
+    .content_title {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      padding-inline: 20%;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      margin-bottom: 3%;
+      div {
+        text-align: flex-start;
+        color: linear-gradient(to top, #00192c, #812b8c 42%, #ff4d5a);
+        font-size: 1.1vw;
+      }
+      .content_title1 {
+        margin-bottom: 10px;
+      }
+      .content_title2 {
+        color: gray;
+      }
+      .content_titlte_ico {
+        position: absolute;
+        width: 56px;
+        height: 56px;
+        object-fit: contain;
+        z-index: -100;
+      }
+      #github {
+        animation: firstAnim 25s linear infinite alternate;
+      }
+      #javascript {
+        animation: secondAnim 40s linear infinite alternate;
+      }
+      #react {
+        animation: thirdAnim 25s linear infinite alternate;
+      }
+      #yarn {
+        animation: firstAnim 40s linear infinite alternate;
+      }
+      #xcode {
+        animation: secondAnim 25s linear infinite alternate;
+      }
+      #android {
+        animation: thirdAnim 40s linear infinite alternate;
+      }
+      #typescript {
+        animation: thirdAnim 25s linear infinite alternate;
+      }
+      #odoo {
+        animation: firstAnim 40s linear infinite alternate;
+      }
+      @keyframes firstAnim {
+        0% {
+          top: 10%;
+          left: 0;
         }
-        img {
-            width: 60%;
+        12% {
+          top: 80%;
+          left: 25%;
         }
-        // .trace-image-container {
-        //     display: flex;
-        //     justify-content: center;
-        //     width: 100%;
-        //     margin-top: 5%;
-        //     img {
-        //         width: 30%;
-        //         padding: 0 5vw;
-        //     }
-        // }
+        25% {
+          top: 10%;
+          left: 65%;
+        }
+        37% {
+          top: 80%;
+          left: 98%;
+        }
+        50% {
+          top: 10%;
+          left: 80%;
+        }
+        62% {
+          top: 80%;
+          left: 50%;
+        }
+        75% {
+          top: 10%;
+          left: 30%;
+        }
+        87% {
+          top: 80%;
+          left: 15%;
+        }
+        100% {
+          top: 10%;
+          left: 0;
+        }
+      }
+      @keyframes secondAnim {
+        0% {
+          bottom: 20%;
+          left: 0;
+        }
+        12% {
+          bottom: 50%;
+          left: 12%;
+        }
+        25% {
+          bottom: 20%;
+          left: 30%;
+        }
+        37% {
+          bottom: 50%;
+          left: 65%;
+        }
+        50% {
+          bottom: 20%;
+          left: 98%;
+        }
+        62% {
+          bottom: 50%;
+          left: 80%;
+        }
+        75% {
+          bottom: 20%;
+          left: 55%;
+        }
+        87% {
+          bottom: 50%;
+          left: 30%;
+        }
+        100% {
+          bottom: 20%;
+          left: 0;
+        }
+      }
+      @keyframes thirdAnim {
+        0% {
+          top: 15%;
+          right: 0;
+        }
+        12% {
+          top: 70%;
+          right: 25%;
+        }
+        25% {
+          top: 15%;
+          right: 65%;
+        }
+        37% {
+          top: 70%;
+          right: 98%;
+        }
+        50% {
+          top: 15%;
+          right: 80%;
+        }
+        62% {
+          top: 70%;
+          right: 50%;
+        }
+        75% {
+          top: 15%;
+          right: 30%;
+        }
+        87% {
+          top: 70%;
+          right: 15%;
+        }
+        100% {
+          top: 15%;
+          right: 0;
+        }
+      }
     }
+    img {
+      width: 60%;
+    }
+  }
 
-    // 02
-    .coming-content {
-        width: 100vw;
-        height: -moz-fit-content;
-        height: fit-content;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        img {
-            width: 25%;
-        }
-        .screwdriver {
-            transition: all ease 1s;
-            z-index: 200;
-            @keyframes dongleSkrew {
-                0% {
-                    transform: rotate(0deg);
-                }
-                20% {
-                    transform: rotate(20deg);
-                }
-                40% {
-                    transform: rotate(-20deg);
-                }
-                60% {
-                    transform: rotate(10deg);
-                }
-                80% {
-                    transform: rotate(0deg);
-                }
-            }
-        }
-        .wrench {
-            transition: all ease 1s;
-            @keyframes dongleWrench {
-                0% {
-                    transform: rotate(0deg);
-                }
-                20% {
-                    transform: rotate(-20deg);
-                }
-                40% {
-                    transform: rotate(20deg);
-                }
-                60% {
-                    transform: rotate(-10deg);
-                }
-                80% {
-                    transform: rotate(0deg);
-                }
-            }
-        }
+  // 02
+  .coming_content {
+    width: 100vw;
+    height: -moz-fit-content;
+    height: fit-content;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 7% 0;
+    img {
+      width: 25%;
     }
+    .screwdriver {
+      transition: all ease 1s;
+      z-index: 200;
+      transform: translateX(100%);
+    }
+    //   @keyframes dongleSkrew {
+    //     0% {
+    //       transform: rotate(0deg);
+    //     }
+    //     20% {
+    //       transform: rotate(20deg);
+    //     }
+    //     40% {
+    //       transform: rotate(-20deg);
+    //     }
+    //     60% {
+    //       transform: rotate(10deg);
+    //     }
+    //     80% {
+    //       transform: rotate(0deg);
+    //     }
+    //   }
+
+    .wrench {
+      transition: all ease 1s;
+      transform: translateX(-100%);
+    }
+    //   @keyframes dongleWrench {
+    //     0% {
+    //       transform: rotate(0deg);
+    //     }
+    //     20% {
+    //       transform: rotate(-20deg);
+    //     }
+    //     40% {
+    //       transform: rotate(20deg);
+    //     }
+    //     60% {
+    //       transform: rotate(-10deg);
+    //     }
+    //     80% {
+    //       transform: rotate(0deg);
+    //     }
+    //   }
+  }
 }
 
 @media screen and (orientation: portrait) {
-    .second-content {
-        // 01
-
-        // 02
-        .content {
-            width: 80%;
-            margin: 7% 0;
-            height: -moz-fit-content;
-            height: fit-content;
-            img {
-                width: 50%;
-            }
-            .screwdriver {
-                transform: translateX(50%);
-                @keyframes dongleSkrew {
-                    0% {
-                        transform: rotate(0deg) translateX(50%);
-                    }
-                    20% {
-                        transform: rotate(-90deg);
-                    }
-                    40% {
-                        transform: rotate(0deg) translateX(50%);
-                    }
-                    60% {
-                        transform: rotate(-90deg);
-                    }
-                    80% {
-                        transform: rotate(0deg) translateX(50%);
-                    }
-                }
-            }
-            .wrench {
-                transform: translateX(-50%);
-                @keyframes dongleWrench {
-                    0% {
-                        transform: rotate(0deg) translateX(-50%);
-                    }
-                    20% {
-                        transform: rotate(90deg);
-                    }
-                    40% {
-                        transform: rotate(0deg) translateX(-50%);
-                    }
-                    60% {
-                        transform: rotate(90deg);
-                    }
-                    80% {
-                        transform: rotate(0deg) translateX(-50%);
-                    }
-                }
-            }
+  .second_content {
+    // 01
+    .content_container {
+      .content_title {
+        padding-inline: 2%;
+        div {
+          font-size: 2.8vw;
         }
+        .content_titlte_ico {
+          width: 24px;
+          height: 24px;
+        }
+      }
     }
+
+    // 02
+    .coming_content {
+      width: 80%;
+      margin: 7% 0;
+      height: -moz-fit-content;
+      height: fit-content;
+      img {
+        width: 30%;
+      }
+      .screwdriver {
+        transform: translateX(80%);
+        @keyframes dongleSkrew {
+          0% {
+            transform: rotate(0deg) translateX(80%);
+          }
+          20% {
+            transform: rotate(-90deg);
+          }
+          40% {
+            transform: rotate(0deg) translateX(80%);
+          }
+          60% {
+            transform: rotate(-90deg);
+          }
+          80% {
+            transform: rotate(0deg) translateX(80%);
+          }
+        }
+      }
+      .wrench {
+        transform: translateX(-80%);
+        @keyframes dongleWrench {
+          0% {
+            transform: rotate(0deg) translateX(-80%);
+          }
+          20% {
+            transform: rotate(90deg);
+          }
+          40% {
+            transform: rotate(0deg) translateX(-80%);
+          }
+          60% {
+            transform: rotate(90deg);
+          }
+          80% {
+            transform: rotate(0deg) translateX(-80%);
+          }
+        }
+      }
+    }
+  }
 }

@@ -1,6 +1,6 @@
 import React from "react";
 
-const TraceContent = (props) => {
+const KricarContent = (props) => {
   const isEnglish = props.english;
   return (
     <div className="content_container">
@@ -13,7 +13,7 @@ const TraceContent = (props) => {
         </div>
         <div>
           <h2 className="content_title1">DATE</h2>
-          <p className="content_title2">dec 2021 - fev 2022</p>
+          <p className="content_title2">nov 2021 - ...</p>
         </div>
         <div>
           <h2 className="content_title1">
@@ -21,12 +21,12 @@ const TraceContent = (props) => {
           </h2>
           <p className="content_title2">
             {!isEnglish
-              ? "correction avant lancement"
-              : "bug fixing before launch"}
+              ? "développement de l'application"
+              : "application development"}
           </p>
         </div>
         <img
-          src="../assets/img/production/react.png"
+          src="../assets/img/production/github.png"
           alt="github"
           className="content_titlte_ico"
           id="github"
@@ -38,25 +38,33 @@ const TraceContent = (props) => {
           id="javascript"
         />
         <img
-          src="../assets/img/production/typescript.png"
+          src="../assets/img/production/react.png"
           alt="react"
           className="content_titlte_ico"
           id="react"
         />
         <img
-          src="../assets/img/production/yarn.png"
-          alt="yarn"
+          src="../assets/img/production/odoo.png"
+          alt="odoo"
           className="content_titlte_ico"
-          id="yarn"
+          id="odoo"
+        />
+        <img
+          src="../assets/img/production/xcode.png"
+          alt="xcode"
+          className="content_titlte_ico"
+          id="xcode"
+        />
+        <img
+          src="../assets/img/production/android.png"
+          alt="android"
+          className="content_titlte_ico"
+          id="android"
         />
       </div>
       <img src="../assets/img/about/trace1.png" alt="trace-img" />
-      {/* <div className="trace-image-container">
-                <img src="../assets/img/about/trace2.png" alt="trace-img2" />
-                <img src="../assets/img/about/trace3.png" alt="trace-img3" />
-            </div> */}
     </div>
   );
 };
 
-export default TraceContent;
+export default KricarContent;
