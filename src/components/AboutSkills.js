@@ -33,7 +33,6 @@ const AboutSkills = (props) => {
 
   // scroll display
   function setVisible() {
-    console.log("okokokok");
     let elem = document.getElementById("displaySkills");
     let coordinates = elem.getBoundingClientRect();
 
@@ -52,38 +51,13 @@ const AboutSkills = (props) => {
       <ul className="skill-list">
         <li className="skill-item">
           <div className="skill-ico">
-            <img src="../assets/html5.svg" alt="html5" />
-          </div>
-          <div className="skill-detail">
-            <div className="skill-meta">
-              <div className="skill-name">
-                <h4>HTML</h4>
-                {!isEnglish ? (
-                  <p>
-                    1 an <sup>1</sup>&frasl;<sub>2</sub>
-                  </p>
-                ) : (
-                  <p>
-                    1 year <sup>1</sup>&frasl;<sub>2</sub>
-                  </p>
-                )}
-              </div>
-              <p className="skill-rate">90%</p>
-            </div>
-            <div className="skill-bar">
-              <span></span>
-            </div>
-          </div>
-        </li>
-        <li className="skill-item">
-          <div className="skill-ico">
             <img src="../assets/js.svg" alt="javascript" />
           </div>
           <div className="skill-detail">
             <div className="skill-meta">
               <div className="skill-name">
                 <h4>JAVASCRIPT</h4>
-                {!isEnglish ? <p>+ 1 an</p> : <p>1 year +</p>}
+                {!isEnglish ? <p>2 ans</p> : <p>2 years +</p>}
               </div>
               <p className="skill-rate">80%</p>
             </div>
@@ -102,85 +76,15 @@ const AboutSkills = (props) => {
                 <h4>TYPESCRIPT</h4>
                 {!isEnglish ? (
                   <p>
-                    - <sup>1</sup>&frasl;<sub>2</sub> an
+                    + <sup>1</sup>&frasl;<sub>2</sub> an
                   </p>
                 ) : (
                   <p>
-                    - <sup>1</sup>&frasl;<sub>2</sub> year
+                    + <sup>1</sup>&frasl;<sub>2</sub> year
                   </p>
                 )}
               </div>
               <p className="skill-rate">50%</p>
-            </div>
-            <div className="skill-bar">
-              <span></span>
-            </div>
-          </div>
-        </li>
-        <li className="skill-item">
-          <div className="skill-ico">
-            <img src="../assets/node.svg" alt="node" />
-          </div>
-          <div className="skill-detail">
-            <div className="skill-meta">
-              <div className="skill-name">
-                <h4>NODE JS</h4>
-                {!isEnglish ? <p>+ 1 an</p> : <p>1 year +</p>}
-              </div>
-              <p className="skill-rate">80%</p>
-            </div>
-            <div className="skill-bar">
-              <span></span>
-            </div>
-          </div>
-        </li>
-        <li className="skill-item">
-          <div className="skill-ico">
-            <img src="../assets/sass.svg" alt="sass" />
-          </div>
-          <div className="skill-detail">
-            <div className="skill-meta">
-              <div className="skill-name">
-                <h4>SASS</h4>
-                {!isEnglish ? (
-                  <p>
-                    - <sup>1</sup>&frasl;<sub>2</sub> an
-                  </p>
-                ) : (
-                  <p>
-                    - <sup>1</sup>&frasl;<sub>2</sub> year
-                  </p>
-                )}
-              </div>
-              <p className="skill-rate">50%</p>
-            </div>
-            <div className="skill-bar">
-              <span></span>
-            </div>
-          </div>
-        </li>
-      </ul>
-
-      <ul className="skill-list">
-        <li className="skill-item">
-          <div className="skill-ico">
-            <img src="../assets/css3.svg" alt="css3" />
-          </div>
-          <div className="skill-detail">
-            <div className="skill-meta">
-              <div className="skill-name">
-                <h4>CSS</h4>
-                {!isEnglish ? (
-                  <p>
-                    1 an <sup>1</sup>&frasl;<sub>2</sub>
-                  </p>
-                ) : (
-                  <p>
-                    1 year <sup>1</sup>&frasl;<sub>2</sub>
-                  </p>
-                )}
-              </div>
-              <p className="skill-rate">90%</p>
             </div>
             <div className="skill-bar">
               <span></span>
@@ -197,11 +101,11 @@ const AboutSkills = (props) => {
                 <h4>REACT JS</h4>
                 {!isEnglish ? (
                   <p>
-                    + <sup>1</sup>&frasl;<sub>2</sub> an
+                    + 1 an
                   </p>
                 ) : (
                   <p>
-                    + <sup>1</sup>&frasl;<sub>2</sub> year
+                    + 1 year
                   </p>
                 )}
               </div>
@@ -222,11 +126,11 @@ const AboutSkills = (props) => {
                 <h4>REACT NATIVE</h4>
                 {!isEnglish ? (
                   <p>
-                    - <sup>1</sup>&frasl;<sub>2</sub> an
+                    1 an
                   </p>
                 ) : (
                   <p>
-                    - <sup>1</sup>&frasl;<sub>2</sub> year
+                    1 year
                   </p>
                 )}
               </div>
@@ -247,15 +151,160 @@ const AboutSkills = (props) => {
                 <h4>REDUX</h4>
                 {!isEnglish ? (
                   <p>
-                    - <sup>1</sup>&frasl;<sub>2</sub> an
+                    1 an
                   </p>
                 ) : (
                   <p>
-                    - <sup>1</sup>&frasl;<sub>2</sub> year
+                    1 year
                   </p>
                 )}
               </div>
               <p className="skill-rate">60%</p>
+            </div>
+            <div className="skill-bar">
+              <span></span>
+            </div>
+          </div>
+        </li>
+        <li className="skill-item">
+          <div className="skill-ico">
+            <img src="../assets/node.svg" alt="node" />
+          </div>
+          <div className="skill-detail">
+            <div className="skill-meta">
+              <div className="skill-name">
+                <h4>NODE JS</h4>
+                {!isEnglish ? <p>+ 1 an</p> : <p>1 year +</p>}
+              </div>
+              <p className="skill-rate">70%</p>
+            </div>
+            <div className="skill-bar">
+              <span></span>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+      <ul className="skill-list">
+        <li className="skill-item">
+          <div className="skill-ico">
+            <img src="../assets/php.svg" alt="node" />
+          </div>
+          <div className="skill-detail">
+            <div className="skill-meta">
+              <div className="skill-name">
+                <h4>PHP</h4>
+                {!isEnglish ? (
+                  <p>
+                    +<sup>1</sup>&frasl;<sub>2</sub> an
+                  </p>
+                ) : (
+                  <p>
+                    +<sup>1</sup>&frasl;<sub>2</sub> year
+                  </p>
+                )}
+              </div>
+              <p className="skill-rate">60%</p>
+            </div>
+            <div className="skill-bar">
+              <span></span>
+            </div>
+          </div>
+        </li>
+        <li className="skill-item">
+          <div className="skill-ico">
+            <img src="../assets/symfony.svg" alt="node" />
+          </div>
+          <div className="skill-detail">
+            <div className="skill-meta">
+              <div className="skill-name">
+                <h4>SYMFONY</h4>
+                {!isEnglish ? (
+                  <p>
+                    +<sup>1</sup>&frasl;<sub>2</sub> an
+                  </p>
+                ) : (
+                  <p>
+                    +<sup>1</sup>&frasl;<sub>2</sub> year
+                  </p>
+                )}
+              </div>
+              <p className="skill-rate">30%</p>
+            </div>
+            <div className="skill-bar">
+              <span></span>
+            </div>
+          </div>
+        </li>
+        <li className="skill-item">
+          <div className="skill-ico">
+            <img src="../assets/python.svg" alt="html5" />
+          </div>
+          <div className="skill-detail">
+            <div className="skill-meta">
+              <div className="skill-name">
+                <h4>PYTHON</h4>
+                {!isEnglish ? (
+                  <p>
+                    +<sup>1</sup>&frasl;<sub>2</sub> an
+                  </p>
+                ) : (
+                  <p>
+                    +<sup>1</sup>&frasl;<sub>2</sub> year
+                  </p>
+                )}
+              </div>
+              <p className="skill-rate">50%</p>
+            </div>
+            <div className="skill-bar">
+              <span></span>
+            </div>
+          </div>
+        </li>
+        <li className="skill-item">
+          <div className="skill-ico">
+            <img src="../assets/docker.svg" alt="html5" />
+          </div>
+          <div className="skill-detail">
+            <div className="skill-meta">
+              <div className="skill-name">
+                <h4>DOCKER</h4>
+                {!isEnglish ? (
+                  <p>
+                    +<sup>1</sup>&frasl;<sub>2</sub> an
+                  </p>
+                ) : (
+                  <p>
+                    +<sup>1</sup>&frasl;<sub>2</sub> year
+                  </p>
+                )}
+              </div>
+              <p className="skill-rate">40%</p>
+            </div>
+            <div className="skill-bar">
+              <span></span>
+            </div>
+          </div>
+        </li>
+        <li className="skill-item">
+          <div className="skill-ico">
+            <img src="../assets/kubernetes.svg" alt="html5" />
+          </div>
+          <div className="skill-detail">
+            <div className="skill-meta">
+              <div className="skill-name">
+                <h4>KUBERNETES</h4>
+                {!isEnglish ? (
+                  <p>
+                    +<sup>1</sup>&frasl;<sub>2</sub> an
+                  </p>
+                ) : (
+                  <p>
+                    +<sup>1</sup>&frasl;<sub>2</sub> year
+                  </p>
+                )}
+              </div>
+              <p className="skill-rate">20%</p>
             </div>
             <div className="skill-bar">
               <span></span>
@@ -270,9 +319,9 @@ const AboutSkills = (props) => {
             <div className="skill-meta">
               <div className="skill-name">
                 <h4>MYSQL</h4>
-                {!isEnglish ? <p>1 an</p> : <p>1 year</p>}
+                {!isEnglish ? <p>2 ans</p> : <p>2 years</p>}
               </div>
-              <p className="skill-rate">90%</p>
+              <p className="skill-rate">80%</p>
             </div>
             <div className="skill-bar">
               <span></span>

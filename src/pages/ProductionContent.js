@@ -67,25 +67,19 @@ const ProductionContent = (props) => {
         <em>01</em>
         <h1>KRICAR</h1>
       </div>
-      {!isEnglish ? (
-        <KricarContent english={false} />
-      ) : (
-        <KricarContent english={true} />
-      )}
+
+      <KricarContent english={isEnglish} />
 
       <div className="about_titles">
         <em>02</em>
         <h1>TRACE TV</h1>
       </div>
-      {!isEnglish ? (
-        <TraceContent english={false} />
-      ) : (
-        <TraceContent english={true} />
-      )}
+
+      <TraceContent english={isEnglish} />
 
       <div className="about_titles">
         <em>03</em>
-        <h1>{!isEnglish ? "PROCHAINEMENT" : "COMING SOON"}</h1>
+        <h1>{!isEnglish ? "PROCHAINEMENT (avec vous peut être...)" : "COMING SOON (with you maybe...)"}</h1>
       </div>
       <div className="coming_content">
         <img

@@ -53,8 +53,8 @@ const AboutPassion = (props) => {
             </h4>
             <p className="passion-text">
               {!isEnglish
-                ? "J'ai monté mon premier ordinateur moi-même et je l'ai beaucoup aimé, des années après avoir décidé de quitter mon travail et de devenir développeur Web. Depuis que je suis très passionné par le codage."
-                : "I built my first computer myself and I liked it very much, years after I decided to quit my job and become a web developper. Since that I'm very passionate by coding."}
+                ? "J'ai monté mon premier ordinateur moi-même et je l'ai beaucoup aimé. Il y'a quelques années j'ai décidé de quitter mon travail et de devenir développeur Web. Ce fût le meilleur choix de ma vie, désormais je peux vivre d'une de mes passions."
+                : "I built my first computer myself and really liked it. A few years ago I decided to quit my job and become a web developer. It was the best choice of my life, now I can live from one of my passions."}
             </p>
           </li>
           <li className="passion-item">
@@ -64,8 +64,8 @@ const AboutPassion = (props) => {
             </h4>
             <p className="passion-text">
               {!isEnglish
-                ? "J'ai grandi avec les jeux vidéo et je n'ai jamais arrêté de jouer depuis mon plus jeune âge. J'ai commencé avec Playstation 1 et Nintendo 64, maintenant je continue exclusivement sur les jeux informatiques."
-                : "I grew up with video games and I've never stop to play since my young age. I started with Playstation 1 and Nintendo 64, now I keep going on computer games exclusively."}
+                ? "J'ai grandi avec les jeux vidéo et je n'ai jamais arrêté de jouer depuis mon plus jeune âge. J'ai commencé avec Playstation 1 et Nintendo 64. Maintenant je continue quand le travail et la vie quotidienne me laissent le temps."
+                : "I grew up with video games and never stopped playing since I was young. I started with Playstation 1 and Nintendo 64. Now I continue when work and daily life give me time."}
             </p>
           </li>
           <li className="passion-item">
@@ -73,8 +73,8 @@ const AboutPassion = (props) => {
             <h4 className="passion-title">Nature</h4>
             <p className="passion-text">
               {!isEnglish
-                ? "Je vis avec ma copine et nos deux chiens. J'aime les animaux et me promener dans la nature avec eux. Je voyage aussi beaucoup en Europe et en Asie pour découvrir de nouveaux environnements et modes de vie."
-                : "I live with my girlfriend and our two dogs. I love animals and walking in nature with them. I also travel a lot in Europe and Asia to discover new environments and lifestyles."}
+                ? "Je vis avec ma copine et nos deux chiens. Je suis quelqu'un de proche de la nature. Je voyage autant que possible afin de découvrir de nouveaux environnements et modes de vie. Mes lieux de prédilection sont l'Europe et l'Asie."
+                : "I live with my girlfriend and our two dogs. I am someone close to nature. I travel as much as possible in order to discover new environments and ways of life. My favorite places are Europe and Asia."}
             </p>
           </li>
         </ul>

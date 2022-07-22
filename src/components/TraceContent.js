@@ -13,8 +13,8 @@ const TraceContent = (props) => {
             </p>
           </div>
           <div>
-            <h2 className="content_title1">DATE</h2>
-            <p className="content_title2">dec 2021 - fev 2022</p>
+            <h2 className="content_title1">LANGUAGES</h2>
+            <p className="content_title2">React Js / TypeScript / Node Js</p>
           </div>
           <div>
             <h2 className="content_title1">
@@ -31,21 +31,9 @@ const TraceContent = (props) => {
       <img src="../assets/img/about/trace1.png" alt="trace-img" />
       <div className="content_container_bottom">
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
-          perspiciatis omnis perferendis obcaecati quibusdam! Similique nulla
-          pariatur error iusto obcaecati, inventore quas illo nihil a
-          accusantium molestias provident vero quod cupiditate cum aliquam
-          itaque alias tempora dignissimos perspiciatis ad mollitia placeat.
-          Numquam iste quam doloribus deserunt in repudiandae esse quo aut illo
-          aliquid. Istealiquam libero laboriosam accusamus, accusantium nostrum
-          animi quo quos architecto aspernatur quis cumque, voluptatem quasi,
-          dicta sequi eaque dolorum vel optio quam veniam a quisquam. Labore
-          eius atque numquam minima ratione est porro, assumenda cum optio
-          asperiores exercitationem, blanditiis tempora ea in deleniti
-          cupiditate eos corrupti soluta. Minus quas optio placeat quo
-          distinctio aperiam, accusamus dolorum ad praesentium quae et animi id
-          culpa recusandae officia labore! Lorem ipsum dolor sit amet
-          consectetur adipisicing elit.
+          {!isEnglish
+            ? "J'ai participé durant plusieurs mois au développement de features et à la correction de bugs sur la plateforme web https://pro.youtrace.tv. Après m'être familiarisé avec l'environnement et le code déja en place j'ai pu participer à l'élaboration quotidienne de certaines parties du site côté front et identifier les problèmes côté back. Ce fût une mission de durée moyenne très enrichissante sur le plan personnel et le travail d'équipe."
+            : "I participated for several months in the development of features and the correction of bugs on the web platform https://pro.youtrace.tv. After familiarizing myself with the environment and the code already in place, I was able to participate in the daily development of certain parts of the site on the front side and identify problems on the back side. It was a very rewarding medium-term mission on a personal level and teamwork."}
         </p>
       </div>
     </div>

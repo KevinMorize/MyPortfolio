@@ -9,12 +9,12 @@ const KricarContent = (props) => {
           <div>
             <h2 className="content_title1">ROLE</h2>
             <p className="content_title2">
-              {!isEnglish ? "developpeur" : "developer"}
+              {!isEnglish ? "developpeur fron-end" : "front-end developer"}
             </p>
           </div>
           <div>
-            <h2 className="content_title1">DATE</h2>
-            <p className="content_title2">nov 2021 - ...</p>
+            <h2 className="content_title1">LANGUAGES</h2>
+            <p className="content_title2">React Native / Python</p>
           </div>
           <div>
             <h2 className="content_title1">
@@ -22,30 +22,18 @@ const KricarContent = (props) => {
             </h2>
             <p className="content_title2">
               {!isEnglish
-                ? "développement de l'application"
-                : "application development"}
+                ? "développement de l'application mobile"
+                : "mobile app development"}
             </p>
           </div>
         </div>
       </div>
-      <img src="../assets/img/about/trace1.png" alt="trace-img" />
+      <img src="../assets/img/about/kricar.png" alt="trace-img" />
       <div className="content_container_bottom">
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
-          perspiciatis omnis perferendis obcaecati quibusdam! Similique nulla
-          pariatur error iusto obcaecati, inventore quas illo nihil a
-          accusantium molestias provident vero quod cupiditate cum aliquam
-          itaque alias tempora dignissimos perspiciatis ad mollitia placeat.
-          Numquam iste quam doloribus deserunt in repudiandae esse quo aut illo
-          aliquid. Istealiquam libero laboriosam accusamus, accusantium nostrum
-          animi quo quos architecto aspernatur quis cumque, voluptatem quasi,
-          dicta sequi eaque dolorum vel optio quam veniam a quisquam. Labore
-          eius atque numquam minima ratione est porro, assumenda cum optio
-          asperiores exercitationem, blanditiis tempora ea in deleniti
-          cupiditate eos corrupti soluta. Minus quas optio placeat quo
-          distinctio aperiam, accusamus dolorum ad praesentium quae et animi id
-          culpa recusandae officia labore! Lorem ipsum dolor sit amet
-          consectetur adipisicing elit.
+          {!isEnglish
+            ? "Ma plus longue mission à ce jour en tant que développeur. En tant que responsable du développement de la partie mobile j'ai du mettre à contribution toute l'organisation et les connaissance possibles. Seul sur la partie front-end j'ai pu m'en donner à coeur joie en partant from scratch. Aujourd'hui c'est un vrai projet en attente de commercialisation qui est naît, ce fût une belle aventure et une réussite personnelle."
+            : "My longest assignment to date as a developer. As responsible for the development of the mobile part, I had to use all the organization and knowledge possible. Alone on the front-end part I was able to have a field day starting from scratch. Today it is a real project awaiting marketing that is born, it was a great adventure and a personal success."}
         </p>
       </div>
     </div>
