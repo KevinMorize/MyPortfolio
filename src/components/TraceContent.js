@@ -28,7 +28,7 @@ const TraceContent = (props) => {
           </div>
         </div>
       </div>
-      <img src="../assets/img/about/trace1.png" alt="trace-img" />
+      <img src="../assets/img/works/trace.png" alt="trace-img" />
       <div className="content_container_bottom">
         <p>
           {!isEnglish

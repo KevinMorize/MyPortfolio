@@ -47,7 +47,10 @@ const AboutPassion = (props) => {
       <div className="content-passion" id="displayPassion">
         <ul className="passion-list">
           <li className="passion-item">
-            <img src="../assets/img/computer.png" alt="computer" />
+            <img
+              src="../assets/img/about/about_passion/computer.png"
+              alt="computer"
+            />
             <h4 className="passion-title">
               {!isEnglish ? "Ordinateur" : "Computer"}
             </h4>
@@ -58,7 +61,10 @@ const AboutPassion = (props) => {
             </p>
           </li>
           <li className="passion-item">
-            <img src="../assets/img/games.png" alt="games" />
+            <img
+              src="../assets/img/about/about_passion/games.png"
+              alt="games"
+            />
             <h4 className="passion-title">
               {!isEnglish ? "Jeux-vidéos" : "Games"}
             </h4>
@@ -69,7 +75,10 @@ const AboutPassion = (props) => {
             </p>
           </li>
           <li className="passion-item">
-            <img src="../assets/img/nature.png" alt="nature" />
+            <img
+              src="../assets/img/about/about_passion/nature.png"
+              alt="nature"
+            />
             <h4 className="passion-title">Nature</h4>
             <p className="passion-text">
               {!isEnglish

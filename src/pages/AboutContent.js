@@ -51,7 +51,7 @@ const AboutContent = (props) => {
         <em>01</em>
         <h1>{!isEnglish ? "QUI JE SUIS" : "WHO AM I"}</h1>
       </div>
-      {!isEnglish ? <AboutMe english={false} /> : <AboutMe english={true} />}
+      {!isEnglish ? <AboutMe english={isEnglish} /> : <AboutMe english={isEnglish} />}
 
       {/* second content */}
       <div className="about_titles">
@@ -59,9 +59,9 @@ const AboutContent = (props) => {
         <h1>PASSIONS</h1>
       </div>
       {!isEnglish ? (
-        <AboutPassion english={false} />
+        <AboutPassion english={isEnglish} />
       ) : (
-        <AboutPassion english={true} />
+        <AboutPassion english={isEnglish} />
       )}
 
       {/* third content */}
@@ -70,9 +70,9 @@ const AboutContent = (props) => {
         <h1>{!isEnglish ? "COMPÉTENCES" : "SKILLS"}</h1>
       </div>
       {!isEnglish ? (
-        <AboutSkills english={false} />
+        <AboutSkills english={isEnglish} />
       ) : (
-        <AboutSkills english={true} />
+        <AboutSkills english={isEnglish} />
       )}
 
       <ul className="footer">

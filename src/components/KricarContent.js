@@ -28,7 +28,7 @@ const KricarContent = (props) => {
           </div>
         </div>
       </div>
-      <img src="../assets/img/about/kricar.png" alt="trace-img" />
+      <img src="../assets/img/works/kricar.png" alt="trace-img" />
       <div className="content_container_bottom">
         <p>
           {!isEnglish

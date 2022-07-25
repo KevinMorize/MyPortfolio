@@ -37,7 +37,7 @@
             }
         }
         .content-img {
-            width: 40%;
+            width: 50%;
             height: auto;
             overflow: hidden;
             transform: scale(0.8);
@@ -49,7 +49,6 @@
                 height: 100%;
                 object-fit: cover;
                 object-position: 60% 0%;
-                filter: saturate(0.5);
             }
         }
         .before-img {

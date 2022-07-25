@@ -64,7 +64,7 @@ const AboutMe = (props) => {
       </div>
       <div className="content-img">
         <img
-          src="../assets/img/profil-pic.jpg"
+          src="../assets/img/about/about_me.jpg"
           alt="profil-pic"
           onLoad={() => setLoaded(true)}
         />

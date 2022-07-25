@@ -83,11 +83,11 @@ const ProductionContent = (props) => {
       </div>
       <div className="coming_content">
         <img
-          src="../assets/img/screwdriver.png"
+          src="../assets/img/works/screwdriver.png"
           alt="screwdriver"
           className="screwdriver"
         />
-        <img src="../assets/img/wrench.png" alt="wrench" className="wrench" />
+        <img src="../assets/img/works/wrench.png" alt="wrench" className="wrench" />
       </div>
     </div>
   );

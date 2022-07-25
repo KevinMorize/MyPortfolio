@@ -132,11 +132,11 @@
         bottom: 0;
         margin: auto;
         right: 10vh;
-        z-index: 600;
         transform: scale(0.8);
         perspective: 1500px;
         transform-style: preserve-3d;
         transition: transform ease 1.5s;
+        z-index: 600;
         img {
             width: 100vh;
             height: 75vh;

@@ -5,15 +5,24 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 3vh 2vw 3vh 3vw;
+    padding: 2.5vh 2vw 2.5vh 3vw;
     z-index: 3000;
     color: $font-color-1;
-
+    .header-left {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+    }   
     h1 {
         display: block;
         font-size: 1.2vw;
         font-weight: 400;
         z-index: inherit;
+    }
+    img {
+        width: 2.5vw;
+        height: 2.5vw;
+        margin-right: 1vw;
     }
 }
 

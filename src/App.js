@@ -1,17 +1,20 @@
-import { Redirect, Route, Switch, useHistory, useLocation } from "react-router";
 import { useEffect, useState } from "react";
+import { Redirect, Route, Switch, useHistory, useLocation } from "react-router";
+import ReactScrollWheelHandler from "react-scroll-wheel-handler";
+
+import Header from "./components/Header";
+import Moon from "./components/Moon";
 import Gradiant from "./components/Gradiant";
 import GrowingCircle from "./components/GrowingCircle";
-import Header from "./components/Header";
+
 import Mouse from "./components/Mouse";
 import Nav from "./components/Nav";
-import MainContent from "./components/MainContent";
 import ScrollBar from "./components/ScrollBar";
-import Moon from "./components/Moon";
+
+import MainContent from "./components/MainContent";
 import AboutContent from "./pages/AboutContent";
 import ProductionContent from "./pages/ProductionContent";
 import ScrollDownItem from "./components/ScrollDownItem";
-import ReactScrollWheelHandler from "react-scroll-wheel-handler";
 
 function App() {
   const location = useLocation();

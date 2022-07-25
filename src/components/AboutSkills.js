@@ -51,7 +51,7 @@ const AboutSkills = (props) => {
       <ul className="skill-list">
         <li className="skill-item">
           <div className="skill-ico">
-            <img src="../assets/js.svg" alt="javascript" />
+            <img src="../assets/img/about/about_skills/js.svg" alt="javascript" />
           </div>
           <div className="skill-detail">
             <div className="skill-meta">
@@ -68,7 +68,7 @@ const AboutSkills = (props) => {
         </li>
         <li className="skill-item">
           <div className="skill-ico">
-            <img src="../assets/typescript.svg" alt="javascript" />
+            <img src="../assets/img/about/about_skills/typescript.svg" alt="javascript" />
           </div>
           <div className="skill-detail">
             <div className="skill-meta">
@@ -93,7 +93,7 @@ const AboutSkills = (props) => {
         </li>
         <li className="skill-item">
           <div className="skill-ico">
-            <img src="../assets/react.svg" alt="react" />
+            <img src="../assets/img/about/about_skills/react.svg" alt="react" />
           </div>
           <div className="skill-detail">
             <div className="skill-meta">
@@ -118,7 +118,7 @@ const AboutSkills = (props) => {
         </li>
         <li className="skill-item">
           <div className="skill-ico">
-            <img src="../assets/react.svg" alt="react" />
+            <img src="../assets/img/about/about_skills/react.svg" alt="react" />
           </div>
           <div className="skill-detail">
             <div className="skill-meta">
@@ -143,7 +143,7 @@ const AboutSkills = (props) => {
         </li>
         <li className="skill-item">
           <div className="skill-ico">
-            <img src="../assets/redux.svg" alt="redux" />
+            <img src="../assets/img/about/about_skills/redux.svg" alt="redux" />
           </div>
           <div className="skill-detail">
             <div className="skill-meta">
@@ -168,7 +168,7 @@ const AboutSkills = (props) => {
         </li>
         <li className="skill-item">
           <div className="skill-ico">
-            <img src="../assets/node.svg" alt="node" />
+            <img src="../assets/img/about/about_skills/node.svg" alt="node" />
           </div>
           <div className="skill-detail">
             <div className="skill-meta">
@@ -188,7 +188,7 @@ const AboutSkills = (props) => {
       <ul className="skill-list">
         <li className="skill-item">
           <div className="skill-ico">
-            <img src="../assets/php.svg" alt="node" />
+            <img src="../assets/img/about/about_skills/php.svg" alt="node" />
           </div>
           <div className="skill-detail">
             <div className="skill-meta">
@@ -213,7 +213,7 @@ const AboutSkills = (props) => {
         </li>
         <li className="skill-item">
           <div className="skill-ico">
-            <img src="../assets/symfony.svg" alt="node" />
+            <img src="../assets/img/about/about_skills/symfony.svg" alt="node" />
           </div>
           <div className="skill-detail">
             <div className="skill-meta">
@@ -238,7 +238,7 @@ const AboutSkills = (props) => {
         </li>
         <li className="skill-item">
           <div className="skill-ico">
-            <img src="../assets/python.svg" alt="html5" />
+            <img src="../assets/img/about/about_skills/python.svg" alt="html5" />
           </div>
           <div className="skill-detail">
             <div className="skill-meta">
@@ -263,7 +263,7 @@ const AboutSkills = (props) => {
         </li>
         <li className="skill-item">
           <div className="skill-ico">
-            <img src="../assets/docker.svg" alt="html5" />
+            <img src="../assets/img/about/about_skills/docker.svg" alt="html5" />
           </div>
           <div className="skill-detail">
             <div className="skill-meta">
@@ -288,7 +288,7 @@ const AboutSkills = (props) => {
         </li>
         <li className="skill-item">
           <div className="skill-ico">
-            <img src="../assets/kubernetes.svg" alt="html5" />
+            <img src="../assets/img/about/about_skills/kubernetes.svg" alt="html5" />
           </div>
           <div className="skill-detail">
             <div className="skill-meta">
@@ -313,7 +313,7 @@ const AboutSkills = (props) => {
         </li>
         <li className="skill-item">
           <div className="skill-ico">
-            <img src="../assets/mysql.svg" alt="mysql" />
+            <img src="../assets/img/about/about_skills/mysql.svg" alt="mysql" />
           </div>
           <div className="skill-detail">
             <div className="skill-meta">
