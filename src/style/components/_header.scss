@@ -11,17 +11,18 @@
     .header-left {
         display: flex;
         justify-content: flex-start;
-        align-items: flex-end;
+        align-items: center;        
     }   
     h1 {
         display: block;
         font-size: 1.2vw;
         font-weight: 400;
+        margin-bottom: -10px;
         z-index: inherit;
     }
     img {
-        width: 2.5vw;
-        height: 2.5vw;
+        width: 75px;
+        height: 75px;
         margin-right: 1vw;
     }
 }

@@ -103,13 +103,13 @@ const MainContent = (props) => {
         const positionY = e.layerY;
 
         if (positionX < width && positionY < height) {
-          animatedContentImage.style.transform = "skew(-3deg, -3deg)";
+          animatedContentImage.style.transform = "skew(-2deg, -2deg)";
         } else if (positionX > width && positionY < height) {
-          animatedContentImage.style.transform = "skew(3deg, 3deg)";
+          animatedContentImage.style.transform = "skew(2deg, 2deg)";
         } else if (positionX > width && positionY > height) {
-          animatedContentImage.style.transform = "skew(-3deg, -3deg)";
+          animatedContentImage.style.transform = "skew(-2deg, -2deg)";
         } else if (positionX < width && positionY > height) {
-          animatedContentImage.style.transform = "skew(3deg, 3deg)";
+          animatedContentImage.style.transform = "skew(2deg, 2deg)";
         }
 
         animatedImage.style.filter = "brightness(0.5)";
